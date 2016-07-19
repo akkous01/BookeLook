@@ -20,10 +20,10 @@ if (session_status() == PHP_SESSION_NONE) {
   }
 
   
-    include "../Database/MySqlConnect.php";
+    include "../../Database/MySqlConnect.php";
 
-    include "list_book/load_books_dataTable.php";
-    include "load/load_keywords_not_found.php";
+    include "../assets/load/load_books_dataTable.php";
+    include "../assets/load/load_keywords_not_found.php";
 ?>
 
 <!DOCTYPE HTML>
@@ -37,19 +37,19 @@ if (session_status() == PHP_SESSION_NONE) {
     <title>Hyperspace by HTML5 UP</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
     <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-    <script src="assets/js/dataTables.js"></script>
+    <script src="../assets/js/dataTables.js"></script>
 
 
     
@@ -59,15 +59,13 @@ if (session_status() == PHP_SESSION_NONE) {
 
 
 			<header id="header">
-				<a href="index.php" class="title">Zoom in Books</a>
-				<nav>
-					<ul>
-						<li><a href="index.php">Admin</a></li>
-						<li><a href="../user/index.php">Web Page</a></li>
-						<li><a href="login.php">Log out</a></li>
-
-					</ul>
-				</nav>
+                <a href="../../../" class="title">Zoom in Books</a>
+                <nav>
+                    <ul>
+                        <li><a href="../../../">Admin</a></li>
+                        <li><a href="../../../">Web Page</a></li>
+                    </ul>
+                </nav>
 			</header>
 <!-- Sidebar -->
 <section id="sidebar">
@@ -134,7 +132,7 @@ if (session_status() == PHP_SESSION_NONE) {
     <section id="new_book" class="wrapper style2 spotlights">
         <h1 class="major">Νέο Βιβλίο</h1>
         <section class="new_book_body">
-            <form method="post" action="new_book/submit_new_book.php" enctype="multipart/form-data">
+            <form method="post" action="../assets/new_edit_book/submit_new_book.php" enctype="multipart/form-data">
                 <div class="row uniform">
 
                     <div class="8u$ 12u$(xsmall)">
@@ -212,7 +210,7 @@ if (session_status() == PHP_SESSION_NONE) {
                     </div>
 
                     <div class="12u$"><hr><h3>Κατηγορίες</h3><hr></div>
-                    <?php include_once "load/load_keywords.php"; ?>
+                    <?php include_once "../assets/load/load_keywords.php"; ?>
 
                     <div class="12u$ 12u$(xsmall)">
                         <input type='checkbox' id="Show_to_user" name="Show_to_user"'>
@@ -245,13 +243,13 @@ if (session_status() == PHP_SESSION_NONE) {
         <div class="inner">
             <h1 class="major">Προσθήκη Νέας Υποκατηγορίας</h1>
                 <section>
-                    <form method="post" action="add_elements/new_subcategory.php">
+                    <form method="post" action="../assets/add_elements/new_subcategory.php">
                         <div class="row uniform">
                             <div class="12u$">
                                 <h4>Κατηγορία</h4>
                                 <div class="select-wrapper">
                                     <select name="select_category" id="select_category" required>
-                                        <?php include "load/load_categories.php";?>
+                                        <?php include "../assets/load/load_categories.php";?>
                                         
                                     </select>
                                 </div>
@@ -276,13 +274,13 @@ if (session_status() == PHP_SESSION_NONE) {
         <div class="inner">
             <h1 class="major">Προσθήκη Νέας Λέξης Κλειδί</h1>
                 <section>
-                    <form method="post" action="add_elements/new_keyword.php">
+                    <form method="post" action="../assets/add_elements/new_keyword.php">
                         <div class="row uniform">
                             <div class="12u$">
                                 <h4>Κατηγορία</h4>
                                 <div class="select-wrapper">
                                     <select name="select_category_2" id="select_category_2">
-                                        <?php include "load/load_categories.php";?> 
+                                        <?php include "../assets/load/load_categories.php";?>
                                     </select>
                                 </div>
                             </div>
@@ -314,7 +312,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
             <h1 class="major">Προσθήκη Ανακοίνωσης</h1>
             <section>
-                <form method="post" action="add_elements/new_announcement.php" enctype="multipart/form-data">
+                <form method="post" action="../assets/add_elements/new_announcement.php" enctype="multipart/form-data">
                     <div class="row uniform">
                     	<div class="12u$">
                             <textarea name="announcement_content" id="announcement_content" rows="4" value="" required=""></textarea>
@@ -339,7 +337,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
             <h1 class="major">Προσθήκη στο Blog</h1>
             <section>
-                <form method="post" action="add_elements/new_blog.php" enctype="multipart/form-data">
+                <form method="post" action="../assets/add_elements/new_blog.php" enctype="multipart/form-data">
                     <div class="row uniform">
                     	<div class="6u$ 12u$(xsmall)">
                         	<h4>Τίτλος</h4><input type="text" name="blog_title" id="blog_title" value="" required />
@@ -396,14 +394,14 @@ if (session_status() == PHP_SESSION_NONE) {
 </footer> -->
 
 <!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/skel.min.js"></script>
-<script src="assets/js/util.js"></script>
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/jquery.scrollex.min.js"></script>
+<script src="../assets/js/jquery.scrolly.min.js"></script>
+<script src="../assets/js/skel.min.js"></script>
+<script src="../assets/js/util.js"></script>
 <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-<script src="assets/js/main.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
 
@@ -444,8 +442,9 @@ if (session_status() == PHP_SESSION_NONE) {
 
     function load_subcategories() {
         var selected = $('#select_category_2').val();
+
         $.ajax({
-            url:        'load/load_subcategories.php',
+            url:        '../assets/load/load_subcategories.php',
             type:       'POST',
             // dataType:   'json',
             data:       "category_id="+selected,
@@ -462,7 +461,7 @@ if (session_status() == PHP_SESSION_NONE) {
     function loadSubCategories(){
         var selected = 1;
         $.ajax({
-            url:        'load/load_subcategories.php',
+            url:        '../assets/load/load_subcategories.php',
             type:       'POST',
             // dataType:   'json',
             data:       "category_id="+selected,

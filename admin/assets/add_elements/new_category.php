@@ -1,10 +1,10 @@
 <?php
-include "../../Database/MySqlConnect.php";
+include "../../../Database/MySqlConnect.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	if (empty($_POST["New_category"])) {
-    	header("Location: ../index.php");
+    	header("Location: ../../");
     	exit();
   	} else {
     	$New_category = test_input($_POST["New_category"]);
@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$New_category_query = $conn->prepare("INSERT INTO categories (Name_of_category) VALUES ('{$New_category}')");
 		$New_category_query->execute();
 		$_SESSION["new_book_insert_succ"]= 1;
-		header("Location: ../index.php");
+		header("Location: ../../");
 	}catch(PDOException $e){
     	handle_sql_errors($selectQuery, $e->getMessage());
 	}

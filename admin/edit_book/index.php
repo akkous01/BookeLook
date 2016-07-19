@@ -59,7 +59,7 @@ if($book['Show_to_user'] == 1){
 -->
 <html>
 <head>
-    <title>Hyperspace by HTML5 UP</title>
+    <title>BookeLook</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -114,8 +114,8 @@ if($book['Show_to_user'] == 1){
                 <a href="index.php" class="title">Zoom in Books</a>
                 <nav>
                     <ul>
-                        <li><a href="index.php">Admin</a></li>
-                        <li><a href="../user/index.php">Web Page</a></li>
+                        <li><a href="../index.php">Admin</a></li>
+                        <li><a href="../../index.php">Web Page</a></li>
                     </ul>
                 </nav>
             </header>
@@ -205,7 +205,7 @@ if($book['Show_to_user'] == 1){
                 </div>
 
                 <?php echo '<div class="4u$"><span class="image fit"><img id="img_back_cover" style="margin-bottom: 2%;" src="../../Database/Back_Covers/'. $book['Back_cover'].'"/></span>';?>
-                <input type="input" name="same_back_cover" id="same_back_cover" style="display:none" value="<?php echo $book['Back_cover']?>" />
+                <input type="file" name="same_back_cover" id="same_back_cover" style="display:none" value="<?php echo $book['Back_cover']?>" />
 
                 <input type="button" class="button special small" id="change_back_cover" value="Αλλαγή Πισθοφύλλου"/>
                 </div>
@@ -215,7 +215,7 @@ if($book['Show_to_user'] == 1){
 
 
                 <div class="12u$"><hr><h3>Κατηγορίες</h3><hr></div>
-                <?php include_once "../load/load_keywords2.php";
+                <?php include_once "../assets/load/load_keywords2.php";
                 for($i=0;$i<count($book_keywards);$i++){
                     echo "<script>$('#K".$book_keywards[$i]['Keyword_id']."').prop('checked', true);</script>";
                 }

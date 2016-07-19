@@ -29,7 +29,7 @@ $(document).ready(function() {
     });
     $("#list_of_books tbody").on("click", "tr", function(e) {
        $tds=$(this).children('td');
-        $.get("edit_book/session_edit_book.php",
+        $.get("../assets/new_edit_book/session_edit_book.php",
             {book_id:$tds[0].innerText,
             title:$tds[1].innerText,
             isbn:$tds[2].innerText,
@@ -40,7 +40,7 @@ $(document).ready(function() {
                 submit:'true'},
             function(data, textStatus, jqXHR)
             {
-                window.open("edit_book/edit_book_form.php");
+                window.open("../edit_book/");
             });
     });
 })

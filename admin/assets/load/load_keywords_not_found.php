@@ -1,6 +1,6 @@
 <?php 
 
-include "../Database/MySqlConnect.php";
+//include "../Database/MySqlConnect.php";
 
 // CATEGORIES
 $keywords_not_found_query = $conn->prepare("SELECT * FROM not_found_keywords");

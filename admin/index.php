@@ -1,6 +1,7 @@
 <?php 
 	$error="";
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		echo $_POST["username"];
 		if (empty($_POST["username"])) {
 			$error="Wrong username";
 		  } else {
@@ -15,7 +16,7 @@
 		
 		if(strcmp($username,"mariach")==0){
 			if(strcmp($password,"password")==0){
- 				header("Location: index.php?");
+ 				header("Location: home/index.php?");
 			}else{
 				$error="Wrong password";	
 			}
@@ -35,7 +36,7 @@
 -->
 <html>
 	<head>
-		<title>Elements - Hyperspace by HTML5 UP</title>
+		<title>BookeLook</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -47,11 +48,11 @@
 	<body>
 			<!-- Header -->
 			<header id="header">
-				<a href="login.html" class="title">Zoom In Books</a>
+				<a href="../index.php" class="title">BookeLook</a>
 				<nav>
 					<ul>
-						<li><a href="login.html">Admin</a></li>
-						<li><a href="../user/index.php">Web Page</a></li>
+						<li><a href="index.php">Admin</a></li>
+						<li><a href="../index.php">Web Page</a></li>
 					</ul>
 				</nav>
 			</header>

@@ -1,7 +1,7 @@
 <!-- <select> -->
 <?php 
 	//Database initialization
-include "../../Database/MySqlConnect.php";
+include "../../../Database/MySqlConnect.php";
 if(isset($_POST['category_id']) && !empty($_POST['category_id'])) {
 	try{
 		$category_id = (integer)$_POST['category_id'];
