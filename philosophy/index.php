@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Book-e-Look</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/phylosophy.css">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/phylosophy.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 queries -->
@@ -18,7 +18,7 @@ queries -->
     <!--[if lt IE 9]>
       <![endif]-->
       <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-      <link rel="stylesheet" href="css/autocomplete-input.css">
+      <link rel="stylesheet" href="../assets/css/autocomplete-input.css">
       <script src="//code.jquery.com/jquery-1.10.2.js"></script>
       <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
@@ -28,20 +28,20 @@ queries -->
 
   <header>
     <ul class="my_nav">
-        <li><a href="index.php"><img src="images/navbar/1_HomePage.png"></a></li>
-        <li><a href="phylosophy.php"><img src="images/navbar/2_OurPhilosophy.png"></a></li>
-        <li><a href="blog.php"><img src="images/navbar/3_Blog.png"></a></li>
-        <li><a href="contact.php"><img src="images/navbar/4_Communicate.png"></a></li>
-        <li><a href="under_construction.php"><img src="images/navbar/5_LogIn.png"></a></li>
-        <li><a href="under_construction.php"><img src="images/navbar/6_CreateAccount.png"></a></li>
-        <li><a href="under_construction.php"><img src="images/navbar/7_Gallery.png"></a></li>
-        <li><a href="under_construction.php"><img src="images/navbar/8_ZoomIn.png"></a></li>
+        <li><a href="../index.php"><img src="../assets/images/navbar/1_HomePage.png"></a></li>
+        <li><a href="#"><img src="../assets/images/navbar/2_OurPhilosophy.png"></a></li>
+        <li><a href="../blog/"><img src="../assets/images/navbar/3_Blog.png"></a></li>
+        <li><a href="../contact/"><img src="../assets/images/navbar/4_Communicate.png"></a></li>
+        <li><a href="../under_construction/"><img src="../assets/images/navbar/5_LogIn.png"></a></li>
+        <li><a href="../under_construction/"><img src="../assets/images/navbar/6_CreateAccount.png"></a></li>
+        <li><a href="../under_construction/"><img src="../assets/images/navbar/7_Gallery.png"></a></li>
+        <li><a href="../under_construction/"><img src="../assets/images/navbar/8_ZoomIn.png"></a></li>
     </ul>
  </header>
 
 <div id="main_phylosophy">
   <div id="phylosophy_area">
-    <h4 id="kapelo"><img src="images/image55.png"> Σας βγάζω το καπέλο και σας χαιρετώ! :)</h4>
+    <h4 id="kapelo"><img src="../assets/images/image55.png"> Σας βγάζω το καπέλο και σας χαιρετώ! :)</h4>
     <div id="kapelo_content" style="display:none">
       <p>Καλώς ορίσατε σ’ένα ταξίδι που θα σας αλλάξει την βιβλιο-θεωρία που είχατε μέχρι σήμερα! Σ’ ένα διαδικτυακό ταξίδι που στόχο έχει να σας δείξει κρυμμένα μονοπάτια που οδηγούν στους θησαυρούς που πραγματικά κρύβουν τα παιδικά λογοτεχνικά βιβλία.</p>
       <p>Αφετηρία σε αυτό το ταξίδι όπως και σε πολλά άλλα αποτελεί ο πρωταγωνιστής στη ζωή μας – το παιδί. Παιδιά που έρχονται σε μια πρώτη επαφή και να θέλουν να γνωρίσουν το καινούριο ή παιδιά που αντιμετωπίζουν προβλήματα σε θέματα</p>
@@ -66,7 +66,7 @@ queries -->
       <p>Διευκρινίζεται ότι το BOOKeLOOK δεν δημιουργήθηκε για να κάνουμε κριτική αλλά να αναδείξουμε τα ευεργετικά χαρακτηριστικά των παιδικών βιβλίων και τον τρόπο που μπορούν να χρησιμοποιηθούν για την ανάπτυξη των παιδιών μας. Για οποιαδήποτε σχόλια, ερωτήσεις ή περισσότερες πληροφορίες για εμάς ή τα βιβλία, θα χαρούμε να δούμε τα ηλεκτρονικά σας μηνύματα (e-mails)!</p>
       <p>Ευελπιστώ ότι το BOOKeLOOK θα σας κρατήσει συντροφιά στην προσπάθεια σας για σωστή διαπαιδαγώγηση των μαθητών και των παιδιών σας μέσα από την εναλλακτική μεθοδολογία του. Αν είστε ευχαριστημένοι, μοιραστείτε το και με γνωστούς ή φίλους που θα τους ήταν χρήσιμο, ουτως ώστε και έμπρακτα να προωθήσουμε τη φιλοσοφία του να «μην κρίνουμε ένα βιβλίο μόνο από το εξώφυλλο» όπως λέει μια αγγλική παροιμία και «να διδάσκουμε την αγάπη για το διάβασμα» όπως αναφέρει ο Skinner.</p>
     </div>
-    <h4 id="ergalio"><img src="images/image54.png"> Το BOOKeLOOK είναι το πιο χρήσιμο εργαλείο σε:</h4>
+    <h4 id="ergalio"><img src="../assets/images/image54.png"> Το BOOKeLOOK είναι το πιο χρήσιμο εργαλείο σε:</h4>
     <div id="ergalio_content" style="display:none">
       <ul>
         <li>Δασκάλους και νηπιαγωγούς
@@ -92,12 +92,12 @@ queries -->
   </div>
 
   <div id="contact-info-area">
-    <div id="contact-info-area-div"><p> Για παραλαβή του <strong>Newsletter</strong> πατήστε <a href="contact.php">εδώ</a></div>
+    <div id="contact-info-area-div"><p> Για παραλαβή του <strong>Newsletter</strong> πατήστε <a href="../contact/">εδώ</a></div>
   </div>
 </div>
-<footer>Maria Christodoulou © 2016</footer>
+<footer><strong>Maria Christodoulou © 2016</strong></footer>
 
-  <script src="js/bootstrap.min.js"></script>
+  <script src="../assets/js/bootstrap.min.js"></script>
   <script>
     $(document).ready(function(){
         $("#kapelo").click(function(){

@@ -1,5 +1,5 @@
 <?php 
-  include "session/search_book.php";
+  include "../assets/session/search_book.php";
 ?>
 
 <!DOCTYPE html>
@@ -9,13 +9,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Book-e-Look</title>
 
     <!-- Bootstrap -->
     
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/book_profile.css">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/book_profile.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,14 +30,14 @@
 
   <header>
     <ul class="my_nav">
-        <li><a href="index.php"><img src="images/navbar/1_HomePage.png"></a></li>
-        <li><a href="phylosophy.php"><img src="images/navbar/2_OurPhilosophy.png"></a></li>
-        <li><a href="blog.php"><img src="images/navbar/3_Blog.png"></a></li>
-        <li><a href="contact.php"><img src="images/navbar/4_Communicate.png"></a></li>
-        <li><a href="under_construction.php"><img src="images/navbar/5_LogIn.png"></a></li>
-        <li><a href="under_construction.php"><img src="images/navbar/6_CreateAccount.png"></a></li>
-        <li><a href="under_construction.php"><img src="images/navbar/7_Gallery.png"></a></li>
-        <li><a href="under_construction.php"><img src="images/navbar/8_ZoomIn.png"></a></li>
+        <li><a href="../index.php"><img src="../assets/images/navbar/1_HomePage.png"></a></li>
+        <li><a href="../philosophy/"><img src="../assets/images/navbar/2_OurPhilosophy.png"></a></li>
+        <li><a href="../blog/"><img src="../assets/images/navbar/3_Blog.png"></a></li>
+        <li><a href="../contact/"><img src="../assets/images/navbar/4_Communicate.png"></a></li>
+        <li><a href="../under_construction/"><img src="../assets/images/navbar/5_LogIn.png"></a></li>
+        <li><a href="../under_construction/"><img src="../assets/images/navbar/6_CreateAccount.png"></a></li>
+        <li><a href="../under_construction/"><img src="../assets/images/navbar/7_Gallery.png"></a></li>
+        <li><a href="../under_construction/"><img src="../assets/images/navbar/8_ZoomIn.png"></a></li>
     </ul>
   </header>
 
@@ -61,11 +61,11 @@
         <?php echo '<img class="big_img" style="display:none" alt="'.$Title.'" id="big_back_cover_img" src="../Database/Back_Covers/'. $Back_cover.'"/>';?>
       </div>
       <div id="mark_area">
-        <img class="mark_img" src="images/mark-1-1.png" <?php echo $mark1?>/>
-        <img class="mark_img" src="images/mark-1-2.png" <?php echo $mark2?>/>
-        <img class="mark_img" src="images/mark-1-3.png" <?php echo $mark3?>/>
-        <img class="mark_img" src="images/mark-1-4.png" <?php echo $mark4?>/>
-        <img class="mark_img" src="images/mark-1-5.png" <?php echo $mark5?>/>
+        <img class="mark_img" src="../assets/images/mark-1-1.png" <?php echo $mark1?>/>
+        <img class="mark_img" src="../assets/images/mark-1-2.png" <?php echo $mark2?>/>
+        <img class="mark_img" src="../assets/images/mark-1-3.png" <?php echo $mark3?>/>
+        <img class="mark_img" src="../assets/images/mark-1-4.png" <?php echo $mark4?>/>
+        <img class="mark_img" src="../assets/images/mark-1-5.png" <?php echo $mark5?>/>
 
       </div>
     </div>
@@ -266,22 +266,22 @@
   
   <div id="categories_nav">
     <div id="ithiki_tab" class="categories_tab" <?php echo $tab1?>>
-      <a href="#ithiki_box"><img src="images/ithiki-tab.png" class="tab_img"></a>
+      <a href="#ithiki_box"><img src="../assets/images/ithiki-tab.png" class="tab_img"></a>
     </div>
      <div id="gramatiki_tab" class="categories_tab" <?php echo $tab4?>>
-      <a href="#gramatiki_box"><img src="images/grammatiki-tab.png" class="tab_img"></a>      
+      <a href="#gramatiki_box"><img src="../assets/images/grammatiki-tab.png" class="tab_img"></a>      
     </div>
     <div id="analisi_tab" class="categories_tab" <?php echo $tab5?>>
-      <a href="#analisi_box"><img src="images/analisi-tab.png" class="tab_img"></a>
+      <a href="#analisi_box"><img src="../assets/images/analisi-tab.png" class="tab_img"></a>
     </div>
     <div id="sindesi_tab" class="categories_tab" <?php echo $tab2?>>
-      <a href="#sindesi_box"><img src="images/sindesi-tab.png" class="tab_img"></a>
+      <a href="#sindesi_box"><img src="../assets/images/sindesi-tab.png" class="tab_img"></a>
     </div>
     <div id="epipleon_tab" class="categories_tab" <?php echo $tab3?>>
-      <a href="#epipleon_box"><img src="images/epipleon-tab.png" class="tab_img"></a>
+      <a href="#epipleon_box"><img src="../assets/images/epipleon-tab.png" class="tab_img"></a>
     </div>
     <div id="drastiriotites_tab"  class="categories_tab" <?php echo $curriculum_show?>>
-      <a href="#drastiriotites_box"><img src="images/drastiriotites-tab.png" class="tab_img"></a>
+      <a href="#drastiriotites_box"><img src="../assets/images/drastiriotites-tab.png" class="tab_img"></a>
     </div>
   </div>
 
@@ -313,8 +313,8 @@
    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/front-end.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../assets/js/front-end.js"></script>
 
      <script>
       // Get the modal

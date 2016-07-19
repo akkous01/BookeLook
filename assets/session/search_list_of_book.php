@@ -15,6 +15,11 @@ $list_for_input = ",...";
 $list_of_keywords =  "keywords.Name_of_keyword='none";
 $not_found_search="none";
 
+
+
+
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 // set variables ////////////////////////////////////////////////////////////////////
@@ -95,7 +100,7 @@ OR books.Min_age_read='".$age."'OR books.Persentage_of_images='".$percentage_of_
 WHERE  ".$list_of_keywords."' ") ;
     $book_query->execute();
     $books_step_3 = $book_query->fetchAll(PDO::FETCH_ASSOC);
-    print_r($books_step_3 ) ;
+    // print_r($books_step_3 ) ;
 
     if ($theme_id!=6 ){
         $book_query = $conn->prepare("SELECT  DISTINCT   books.Book_id
@@ -107,11 +112,11 @@ WHERE  ".$list_of_keywords."' ") ;
                                 WHERE     categories.Category_id='" . $theme_id . "'");
         $book_query->execute();
         $books_step_4 = $book_query->fetchAll(PDO::FETCH_ASSOC);
-        print_r($books_step_4 ) ;
+        // print_r($books_step_4 ) ;
     }else{
         $books_step_4 = array();
     }
-    print_r($books_step_4 ) ;
+    // print_r($books_step_4 ) ;
 
     $book_query = $conn->prepare("SELECT  DISTINCT   books.Book_id FROM books ");
     $book_query->execute();
@@ -173,11 +178,11 @@ WHERE  ".$list_of_keywords."' ") ;
                                                 <img class='small_img' id='big_cover_img' src='../Database/Covers/". $value['Cover']."'/>
                                             </div>
                                             <div id='mark_area'>
-                                                  <img class='mark_img' id='m_".$value['Book_id']."_1' src='images/mark-1-1.png' style='display:".$mark[0]."/>
-                                                  <img class='mark_img' id='m_".$value['Book_id']."_2' src='images/mark-1-2.png' style='display:".$mark[1]."/>
-                                                  <img class='mark_img' id='m_".$value['Book_id']."_3' src='images/mark-1-3.png' style='display:".$mark[2]."/>
-                                                  <img class='mark_img' id='m_".$value['Book_id']."_4' src='images/mark-1-4.png' style='display:".$mark[3]."/>
-                                                  <img class='mark_img' id='m_".$value['Book_id']."_5' src='images/mark-1-5.png' style='display:".$mark[4]."/>
+                                                  <img class='mark_img' id='m_".$value['Book_id']."_1' src='../assets/images/mark-1-1.png' style='display:".$mark[0]."/>
+                                                  <img class='mark_img' id='m_".$value['Book_id']."_2' src='../assets/images/mark-1-2.png' style='display:".$mark[1]."/>
+                                                  <img class='mark_img' id='m_".$value['Book_id']."_3' src='../assets/images/mark-1-3.png' style='display:".$mark[2]."/>
+                                                  <img class='mark_img' id='m_".$value['Book_id']."_4' src='../assets/images/mark-1-4.png' style='display:".$mark[3]."/>
+                                                  <img class='mark_img' id='m_".$value['Book_id']."_5' src='../assets/images/mark-1-5.png' style='display:".$mark[4]."/>
                                             </div>
                                          </div>
                                         <div id='more_button'>
@@ -208,6 +213,28 @@ if(strcmp($writer,"none")==0 or strcmp($writer,"")==0){
         }
     }
 
+
+
+$book_query=$conn->prepare("SELECT books.Title,books.Writer FROM books");
+$book_query->execute();
+$book = $book_query->fetchAll(PDO::FETCH_ASSOC);;
+$titles="[";
+$writers="[";
+for($i=0; $i<count($book) ; $i++){
+    $titles=$titles."'".$book[$i]['Title']."',";
+    $writers=$writers."'".$book[$i]['Writer']."',";
+}
+$titles=$titles."]";
+$writers=$writers."]";
+
+$list_of_keywords_query=$conn->prepare("SELECT keywords.Name_of_keyword FROM keywords");
+$list_of_keywords_query->execute();
+$list_of_keywords = $list_of_keywords_query->fetchAll(PDO::FETCH_ASSOC);;
+$keywords="[";
+for($i=0; $i<count($list_of_keywords) ; $i++){
+    $keywords=$keywords."'".$list_of_keywords[$i]['Name_of_keyword']."',";
+}
+$keywords=$keywords."]";
 
 
 ?>

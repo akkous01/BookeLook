@@ -1,5 +1,5 @@
 <?php 
-include_once "session/load_data_from_database.php";
+include_once "assets/session/load_data_from_database.php";
 
 ?>
 
@@ -10,11 +10,11 @@ include_once "session/load_data_from_database.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Book-e-Look</title>
 
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 queries -->
@@ -22,7 +22,7 @@ queries -->
     <!--[if lt IE 9]>
       <![endif]-->
       <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-      <link rel="stylesheet" href="css/autocomplete-input.css">
+      <link rel="stylesheet" href="assets/css/autocomplete-input.css">
       <script src="//code.jquery.com/jquery-1.10.2.js"></script>
       <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
@@ -35,14 +35,14 @@ queries -->
 
   <header>
     <ul class="my_nav">
-        <li><a href="index.php"><img src="images/navbar/1_HomePage.png"></a></li>
-        <li><a href="phylosophy.php"><img src="images/navbar/2_OurPhilosophy.png"></a></li>
-        <li><a href="blog.php"><img src="images/navbar/3_Blog.png"></a></li>
-        <li><a href="contact.php"><img src="images/navbar/4_Communicate.png"></a></li>
-        <li><a href="under_construction.php"><img src="images/navbar/5_LogIn.png"></a></li>
-        <li><a href="under_construction.php"><img src="images/navbar/6_CreateAccount.png"></a></li>
-        <li><a href="under_construction.php"><img src="images/navbar/7_Gallery.png"></a></li>
-        <li><a href="under_construction.php"><img src="images/navbar/8_ZoomIn.png"></a></li>
+        <li><a href="#"><img src="assets/images/navbar/1_HomePage.png"></a></li>
+        <li><a href="philosophy/"><img src="assets/images/navbar/2_OurPhilosophy.png"></a></li>
+        <li><a href="blog/"><img src="assets/images/navbar/3_Blog.png"></a></li>
+        <li><a href="contact/"><img src="assets/images/navbar/4_Communicate.png"></a></li>
+        <li><a href="under_construction/"><img src="assets/images/navbar/5_LogIn.png"></a></li>
+        <li><a href="under_construction/"><img src="assets/images/navbar/6_CreateAccount.png"></a></li>
+        <li><a href="under_construction/"><img src="assets/images/navbar/7_Gallery.png"></a></li>
+        <li><a href="under_construction/"><img src="assets/images/navbar/8_ZoomIn.png"></a></li>
     </ul>
 
  </header>
@@ -52,12 +52,12 @@ queries -->
 
   <div id="main-top" >
     <div id="search_bar_book">
-        <form id="search" autocomplete="on" method="post" action="search.php">
+        <form id="search" autocomplete="on" method="post" action="search/">
             <div id="search_box_dropdown"  style="display: none">
                 <div class="search_box_dropdown_elements" style="display: none">
                     <div id="search_header">
                         <div id="close_button">
-                            <a href="#" ><img  src="images/close.png"></a>
+                            <a href="#" ><img  src="assets/images/close.png"></a>
                         </div>
                     </div>
                     <div id="search_elements">
@@ -126,16 +126,16 @@ queries -->
       <div id="book">
         <div class="bookmarks_left">
           <div class="bookmark_left">
-            <img id="ithika" src="images/bookmark-1.png" class="bookmark_tag">
-            <img id="ithika_new" src="images/bookmark-1-new.png" class="bookmark_tag_new" style="display: none">
+            <img id="ithika" src="assets/images/bookmark-1.png" class="bookmark_tag">
+            <img id="ithika_new" src="assets/images/bookmark-1-new.png" class="bookmark_tag_new" style="display: none">
           </div>
           <div class="bookmark_left">
-            <img id="sindesi" src="images/bookmark-2.png" class="bookmark_tag">
-            <img id="sindesi_new" src="images/bookmark-2-new.png" class="bookmark_tag_new" style="display: none">
+            <img id="sindesi" src="assets/images/bookmark-2.png" class="bookmark_tag">
+            <img id="sindesi_new" src="assets/images/bookmark-2-new.png" class="bookmark_tag_new" style="display: none">
           </div>
           <div class="bookmark_left">
-            <img id="epipleon" src="images/bookmark-3.png" class="bookmark_tag">
-            <img id="epipleon_new" src="images/bookmark-3-new.png" class="bookmark_tag_new" style="display: none">
+            <img id="epipleon" src="assets/images/bookmark-3.png" class="bookmark_tag">
+            <img id="epipleon_new" src="assets/images/bookmark-3-new.png" class="bookmark_tag_new" style="display: none">
           </div>
         </div>
 
@@ -153,12 +153,12 @@ queries -->
 
         <div class="bookmarks_right">
           <div class="bookmark_right">
-          <img id="analisi" src="images/bookmark-4.png" class="bookmark_tag">
-          <img id="analisi_new" src="images/bookmark-4-new.png" class="bookmark_tag_new" style="display: none">
+          <img id="analisi" src="assets/images/bookmark-4.png" class="bookmark_tag">
+          <img id="analisi_new" src="assets/images/bookmark-4-new.png" class="bookmark_tag_new" style="display: none">
           </div>
           <div class="bookmark_right_2">
-            <img id="gramatiki" src="images/bookmark-5.png" class="bookmark_tag">
-            <img id="gramatiki_new" src="images/bookmark-5-new.png" class="bookmark_tag_new" style="display: none">
+            <img id="gramatiki" src="assets/images/bookmark-5.png" class="bookmark_tag">
+            <img id="gramatiki_new" src="assets/images/bookmark-5-new.png" class="bookmark_tag_new" style="display: none">
           </div>
         </div>
       </div>
@@ -166,7 +166,7 @@ queries -->
     </div>
   
   <div id="contact-info">
-    <div id="contact-link-div"><p> Για παραλαβή του <strong>Newsletter</strong> πατήστε <a href="contact.php">εδώ</a></div>
+    <div id="contact-link-div"><p> Για παραλαβή του <strong>Newsletter</strong> πατήστε <a href="contact/">εδώ</a></div>
   </div>
   </div>
 
@@ -179,8 +179,8 @@ queries -->
     </div>
 
     <div id="middle">
-        <div id="facebook_div"><img id="facebook_icon" src="images/facebook-02.png" ></div>
-        <div id="instagram_div"><img id="instagram_icon" src="images/instagram-02.png" ></div>
+        <div id="facebook_div"><img id="facebook_icon" src="assets/images/facebook-02.png" ></div>
+        <div id="instagram_div"><img id="instagram_icon" src="assets/images/instagram-02.png" ></div>
     </div>
 
     <div id="anakinosis">
@@ -236,9 +236,9 @@ queries -->
 <!-- <div id="cotact-side"></div> -->
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <!--      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
-      <script src="js/bootstrap.min.js"></script>
-      <script type="text/javascript" src="js/front-end.js"></script>
-      <script type="text/javascript" src="js/index.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="assets/js/front-end.js"></script>
+      <script type="text/javascript" src="assets/js/index.js"></script>
      
       <script>
           $( document ).ready(function() {

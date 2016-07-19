@@ -17,7 +17,7 @@ for($i=0 ;$i<count($keywords_sub); $i++){
 session_start();
 $_SESSION['list_of_books']=$list_of_books;
 
-header('Location: ../search.php');
+header('Location: ../../search/');
 // print_r($list_of_books);
 ?>
 

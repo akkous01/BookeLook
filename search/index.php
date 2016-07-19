@@ -1,8 +1,10 @@
 <?php
 session_start();
-$list_of_books=$_SESSION['list_of_books'];
-include "session/search_list_of_book.php";
-include_once "session/load_data_from_database.php";
+if(isset($_SESSION['list_of_books'])){
+  $list_of_books=$_SESSION['list_of_books'];
+}
+include "../assets/session/search_list_of_book.php";
+// include_once "../assets/session/load_data_from_database.php";
 
 ?>
 
@@ -13,12 +15,12 @@ include_once "session/load_data_from_database.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Book-e-Look</title>
 
       <!-- Bootstrap -->
-      <link href="css/bootstrap.min.css" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="css/main.css">
-      <link rel="stylesheet" type="text/css" href="css/search.css">
+      <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+      <link rel="stylesheet" type="text/css" href="../assets/css/search.css">
       <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
       <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   queries -->
@@ -26,7 +28,7 @@ include_once "session/load_data_from_database.php";
       <!--[if lt IE 9]>
       <![endif]-->
       <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-      <link rel="stylesheet" href="css/autocomplete-input.css">
+      <link rel="stylesheet" href="../assets/css/autocomplete-input.css">
       <script src="//code.jquery.com/jquery-1.10.2.js"></script>
       <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
@@ -38,20 +40,20 @@ include_once "session/load_data_from_database.php";
 
   <header>
     <ul class="my_nav">
-        <li><a href="index.php"><img src="images/navbar/1_HomePage.png"></a></li>
-        <li><a href="phylosophy.php"><img src="images/navbar/2_OurPhilosophy.png"></a></li>
-        <li><a href="blog.php"><img src="images/navbar/3_Blog.png"></a></li>
-        <li><a href="contact.php"><img src="images/navbar/4_Communicate.png"></a></li>
-        <li><a href="under_construction.php"><img src="images/navbar/5_LogIn.png"></a></li>
-        <li><a href="under_construction.php"><img src="images/navbar/6_CreateAccount.png"></a></li>
-        <li><a href="under_construction.php"><img src="images/navbar/7_Gallery.png"></a></li>
-        <li><a href="under_construction.php"><img src="images/navbar/8_ZoomIn.png"></a></li>
+        <li><a href="../index.php"><img src="../assets/images/navbar/1_HomePage.png"></a></li>
+        <li><a href="../philosophy/"><img src="../assets/images/navbar/2_OurPhilosophy.png"></a></li>
+        <li><a href="../blog/"><img src="../assets/images/navbar/3_Blog.png"></a></li>
+        <li><a href="../contact/"><img src="../assets/images/navbar/4_Communicate.png"></a></li>
+        <li><a href="../under_construction/"><img src="../assets/images/navbar/5_LogIn.png"></a></li>
+        <li><a href="../under_construction/"><img src="../assets/images/navbar/6_CreateAccount.png"></a></li>
+        <li><a href="../under_construction/"><img src="../assets/images/navbar/7_Gallery.png"></a></li>
+        <li><a href="../under_construction/"><img src="../assets/images/navbar/8_ZoomIn.png"></a></li>
     </ul>
   </header>
 
   <div id="main_search">
       <div id="search_box">
-          <form  id="search_form" method="post" action="search.php">
+          <form  id="search_form" method="post" action="#">
             <div id="up_box">
 
                 <div class="form-group ">
@@ -75,6 +77,7 @@ include_once "session/load_data_from_database.php";
                     <label for="writer">ΣΥΓΓΡΑΦΕΑΣ:</label>
                     <input type="text" class="form-control input-sm" id="writer" name="writer" value="<?php echo $writer;?>">
                 </div>
+               
                 <div class="form-group ">
                     <label for="searched_keywords">ΛΕΞΕΙΣ ΚΛΕΙΔΙΑ:</label>
                     <div style="width:100%;">
@@ -155,8 +158,9 @@ include_once "session/load_data_from_database.php";
       </div>
 
 
-
-
+</div>
+</div>
+<footer><strong>Maria Christodoulou © 2016</strong></footer>
 
 
 
@@ -164,9 +168,9 @@ include_once "session/load_data_from_database.php";
 
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
       <!--      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
-      <script src="js/bootstrap.min.js"></script>
-      <script type="text/javascript" src="js/front-end.js"></script>
-      <script type="text/javascript" src="js/index.js"></script>
+      <script src="../assets/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="../assets/js/front-end.js"></script>
+      <script type="text/javascript" src="../assets/js/index.js"></script>
 
       <script>
           $( document ).ready(function() {
@@ -179,7 +183,7 @@ include_once "session/load_data_from_database.php";
                   var gramatiki=$("#m_"+book_id+"_4").attr('name');
                   var analisi=$("#m_"+book_id+"_5").attr('name');
 
-                  $.get("session/search_book.php",
+                  $.get("../assets/session/search_book.php",
                       {book_id:book_id,
                           ithiki:ithiki,
                           sindesi:sindesi,
@@ -189,7 +193,7 @@ include_once "session/load_data_from_database.php";
                           submit:'true'},
                       function(data, textStatus, jqXHR)
                       {
-                          window.open("book_profile.php");
+                          window.open("../book_profile/");
                       });
               });
 

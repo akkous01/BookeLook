@@ -7,14 +7,14 @@ $name = $surname = $tel = $email = $occup = $city = $sinergasia = $paraggelia = 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	if (empty($_POST['name'])) {
         $error = "Το όνομα σας είναι υποχρεωτικό πεδίο";
-        header("Location: ../error.php?error=".$error);
+        header("Location: ../../message/error/index.php?error=".$error);
     } else {
         $name = $_POST['name'];
     }
 
     if (empty($_POST['surname'])) {
         $error = "Το επίθετο σας είναι υποχρεωτικό πεδίο";
-        header("Location: ../error.php?error=".$error);
+        header("Location: ../../message/error/index.php?error=".$error);
     } else {
         $surname = $_POST['surname'];
     }
@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (empty($_POST['email'])) {
         $error = "Το email σας είναι υποχρεωτικό πεδίο";
-        header("Location: ../error.php?error=".$error);
+        header("Location: ../../message/error/index.php?error=".$error);
     } else {
         $email = $_POST['email'];
     }
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (empty($_POST['occup'])) {
         $error = "H Ιδιότητα σας είναι υποχρεωτικό πεδίο";
-        header("Location: ../error.php?error=".$error);
+        header("Location: ../../message/error/index.php?error=".$error);
     } else {
         $occup = $_POST['occup'];
     }
@@ -73,9 +73,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 	  if( !mail($email_address,$subject,$message)){
 	  	$error = "Απέτυχε η αποστολή του μηνύματος. Προσπαθήστε ξανά.";
-        header("Location: ../error.php?error=".$error);
+        header("Location: ../../message/error/index.php?error=".$error);
 	  }else{
-	  	 header("Location: ../success.php");
+	  	 header("Location: ../../message/success/");
 	  }
 	  
 }
