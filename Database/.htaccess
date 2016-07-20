@@ -1,2 +1,0 @@
-AuthName "Autorisation Users Only!"
-AuthUserFile "/home4/mariact/.htpasswds/public_html/Database/passwd"

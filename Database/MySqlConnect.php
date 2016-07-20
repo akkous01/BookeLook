@@ -1,9 +1,9 @@
 <?php
 
 $servername = "localhost";
-$username = "mariact_root";
-$password = "^8pA,Wcd7Mm6";
-$dbname = "mariact_BookeLook";
+$username = "root";
+$password = "";
+$dbname = "zoominbooks";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
