@@ -53,7 +53,7 @@
     </div>
     <div id="show_image">
 	    <div id="title_area">
-	    	<div class="title_div" style="width:20%;margin-left:1%"><h4>Τίτλος</h4></div>
+	    	<div class="title_div" style="width:25%;margin-left:1%"><h4>Τίτλος</h4></div>
         	<div class="data_div" style="width:100%;margin-left:0%"><h4><?php echo $Title?></h4></div>
 	    </div>
       <div id="image_area">
@@ -85,7 +85,7 @@
         </tr>
         <tr>
           <td>
-              <div class="title_div" style="width:25%;margin-left:3%" >
+              <div class="title_div" style="width:30%;margin-left:3%" >
                 <h4>Εικονογράφος</h4>
               </div>
               <div class="data_div" style="width:45%;margin-left:3%">

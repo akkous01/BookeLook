@@ -166,7 +166,7 @@ queries -->
     </div>
   
   <div id="contact-info">
-    <div id="contact-link-div"><p> Για παραλαβή του <strong>Newsletter</strong> πατήστε <a href="contact/">εδώ</a></div>
+    <div id="contact-link-div"><p> Παραλαβή <a href="contact/"><strong>Newsletter</strong></a></div>
   </div>
   </div>
 
