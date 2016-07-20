@@ -53,8 +53,8 @@
     </div>
     <div id="show_image">
 	    <div id="title_area">
-	    	<div class="title_div" style="width:15%;margin-left:1%"><h4>Τίτλος</h4></div>
-        	<div class="data_div" style="width:95%;margin-left:1%"><h4><?php echo $Title?></h4></div>
+	    	<div class="title_div" style="width:20%;margin-left:1%"><h4>Τίτλος</h4></div>
+        	<div class="data_div" style="width:100%;margin-left:0%"><h4><?php echo $Title?></h4></div>
 	    </div>
       <div id="image_area">
         <?php echo '<img class="big_img" id="big_cover_img" alt= "'.$Title.'" src="../Database/Covers/'. $Cover.'"/>';?>
@@ -75,30 +75,30 @@
         <table class="main_characteristics_table">
         <tr>
           <td>
-            <div class="title_div" style="width:20%;margin-left:3%">
+            <div class="title_div" style="width:25%;margin-left:3%">
               <h4>Συγγραφέας</h4>
             </div>
-            <div class="data_div" style="width:40%;margin-left:3%">
+            <div class="data_div" style="width:45%;margin-left:3%">
               <h4><?php echo $Writer?></h4>
             </div>
           </td>
         </tr>
         <tr>
           <td>
-              <div class="title_div" style="width:20%;margin-left:3%" >
+              <div class="title_div" style="width:25%;margin-left:3%" >
                 <h4>Εικονογράφος</h4>
               </div>
-              <div class="data_div" style="width:40%;margin-left:3%">
+              <div class="data_div" style="width:45%;margin-left:3%">
                 <h4><?php echo $Illustrator?></h4>
               </div>
             </td>
         </tr>
         <tr>
           <td>
-              <div class="title_div" style="width:30%;margin-left:3%">
+              <div class="title_div" style="width:35%;margin-left:3%">
                 <h4>Εκδόσεις</h4>
               </div>
-              <div class="data_div" style="width:60%;margin-left:3%">
+              <div class="data_div" style="width:65%;margin-left:3%">
                 <h4><?php echo $Publisher?></h4>
               </div>
           </td>
@@ -106,7 +106,7 @@
 
         <tr>
           <td>
-            <div class="title_div" style="width:15%;margin-left:3%" >
+            <div class="title_div" style="width:20%;margin-left:3%" >
               <h4>ISBN</h4>
             </div>
             <div class="data_div" style="width:50%;margin-left:3%">
@@ -117,39 +117,39 @@
 
         <tr>
           <td style="width:25%;" >
-            <div class="title_div" style="width:25%;margin-left:3%" >
+            <div class="title_div" style="width:30%;margin-left:3%" >
               <h4>Σελίδες</h4>
             </div>
-            <div class="data_div" style="width:10%;margin-left:3%"><h4>
+            <div class="data_div" style="width:15%;margin-left:3%"><h4>
               <?php echo $Pages?></h4>
             </div>
             </td>
         </tr>
           <td style="width:25%;">
-            <div class="title_div" style="width:10%;margin-left:3%" >
+            <div class="title_div" style="width:15%;margin-left:3%" >
               <h4>Τιμή</h4>
             </div>
-            <div class="data_div" style="width:12%;margin-left:3%">
+            <div class="data_div" style="width:17%;margin-left:3%">
               <h4><?php echo $Price -3 ;?> - <?php echo $Price +3 ;?>€</h4>
             </div>
           </td>
         <tr>
         
           <td>
-            <div class="title_div" style="width:45%;margin-left:3%" >
+            <div class="title_div" style="width:50%;margin-left:3%" >
               <h4>Αναλογία Εικόνων- Κειμένου</h4>
             </div>
-            <div class="data_div" style="width:15%;margin-left:3%">
+            <div class="data_div" style="width:20%;margin-left:3%">
               <h4><?php echo $Persentage_of_images?>:<?php echo 100-$Persentage_of_images?></h4>
             </div>
           </td>
         </tr>  
         <tr>
           <td style="width:30%;" >
-              <div class="title_div" style="width:15%;margin-left:3%" >
+              <div class="title_div" style="width:20%;margin-left:3%" >
                 <h4> Ηλικία</h4>
               </div>
-              <div class="data_div" style="width:20%;margin-left:3%">
+              <div class="data_div" style="width:25%;margin-left:3%">
                 <h4><?php echo $age?></h4>
               </div>
             </td>
@@ -157,20 +157,20 @@
 
         <tr>
           <td >
-              <div class="data_div" style="width:50%;margin-left:3%;<?php echo $parents_show?>"  >
+              <div class="data_div" style="width:55%;margin-left:3%;<?php echo $parents_show?>"  >
                 <h4> <?php echo $parents?></h4>
               </div>
             </td>
         </tr>
         <tr>
           <td style="width:100%">
-              <div class="title_div" style="width:12%;margin-left:3%" ><h4>Μορφή</h4></div>
-              <div class="data_div" style="width:50%;margin-left:3%"><h4><?php echo $morfi?></h4></div>
+              <div class="title_div" style="width:17%;margin-left:3%" ><h4>Μορφή</h4></div>
+              <div class="data_div" style="width:55%;margin-left:3%"><h4><?php echo $morfi?></h4></div>
             </td>
         </tr>
         <tr <?php echo $link_show?>>
             <td style="width:100%">
-              <div class="title_div" style="width:12%;margin-left:3%" ><h4>Link</h4></div>
+              <div class="title_div" style="width:17%;margin-left:3%" ><h4>Link</h4></div>
               <div class="data_div" style="width:70%;margin-left:3%"><h4><?php echo $Link?></h4></div>
             </td>
           </tr>
@@ -309,7 +309,7 @@
     <div id="modal-caption-2"></div>
   </div>
 
-  <footer>Maria Christodoulou © 2016</footer>
+  <footer><strong>Maria Christodoulou © 2016</strong></footer>
 
    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
