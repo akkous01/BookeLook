@@ -67,7 +67,6 @@
         <img class="mark_img" src="../assets/images/mark-1-2.png" <?php echo $mark4?>/>
         <img class="mark_img" src="../assets/images/mark-1-3.png" <?php echo $mark5?>/>
 
-
       </div>
     </div>
     <div id="main_characteristics">
@@ -269,12 +268,13 @@
     <div id="ithiki_tab" class="categories_tab" <?php echo $tab1?>>
       <a href="#ithiki_box"><img src="../assets/images/ithiki-tab.png" class="tab_img"></a>
     </div>
-    <div id="analisi_tab" class="categories_tab" <?php echo $tab2?>>
+     <div id="analisi_tab" class="categories_tab" <?php echo $tab2?>>
       <a href="#analisi_box"><img src="../assets/images/analisi-tab.png" class="tab_img"></a>
     </div>
      <div id="gramatiki_tab" class="categories_tab" <?php echo $tab3?>>
       <a href="#gramatiki_box"><img src="../assets/images/grammatiki-tab.png" class="tab_img"></a>      
     </div>
+   
     <div id="sindesi_tab" class="categories_tab" <?php echo $tab4?>>
       <a href="#sindesi_box"><img src="../assets/images/sindesi-tab.png" class="tab_img"></a>
     </div>

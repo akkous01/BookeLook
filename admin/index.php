@@ -1,7 +1,6 @@
 <?php 
 	$error="";
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		// echo $_POST["username"];
 		if (empty($_POST["username"])) {
 			$error="Wrong username";
 		  } else {
@@ -36,7 +35,7 @@
 -->
 <html>
 	<head>
-		<title>BookeLook</title>
+		<title>Book-e-Look Admin</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->

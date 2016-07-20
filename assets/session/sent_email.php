@@ -41,15 +41,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $city = $_POST["city"];
 
 
-    if(! empty($_POST["sinergasia"])){
+    if(isset($_POST["sinergasia"])){
 	    $sinergasia = "Πιθανή συνεργασία";
 	  }
 	  
-	  if(! empty($_POST["paraggelia"])){
+	  if(isset($_POST["paraggelia"])){
 	    $paraggelia = "Παραγγελία έντυπου οδηγού";
 	  }
 	  
-	  if(! empty($_POST["newsletter"])){
+	  if(isset($_POST["newsletter"])){
 	    $newsletter = "Εγγραφή στο newsletter";
 	  }
 
@@ -63,13 +63,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	  $message .= "Τηλέφωνο: ".$tel."\n";
 	  $message .= "E-mail:".$email."\n";
 	  $message .= "Ιδιότητα: ".$occup."\n";
-	  $message .= "Πόλη: ".$city."\n";
+	  $message .= "Πόλη: ".$city."\n\n";
 	  $message .= "Ενδιαφέρομαι για:\n";
-	  $message .= $sinergasia." ".$paraggelia." ".$newsletter."\n\n";
+	  $message .= "\t".$sinergasia;
+	  $message .= "\n\t".$paraggelia;
+	  $message .= "\n\t".$newsletter;
+	  $message .= "\n\n";
 
 	  $message .= "Μήνυμα:\n".$msg;
 
-	  $message = wordwrap($message,70);
+	  $message = wordwrap($message,100);
 
 	  if( !mail($email_address,$subject,$message)){
 	  	$error = "Απέτυχε η αποστολή του μηνύματος. Προσπαθήστε ξανά.";

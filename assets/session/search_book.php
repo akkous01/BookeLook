@@ -25,12 +25,11 @@ $tab1 = $tab2 = $tab3 = $tab4 = $tab5 = "";
  	$mark1 = "style='display:none'";
  	$tab1 = "style='display:none'";
  }
- if($_SESSION["analisi"] == 0){
+  if($_SESSION["analisi"] == 0){
  	$mark2 = "style='display:none'";
  	$tab2 = "style='display:none'";
  }
- 
- if($_SESSION["gramatiki"] == 0){
+  if($_SESSION["gramatiki"] == 0){
  	$mark3 = "style='display:none'";
  	$tab3 = "style='display:none'";
  }
@@ -42,7 +41,8 @@ $tab1 = $tab2 = $tab3 = $tab4 = $tab5 = "";
  	$mark5 = "style='display:none'";
  	$tab5 = "style='display:none'";
  }
- 
+
+
 
 include "../Database/MySqlConnect.php";
 
@@ -121,7 +121,7 @@ $meanings_queries = $conn->prepare("SELECT * FROM books_keywords_meaning a WHERE
 $meanings_queries->execute();
 $meaning = $meanings_queries->fetchAll(PDO::FETCH_ASSOC);
 
-$ithiki_query = $conn->prepare("SELECT b.Keyword_id, b.Name_of_keyword, c.Name_of_subcategory, c.Subcategory_id, d.Name_of_category FROM books_keywords a, keywords b, subcategories c, categories d WHERE a.Book_id='{$book_id}' AND a.Keyword_id = b.Keyword_id AND b.Subcategory_id = c.Subcategory_id AND C.Category_id = d.Category_id AND d.Category_id=1 ORDER BY c.Subcategory_id ");
+$ithiki_query = $conn->prepare("SELECT b.Keyword_id, b.Name_of_keyword, c.Name_of_subcategory, c.Subcategory_id, d.Name_of_category FROM books_keywords a, keywords b, subcategories c, categories d WHERE a.Book_id='{$book_id}' AND a.Keyword_id = b.Keyword_id AND b.Subcategory_id = c.Subcategory_id AND c.Category_id = d.Category_id AND d.Category_id=1 ORDER BY c.Subcategory_id ");
 
 $ithiki_query->execute();
 
@@ -149,7 +149,7 @@ for($i=0 ; $i < count($ithiki_data) ; $i++){
 $ithiki .= "</div>";
 
 
-$sindesi_query = $conn->prepare("SELECT b.Keyword_id, b.Name_of_keyword, c.Name_of_subcategory, c.Subcategory_id, d.Name_of_category FROM books_keywords a, keywords b, subcategories c, categories d WHERE a.Book_id='{$book_id}' AND a.Keyword_id = b.Keyword_id AND b.Subcategory_id = c.Subcategory_id AND C.Category_id = d.Category_id AND d.Category_id=4 ORDER BY c.Subcategory_id ");
+$sindesi_query = $conn->prepare("SELECT b.Keyword_id, b.Name_of_keyword, c.Name_of_subcategory, c.Subcategory_id, d.Name_of_category FROM books_keywords a, keywords b, subcategories c, categories d WHERE a.Book_id='{$book_id}' AND a.Keyword_id = b.Keyword_id AND b.Subcategory_id = c.Subcategory_id AND c.Category_id = d.Category_id AND d.Category_id=4 ORDER BY c.Subcategory_id ");
 
 $sindesi_query->execute();
 
@@ -178,7 +178,7 @@ $sindesi .= "</div>";
 
 
 
-$epipleon_query = $conn->prepare("SELECT b.Keyword_id, b.Name_of_keyword, c.Name_of_subcategory, c.Subcategory_id, d.Name_of_category FROM books_keywords a, keywords b, subcategories c, categories d WHERE a.Book_id='{$book_id}' AND a.Keyword_id = b.Keyword_id AND b.Subcategory_id = c.Subcategory_id AND C.Category_id = d.Category_id AND d.Category_id=5 ORDER BY c.Subcategory_id ");
+$epipleon_query = $conn->prepare("SELECT b.Keyword_id, b.Name_of_keyword, c.Name_of_subcategory, c.Subcategory_id, d.Name_of_category FROM books_keywords a, keywords b, subcategories c, categories d WHERE a.Book_id='{$book_id}' AND a.Keyword_id = b.Keyword_id AND b.Subcategory_id = c.Subcategory_id AND c.Category_id = d.Category_id AND d.Category_id=5 ORDER BY c.Subcategory_id ");
 
 $epipleon_query->execute();
 
@@ -206,7 +206,7 @@ for($i=0 ; $i < count($epipleon_data) ; $i++){
 $epipleon .= "</div>";
 
 
-$gramatiki_query = $conn->prepare("SELECT b.Keyword_id, b.Name_of_keyword, c.Name_of_subcategory, c.Subcategory_id, d.Name_of_category FROM books_keywords a, keywords b, subcategories c, categories d WHERE a.Book_id='{$book_id}' AND a.Keyword_id = b.Keyword_id AND b.Subcategory_id = c.Subcategory_id AND C.Category_id = d.Category_id AND d.Category_id=3 ORDER BY c.Subcategory_id ");
+$gramatiki_query = $conn->prepare("SELECT b.Keyword_id, b.Name_of_keyword, c.Name_of_subcategory, c.Subcategory_id, d.Name_of_category FROM books_keywords a, keywords b, subcategories c, categories d WHERE a.Book_id='{$book_id}' AND a.Keyword_id = b.Keyword_id AND b.Subcategory_id = c.Subcategory_id AND c.Category_id = d.Category_id AND d.Category_id=3 ORDER BY c.Subcategory_id ");
 
 $gramatiki_query->execute();
 
@@ -233,7 +233,7 @@ for($i=0 ; $i < count($gramatiki_data) ; $i++){
 
 $gramatiki .= "</div>";
 
-$analisi_query = $conn->prepare("SELECT b.Keyword_id, b.Name_of_keyword, c.Name_of_subcategory, c.Subcategory_id, d.Name_of_category FROM books_keywords a, keywords b, subcategories c, categories d WHERE a.Book_id='{$book_id}' AND a.Keyword_id = b.Keyword_id AND b.Subcategory_id = c.Subcategory_id AND C.Category_id = d.Category_id AND d.Category_id=2 ORDER BY c.Subcategory_id ");
+$analisi_query = $conn->prepare("SELECT b.Keyword_id, b.Name_of_keyword, c.Name_of_subcategory, c.Subcategory_id, d.Name_of_category FROM books_keywords a, keywords b, subcategories c, categories d WHERE a.Book_id='{$book_id}' AND a.Keyword_id = b.Keyword_id AND b.Subcategory_id = c.Subcategory_id AND c.Category_id = d.Category_id AND d.Category_id=2 ORDER BY c.Subcategory_id ");
 
 $analisi_query->execute();
 

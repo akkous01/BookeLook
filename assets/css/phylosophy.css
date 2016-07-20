@@ -1,5 +1,5 @@
 #main_phylosophy{
-	height: 77%;
+	height: 75%;
   	width:80%;
   	margin-top: 0%;
   	margin-left: 10%;
@@ -44,7 +44,7 @@
 }
 
 #main_blog{
-	height: 77%;
+	height: 75%;
   	width:80%;
   	margin-top: 0%;
   	margin-left: 10%;
@@ -65,7 +65,7 @@
 }
 
 #main_contact{
-	height: 77%;
+	height: 75%;
   	width:80%;
   	margin-top: 0%;
   	margin-left: 10%;
@@ -75,7 +75,7 @@
 }
 
 #main_comingsoon{
-	height: 77%;
+	height: 75%;
   	width:80%;
   	margin-top: 0%;
   	margin-left: 10%;
@@ -98,7 +98,7 @@
 #kapelo{
 	color:#26B8DB;
 	text-decoration: underline;
-	cursor: pointer;
+	cursor:pointer;
 }
 
 #kapelo:hover, #ergalio:hover, .blog_title:hover{
@@ -108,7 +108,7 @@
 #ergalio{
 	color:#26B8DB;
 	text-decoration: underline;
-	cursor: pointer;
+	cursor:pointer;
 }
 
 .blog_title{

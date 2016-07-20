@@ -15,8 +15,8 @@
 
 		$categories_check_box .= "\r\n<div class='12u$' ><h4 style='float:left;width:50%'>$category_name</h4>
 			<span class='collapse_sub_categories'  id='cat$category_id' style='float:left'>
-						<img  id='show_cat$category_id' src='../images/show.png'>
-						<img  id='hide_cat$category_id' src='../images/hide.png' style='display:none'>
+						<img  id='show_cat$category_id' src='../assets/images/show.png'>
+						<img  id='hide_cat$category_id' src='../assets/images/hide.png' style='display:none'>
 			</span>
 		</div>";
 		$categories_check_box .= "\r\n<div style='display:none;width:100%;' id='collapse_cat$category_id'>";
@@ -33,8 +33,8 @@
 			$categories_check_box .= "\r\n<div class='12u$'>
 				<h5 style='color:grey;width:50%;float:left'>$subcategory_name</h5>
 				<span class='collapse_sub_categories' style='float:left' id='sub$subcategory_id'>
-						<img  id='show_sub$subcategory_id' src='../images/show.png'>
-						<img style='display:none'id='hide_sub$subcategory_id' src='../images/hide.png' >
+						<img  id='show_sub$subcategory_id' src='../assets/images/show.png'>
+						<img style='display:none'id='hide_sub$subcategory_id' src='../assets/images/hide.png' >
 				</span>
 			";
 

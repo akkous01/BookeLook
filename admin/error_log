@@ -1,0 +1,1 @@
+[19-Jul-2016 12:43:59 America/Chicago] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home4/mariact/public_html/admin/index.php:4) in /home4/mariact/public_html/admin/index.php on line 19

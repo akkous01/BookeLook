@@ -84,8 +84,8 @@ queries -->
           <div class="checkbox">
             <label><input id="paraggelia" name="paraggelia" type="checkbox" value="">Παραγγελία έντυπου οδηγού</label>
           </div>
-          <div class="checkbox disabled">
-            <label><input type="checkbox" id="newsletter" name="newslatter" value="">Εγγραφή στο newsletter</label>
+          <div class="checkbox">
+            <label><input type="checkbox" id="newsletter" name="newsletter" value="">Εγγραφή στο newsletter</label>
           </div>
         </div>
         <div style="margin-top:4%;width:70%; margin-left:15%; text-align:left">
@@ -106,7 +106,7 @@ queries -->
   </div>
 </div>
 
-<footer>Maria Christodoulou © 2016</footer>
+<footer><strong>Maria Christodoulou © 2016<strong></footer>
 
   <script src="../assets/js/bootstrap.min.js"></script>
 

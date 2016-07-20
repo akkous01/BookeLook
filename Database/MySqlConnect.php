@@ -1,9 +1,9 @@
 <?php
 
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "zoominbooks";
+$username = "mariact_root";
+$password = "^8pA,Wcd7Mm6";
+$dbname = "mariact_BookeLook";
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -13,10 +13,3 @@ try {
 }catch(PDOException $e){
     echo "Connection failed: " . $e->getMessage();
 }
-//Databese user phpmyadmin
-// mariact_root
-// ^8pA,Wcd7Mm6
-
-// Database directory - assets -
-// mariact_root
-// {B[U{~7fW}=q

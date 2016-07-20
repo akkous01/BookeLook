@@ -1,0 +1,6 @@
+[20-Jul-2016 03:21:21 America/Chicago] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'C.Category_id' in 'where clause'' in /home4/mariact/public_html/assets/session/search_book.php:124
+Stack trace:
+#0 /home4/mariact/public_html/assets/session/search_book.php(124): PDOStatement->execute()
+#1 /home4/mariact/public_html/book_profile/index.php(2): include('/home4/mariact/...')
+#2 {main}
+  thrown in /home4/mariact/public_html/assets/session/search_book.php on line 124
