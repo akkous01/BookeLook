@@ -67,7 +67,7 @@ footer{
   width:80%;
   margin-left: 10%;
   background: url(../images/index-back-01-01.png) no-repeat center top;
-  background-size: 96% 100% ;
+  background-size: 100% 100% ;
   /*float: left;*/
   border: 1px solid rgba(1, 1, 255, 0);
 
@@ -327,7 +327,7 @@ footer{
   height: 65%;
   width:100%;
   margin-top: 2%;
-  /*border:4px solid yellow ; */
+  /*border:4px solid yellow ;*/
   
 
 }
@@ -344,7 +344,7 @@ footer{
   height: 18%;
   width:80%;
   margin-top: 2%;
-  /*border:1px solid green ; */
+  /*border:1px solid green ;*/
   text-align: right;
   margin-left: 20%;
 
@@ -387,14 +387,14 @@ footer{
 
 }
 .bookmarks_left{
-  /*display: inline-block;*/
+  display: inline-block;
   float: left;
   height: 100%;
-  width:25%;
+  width:23%;
   margin-top: 0px;
   margin-left: 0px;
   margin-right: 0px;
-      /*border:1px solid orange ; */
+      /*border:1px solid orange ;*/
 
 }
 
@@ -402,7 +402,7 @@ footer{
   /*display: inline-block;*/
   float: left;
   height: 100%;
-  width:48%;
+  width:52%;
   margin-top: 0px;
   margin-left: 0px;
   margin-right: 0px;
@@ -416,11 +416,11 @@ footer{
   /*display: inline-block;*/
   float: left;
   height: 100%;
-  width:25%;
+  width:23%;
   margin-top: 0px;
   margin-left: 0px;
   margin-right:0px;
-  /*border:1px solid orange ; */
+  /*border:1px solid orange ;*/
 
 }
 
@@ -440,16 +440,17 @@ footer{
   width:70%;
   margin-left: 15%;
   border: 0;
-  border-top: 2px solid #8a6d3b;
+  border-top: 1px solid #8a6d3b;
 }
 
 
 #subcategories_area{
   height: 81%;
-  width: 88%;
-  margin-left: 7%;
+  width: 90%;
+  margin-left: 6%;
   margin-top: 6%;
   /*border: 3px solid red;*/
+    font-size: 10px;
   /*overflow-y: scroll;*/
 
 }
