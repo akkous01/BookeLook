@@ -2,6 +2,8 @@
 session_start();
 if(isset($_SESSION['list_of_books'])){
   $list_of_books=$_SESSION['list_of_books'];
+}else{
+    $list_of_books=array();
 }
 include "../assets/session/search_list_of_book.php";
 // include_once "../assets/session/load_data_from_database.php";
@@ -54,7 +56,7 @@ include "../assets/session/search_list_of_book.php";
   <div id="main_search">
       <div id="search_box">
           <form  id="search_form" method="post" action="#">
-            <div id="up_box">
+            <div class="box">
 
                 <div class="form-group ">
                     <label for="title">ΤΙΤΛΟΣ ΒΙΒΛΙΟΥ:</label>
@@ -77,25 +79,17 @@ include "../assets/session/search_list_of_book.php";
                     <label for="writer">ΣΥΓΓΡΑΦΕΑΣ:</label>
                     <input type="text" class="form-control input-sm" id="writer" name="writer" value="<?php echo $writer;?>">
                 </div>
-               
+
                 <div class="form-group ">
                     <label for="searched_keywords">ΛΕΞΕΙΣ ΚΛΕΙΔΙΑ:</label>
                     <div style="width:100%;">
                         <input style="width: 75%;float: left;"  readonly="readonly" type="text" class="form-control input-sm" id="searched_keywords" name="searched_keywords" value="<?php echo $list_for_input;?>">
-                        <button  style="width: 25%" id="button_change" class="btn btn-sm" type="button" >Αλλαγή</button>
+                        <button   id="button_change" class="btn btn-sm" type="button" >Αλλαγή</button>
                     </div>
                 </div>
-<!--                <div class="form-group search2_div" id="all_keywards">-->
-<!--                    <label >ΛΕΞΕΙΣ ΚΛΕΙΔΙΑ:</label>-->
-<!--                    <input type="hidden" name="count" value="1" />-->
-<!--                    <div id="field">-->
-<!--                        <input   class=" form-control input-sm keywords" id="field1"  name="keyword1" type="text" />-->
-<!--                        <button  id="b1" class="btn btn-sm add-more keywords_button" type="button">+</button>-->
-<!--                    </div>-->
-<!--                </div>-->
 
             </div>
-            <div id="down_box">
+            <div class="box" style="margin-top: 0px;">
                 <div class="form-group ">
                     <label for="percentage_of_images">ΑΝΑΛΟΓΙΑ ΕΙΚΟΝΑΣ/ΓΡΑΠΤΟΥ:</label>
                     <input type="number" class="form-control input-sm" id="percentage_of_images" name="percentage_of_images" value="<?php echo $percentage_of_images;?>">
@@ -178,11 +172,10 @@ include "../assets/session/search_list_of_book.php";
               $(".search_book").click(function(){
                   var book_id=$(this).attr('id').split("_")[1];
                   var ithiki=$("#m_"+book_id+"_1").attr('name');
-                  var sindesi=$("#m_"+book_id+"_2").attr('name');
-                  var epipleon=$("#m_"+book_id+"_3").attr('name');
-                  var gramatiki=$("#m_"+book_id+"_4").attr('name');
-                  var analisi=$("#m_"+book_id+"_5").attr('name');
-
+                  var analisi=$("#m_"+book_id+"_2").attr('name');
+                  var gramatiki=$("#m_"+book_id+"_3").attr('name');
+                  var sindesi=$("#m_"+book_id+"_4").attr('name');
+                  var epipleon=$("#m_"+book_id+"_5").attr('name');
                   $.get("../assets/session/search_book.php",
                       {book_id:book_id,
                           ithiki:ithiki,

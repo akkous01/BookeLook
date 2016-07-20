@@ -14,50 +14,51 @@ $price[1]=0;
 $list_for_input = ",...";
 $list_of_keywords =  "keywords.Name_of_keyword='none";
 $not_found_search="none";
+$not_fount = true;
 
+if(empty($list_of_books)) {
 
-
-
-
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 // set variables ////////////////////////////////////////////////////////////////////
-    $title = $_POST['title'];
-    $writer = $_POST['writer'];
-    $age = $_POST['age'];
-    $percentage_of_images = $_POST['percentage_of_images'];
-    $theme_id = $_POST['theme'];
-    $not_fount=true;
+        $title = $_POST['title'];
+        $writer = $_POST['writer'];
+        $age = $_POST['age'];
+        $percentage_of_images = $_POST['percentage_of_images'];
+        $theme_id = $_POST['theme'];
 
-    $price=array(2);
-    $price = explode("  ", preg_replace("/[^A-Za-z0-9 ]/", '',$_POST['amount']));
-    $list_of_books=array();
 
-    $keywords = array();
-    $list_of_keywords = "";
-    $list_for_input = "";
-    foreach ($_POST as $key => $value):
-        $keyword = substr($key, 0, -1);
-        if ((strcmp($keyword, 'k') == 0 and strcmp($value, '') != 0)or (strcmp($key, 'keywords_Autofill') == 0 and strcmp($value, '') != 0)) {
-            array_push($keywords, $value);
-            $list_of_keywords = $list_of_keywords . " keywords.Name_of_keyword LIKE '%" . $value . "%' or ";
-            $list_for_input = $list_for_input . $value . ",";
-        }
-    endforeach;
+        $price = array(2);
+        $price = explode("  ", preg_replace("/[^A-Za-z0-9 ]/", '', $_POST['amount']));
+        $list_of_books = array();
 
-    if (isset($_POST['searched_keywords'])) {
-        $searched_keywords = explode(",", $_POST['searched_keywords']);
-        for ($i = 0; $i < count($searched_keywords) - 1; $i++) {
-            if(strcmp($searched_keywords[$i], "") != 0) {
-                $list_for_input = $list_for_input . $searched_keywords[$i] . ",";
-                $list_of_keywords = $list_of_keywords . " keywords.Name_of_keyword LIKE'%" . $searched_keywords[$i] . "%' or ";
+        $keywords = array();
+        $list_of_keywords = "";
+        $list_for_input = "";
+        foreach ($_POST as $key => $value):
+            $keyword = substr($key, 0, -1);
+            if ((strcmp($keyword, 'k') == 0 and strcmp($value, '') != 0) or (strcmp($key, 'keywords_Autofill') == 0 and strcmp($value, '') != 0)) {
+                array_push($keywords, $value);
+                $list_of_keywords = $list_of_keywords . " keywords.Name_of_keyword LIKE '%" . $value . "%' or ";
+                $list_for_input = $list_for_input . $value . ",";
+            }
+        endforeach;
+
+        if (isset($_POST['searched_keywords'])) {
+            $searched_keywords = explode(",", $_POST['searched_keywords']);
+            for ($i = 0; $i < count($searched_keywords) - 1; $i++) {
+                if (strcmp($searched_keywords[$i], "") != 0) {
+                    $list_for_input = $list_for_input . $searched_keywords[$i] . ",";
+                    $list_of_keywords = $list_of_keywords . " keywords.Name_of_keyword LIKE'%" . $searched_keywords[$i] . "%' or ";
+                }
             }
         }
-    }
-    $list_for_input = $list_for_input . "...";
-    $list_of_keywords = substr($list_of_keywords, 0, -5);
+        $list_for_input = $list_for_input . "...";
+        $list_of_keywords = substr($list_of_keywords, 0, -5);
 
+    } else {
+        header('Location: ../');
+    }
 }
     $theme = array(6);
     for ($j = 0; $j < 6; $j++) {
@@ -129,8 +130,8 @@ WHERE  ".$list_of_keywords."' ") ;
         $list_of_books_Id=array_merge ($books_step_5 );
     }
 
-    for($i=0;$i<count($list_of_books_Id);$i++){
-        array_push($list_of_books,$list_of_books_Id[$i]['Book_id']);
+    for($i=0;$i<count($list_of_books_Id);$i++) {
+        array_push($list_of_books, $list_of_books_Id[$i]['Book_id']);
     }
     $list_of_books=array_unique($list_of_books);
     $books="";
