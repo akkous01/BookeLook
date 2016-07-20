@@ -1,7 +1,7 @@
 <?php 
 	$error="";
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		echo $_POST["username"];
+		// echo $_POST["username"];
 		if (empty($_POST["username"])) {
 			$error="Wrong username";
 		  } else {
