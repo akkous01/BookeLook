@@ -16,10 +16,10 @@ $list_of_keywords =  "keywords.Name_of_keyword='none";
 $not_found_search="none";
 $not_fount = true;
 
-if(empty($list_of_books)) {
+
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
+        unset($_SESSION['list_of_books']);
 // set variables ////////////////////////////////////////////////////////////////////
         $title = $_POST['title'];
         $writer = $_POST['writer'];
@@ -27,7 +27,7 @@ if(empty($list_of_books)) {
         $percentage_of_images = $_POST['percentage_of_images'];
         $theme_id = $_POST['theme'];
 
-
+        echo $percentage_of_images;
         $price = array(2);
         $price = explode("  ", preg_replace("/[^A-Za-z0-9 ]/", '', $_POST['amount']));
         $list_of_books = array();
@@ -57,9 +57,11 @@ if(empty($list_of_books)) {
         $list_of_keywords = substr($list_of_keywords, 0, -5);
 
     } else {
-        header('Location: ../');
+        if(empty($list_of_books)){
+            header('Location: ../');
+        }
     }
-}
+
     $theme = array(6);
     for ($j = 0; $j < 6; $j++) {
         $theme[$j] = "";
@@ -67,20 +69,35 @@ if(empty($list_of_books)) {
     $theme[$theme_id - 1] = "selected";
 
 /// check if empty ////////////////////////////////////////////////////////////////////
-
+    $emptyInputs=true;
     if(strcmp($title," ")==0 or strcmp($title,"")==0){
         $title='none';
-    }
+    }else{$emptyInputs=false;}
+
     if(strcmp($writer," ")==0 or strcmp($writer,"")==0){
         $writer='none';
-    }
+    }else{$emptyInputs=false;}
 
+    if($price[0]==5 and $price[1]==45){
+        $price[0]=0;
+        $price[1]=0;
+
+    }else{$emptyInputs=false;}
 
     if(strcmp($list_of_keywords,"")==0){
         $not_fount=false;
         $list_of_keywords="keywords.Name_of_keyword LIKE '%none%";
 
-    }
+    }else{$emptyInputs=false;}
+
+    if(strcmp($percentage_of_images," ")==0 or strcmp($percentage_of_images,"")==0){
+        $percentage_of_images='none';
+    }else{$emptyInputs=false;}
+
+    if(strcmp($age," ")==0 or strcmp($age,"")==0){
+        $age='none';
+    }else{$emptyInputs=false;}
+
 
 //queries //////////////////////////////////////////////
 
@@ -101,7 +118,7 @@ OR books.Min_age_read='".$age."'OR books.Persentage_of_images='".$percentage_of_
 WHERE  ".$list_of_keywords."' ") ;
     $book_query->execute();
     $books_step_3 = $book_query->fetchAll(PDO::FETCH_ASSOC);
-    // print_r($books_step_3 ) ;
+//     print_r($books_step_3 ) ;
 
     if ($theme_id!=6 ){
         $book_query = $conn->prepare("SELECT  DISTINCT   books.Book_id
@@ -117,7 +134,7 @@ WHERE  ".$list_of_keywords."' ") ;
     }else{
         $books_step_4 = array();
     }
-    // print_r($books_step_4 ) ;
+//     print_r($books_step_4 ) ;
 
     $book_query = $conn->prepare("SELECT  DISTINCT   books.Book_id FROM books ");
     $book_query->execute();
@@ -125,8 +142,10 @@ WHERE  ".$list_of_keywords."' ") ;
 
 // create variable /////////////////////////////////////////////////////////////////
     $list_of_books_Id=array_merge ($books_step_1 ,$books_step_2, $books_step_3,$books_step_4 );
-    if(empty($list_of_books_Id) && empty($list_of_books)){
-        $not_found_search="block";
+    if(empty($list_of_books_Id) and empty($list_of_books)  ){
+        if(!$emptyInputs) {
+            $not_found_search = "block";
+        }
         $list_of_books_Id=array_merge ($books_step_5 );
     }
 
@@ -139,7 +158,7 @@ WHERE  ".$list_of_keywords."' ") ;
     $index=0;
 //print_r($list_of_books);
 
-   foreach ($list_of_books as $index_of_table=>$book_id):
+   foreach ($list_of_books as $index_of_table=>$book_id):;
        for($j=0;$j<5;$j++) {
            $mark[$j]="none' name='0'";
        }
@@ -149,7 +168,7 @@ WHERE  ".$list_of_keywords."' ") ;
                             INNER JOIN keywords ON keywords.Keyword_id = books_keywords.Keyword_id
                             INNER JOIN subcategories ON subcategories.Subcategory_id = keywords.Subcategory_id
                             INNER JOIN categories ON categories.Category_id = subcategories.Category_id
-                            WHERE     books.Book_id='".$book_id."'");
+                            WHERE     books.Book_id='".$book_id."' and books.Show_to_User=1");
 
        $book_query->execute();
        $books_results = $book_query->fetchAll(PDO::FETCH_ASSOC);
@@ -228,9 +247,10 @@ for($i=0; $i<count($book) ; $i++){
 $titles=$titles."]";
 $writers=$writers."]";
 
-$list_of_keywords_query=$conn->prepare("SELECT keywords.Name_of_keyword FROM keywords");
+$list_of_keywords_query=$conn->prepare("SELECT keywords.Name_of_keyword FROM keywords INNER JOIN books_keywords on books_keywords.Keyword_id=keywords.Keyword_id");
 $list_of_keywords_query->execute();
-$list_of_keywords = $list_of_keywords_query->fetchAll(PDO::FETCH_ASSOC);;
+$list_of_keywords = $list_of_keywords_query->fetchAll(PDO::FETCH_ASSOC);
+
 $keywords="[";
 for($i=0; $i<count($list_of_keywords) ; $i++){
     $keywords=$keywords."'".$list_of_keywords[$i]['Name_of_keyword']."',";

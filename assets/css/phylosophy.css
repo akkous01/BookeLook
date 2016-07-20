@@ -98,6 +98,7 @@
 #kapelo{
 	color:#26B8DB;
 	text-decoration: underline;
+	cursor: pointer;
 }
 
 #kapelo:hover, #ergalio:hover, .blog_title:hover{
@@ -107,6 +108,7 @@
 #ergalio{
 	color:#26B8DB;
 	text-decoration: underline;
+	cursor: pointer;
 }
 
 .blog_title{

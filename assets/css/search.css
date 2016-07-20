@@ -100,6 +100,7 @@ label{
     height: 10%;
     margin-left:5%;
     margin-bottom:2%;
+    border-bottom: dashed #86e886;
 }
 #table_of_books{
     /*border:2px solid yellow;*/
