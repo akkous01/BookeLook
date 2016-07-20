@@ -92,7 +92,7 @@ footer{
 #contact-info{
   float:left;
   height: 100%;
-  width: 10%;
+  width: 13%;
 }
 
 #contact-link-div{
@@ -104,8 +104,8 @@ footer{
 }
 
 #contact-link-div p {
-  padding-top: 3%;
-  font-size: 12px;
+  padding-top: 5%;
+  font-size: 11px;
 }
 
 #main-bottom{
