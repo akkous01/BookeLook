@@ -13,5 +13,10 @@ try {
 }catch(PDOException $e){
     echo "Connection failed: " . $e->getMessage();
 }
-
+//Databese user phpmyadmin
+// mariact_root
 // ^8pA,Wcd7Mm6
+
+// Database directory - assets -
+// mariact_root
+// {B[U{~7fW}=q
