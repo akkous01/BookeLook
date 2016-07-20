@@ -24,7 +24,7 @@ queries -->
 
 
   </head>
-  <body>
+  <body ondragstart="return false" onselectstart="return false">
 
   <header>
     <ul class="my_nav">
