@@ -145,12 +145,12 @@ queries -->
 
               <tr>
               <td style="width:20%">
-                <img src="assets/images/arrows-left.png" style="height:60%">
+                <!-- <img src="assets/images/arrows-left.png" style="height:60%"> -->
               </td>
                 <td style="text-align:center;width:60%"><h4 style="color:#8a6d3b">Δες τους σελιδοδείκτες και βιβλία βρες...</h4></td>
                 
                 <td style="width:18%;margin-right:5%;">
-                  <img src="assets/images/arrows-right.png" style="height:40%">
+                  <!-- <img src="assets/images/arrows-right.png" style="height:40%"> -->
                 </td>
               </tr>
               <tr></tr>
