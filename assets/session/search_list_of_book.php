@@ -101,21 +101,21 @@ $not_fount = true;
 
 //queries //////////////////////////////////////////////
 
-    $book_query=$conn->prepare("SELECT DISTINCT books.Book_id FROM books WHERE books.Title LIKE '%".$title."%' OR books.Writer LIKE '%".$writer."%'");
+    $book_query=$conn->prepare("SELECT DISTINCT books.Book_id FROM books WHERE books.Title LIKE '%".$title."%' OR books.Writer LIKE '%".$writer."%'and books.Show_to_User=1");
     $book_query->execute();
     $books_step_1 = $book_query->fetchAll(PDO::FETCH_ASSOC);
 //    print_r($books_step_1 ) ;
 
 
     $book_query=$conn->prepare("SELECT DISTINCT books.Book_id FROM books WHERE  books.Min_age_no_read='".$age."'
-OR books.Min_age_read='".$age."'OR books.Persentage_of_images='".$percentage_of_images."' OR (books.Price>'".$price[0]."' AND books.Price < '".$price[1]."')");
+OR books.Min_age_read='".$age."'OR books.Persentage_of_images='".$percentage_of_images."' OR (books.Price>'".$price[0]."' AND books.Price < '".$price[1]."')and books.Show_to_User=1");
     $book_query->execute();
     $books_step_2 = $book_query->fetchAll(PDO::FETCH_ASSOC);
 //    print_r($books_step_2 ) ;
 
 
-    $book_query=$conn->prepare("SELECT DISTINCT books_keywords.Book_id FROM books_keywords INNER JOIN keywords ON books_keywords.Keyword_id=keywords.Keyword_id
-WHERE  ".$list_of_keywords."' ") ;
+    $book_query=$conn->prepare("SELECT DISTINCT books_keywords.Book_id FROM books_keywords INNER JOIN books ON books.Book_id=books_keywords.Book_id INNER JOIN keywords ON books_keywords.Keyword_id=keywords.Keyword_id
+WHERE  ".$list_of_keywords."' and books.Show_to_User=1 ") ;
     $book_query->execute();
     $books_step_3 = $book_query->fetchAll(PDO::FETCH_ASSOC);
 //     print_r($books_step_3 ) ;
@@ -127,7 +127,7 @@ WHERE  ".$list_of_keywords."' ") ;
                                 INNER JOIN keywords ON keywords.Keyword_id = books_keywords.Keyword_id
                                 INNER JOIN subcategories ON subcategories.Subcategory_id = keywords.Subcategory_id
                                 INNER JOIN categories ON categories.Category_id = subcategories.Category_id
-                                WHERE     categories.Category_id='" . $theme_id . "'");
+                                WHERE     categories.Category_id='" . $theme_id . "'and books.Show_to_User=1");
         $book_query->execute();
         $books_step_4 = $book_query->fetchAll(PDO::FETCH_ASSOC);
         // print_r($books_step_4 ) ;
@@ -136,7 +136,7 @@ WHERE  ".$list_of_keywords."' ") ;
     }
 //     print_r($books_step_4 ) ;
 
-    $book_query = $conn->prepare("SELECT  DISTINCT   books.Book_id FROM books ");
+    $book_query = $conn->prepare("SELECT  DISTINCT   books.Book_id FROM books WHERE books.Show_to_User=1");
     $book_query->execute();
     $books_step_5 = $book_query->fetchAll(PDO::FETCH_ASSOC);
 
@@ -206,7 +206,7 @@ WHERE  ".$list_of_keywords."' ") ;
                                             </div>
                                          </div>
                                         <div id='more_button'>
-                                            <button id='button_".$value['Book_id']."' type='submit' class='btn btn-info btn-xs search_book'>Δείτε περισσότερα...</button>
+                                            <button id='button_".$value['Book_id']."' type='submit' class='btn btn-info btn-xs btn-xxs search_book'>Δείτε περισσότερα...</button>
                                         </div>
 
                                     </div>
@@ -247,7 +247,7 @@ for($i=0; $i<count($book) ; $i++){
 $titles=$titles."]";
 $writers=$writers."]";
 
-$list_of_keywords_query=$conn->prepare("SELECT keywords.Name_of_keyword FROM keywords INNER JOIN books_keywords on books_keywords.Keyword_id=keywords.Keyword_id");
+$list_of_keywords_query=$conn->prepare("SELECT keywords.Name_of_keyword FROM keywords INNER JOIN books_keywords ON books_keywords.Keyword_id=keywords.Keyword_id INNER JOIN books ON books.Book_id=books_keywords.Book_id WHERE books.Show_to_user=1");
 $list_of_keywords_query->execute();
 $list_of_keywords = $list_of_keywords_query->fetchAll(PDO::FETCH_ASSOC);
 

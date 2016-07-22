@@ -154,7 +154,7 @@ for($i=0; $i<count($book) ; $i++){
 $titles=$titles."]";
 $writers=$writers."]";
 
-$list_of_keywords_query=$conn->prepare("SELECT keywords.Name_of_keyword FROM keywords");
+$list_of_keywords_query=$conn->prepare("SELECT keywords.Name_of_keyword FROM keywords INNER JOIN books_keywords ON books_keywords.Keyword_id=keywords.Keyword_id INNER JOIN books ON books.Book_id=books_keywords.Book_id WHERE books.Show_to_user=1");
 $list_of_keywords_query->execute();
 $list_of_keywords = $list_of_keywords_query->fetchAll(PDO::FETCH_ASSOC);;
 $keywords="[";

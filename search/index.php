@@ -60,11 +60,11 @@ include "../assets/session/search_list_of_book.php";
 
                 <div class="form-group ">
                     <label for="title">ΤΙΤΛΟΣ ΒΙΒΛΙΟΥ:</label>
-                    <input type="text" class="form-control input-sm" id="title" name="title" value="<?php echo $title;?>">
+                    <input type="text" class="form-control input-xs" id="title" name="title" value="<?php echo $title;?>">
                 </div>
                 <div class="form-group ">
                     <label for="theme">ΘΕΜΑ:</label>
-                    <select class="form-control input-sm" id="theme" name="theme">
+                    <select class="form-control input-xs" id="theme" name="theme">
                         <option value="1" <?php echo $theme[0];?>>Ηθικά/ Πνευματικά μηνυματα</option>
                         <option value="2" <?php echo $theme[1];?>>Ανάλυση-κατανόηση και παραγωγή γραπτού λόγου / Σκέφτομαι και Γράφω </option>
                         <option value="3" <?php echo $theme[2];?>>Γραμματική – Σύνταξη – Λεξιλόγιο</option>
@@ -77,14 +77,14 @@ include "../assets/session/search_list_of_book.php";
 
                 <div class="form-group ">
                     <label for="writer">ΣΥΓΓΡΑΦΕΑΣ:</label>
-                    <input type="text" class="form-control input-sm" id="writer" name="writer" value="<?php echo $writer;?>">
+                    <input type="text" class="form-control input-xs" id="writer" name="writer" value="<?php echo $writer;?>">
                 </div>
 
                 <div class="form-group ">
                     <label for="searched_keywords">ΛΕΞΕΙΣ ΚΛΕΙΔΙΑ:</label>
                     <div style="width:100%;">
-                        <input style="width: 75%;float: left;"  readonly="readonly" type="text" class="form-control input-sm" id="searched_keywords" name="searched_keywords" value="<?php echo $list_for_input;?>">
-                        <button   id="button_change" class="btn btn-sm" type="button" >Αλλαγή</button>
+                        <input style="width: 75%;float: left;"  readonly="readonly" type="text" class="form-control input-xs" id="searched_keywords" name="searched_keywords" value="<?php echo $list_for_input;?>">
+                        <button   id="button_change" class="btn btn-xs" type="button" >Αλλαγή</button>
                     </div>
                 </div>
 
@@ -92,11 +92,11 @@ include "../assets/session/search_list_of_book.php";
             <div class="box" style="margin-top: 0px;">
                 <div class="form-group ">
                     <label for="percentage_of_images">ΑΝΑΛΟΓΙΑ ΕΙΚΟΝΑΣ/ΓΡΑΠΤΟΥ:</label>
-                    <input type="number" class="form-control input-sm" id="percentage_of_images" name="percentage_of_images" value="<?php echo $percentage_of_images;?>">
+                    <input type="number" class="form-control input-xs" id="percentage_of_images" name="percentage_of_images" value="<?php echo $percentage_of_images;?>">
                 </div>
                 <div class="form-group ">
                     <label for="age">ΗΛΙΚΙΑ:</label>
-                    <input type="number" class="form-control input-sm" id="age" name="age" value="<?php echo $age;?>">
+                    <input type="number" class="form-control input-xs" id="age" name="age" value="<?php echo $age;?>">
                 </div>
                 <div class="form-group ">
                     <div style="width:100%;margin-bottom: 10px;">
@@ -128,18 +128,20 @@ include "../assets/session/search_list_of_book.php";
               <div class="modal-content">
                   <div class="modal-header">
                       <button type="button" class="close" data-dismiss="modal">&times;</button>
-                      <h4 class="modal-title">Αλλαγή των Λέξεων κλειδιών που επιλέξατε</h4>
+                      <br><br><br>
+<!--                      <h4 class="modal-title">Αλλαγή των Λέξεων κλειδιών που επιλέξατε <img style="width:35px;height: 35px" src="../assets/images/dragon.png"></h4>-->
                   </div>
                   <div class="modal-body">
-                          <p>Διάγρεψε ή Πρόσθεσε λέξεις κλειδιά για την αναζήτηση:</p>
+                          <p >Διάγραψε ή Πρόσθεσε λέξεις κλειδιά για την αναζήτηση: </p>
                           <div class="all_keywords"></div>
                           <div class="keyword_main">
                               <div id="keywords_Autofill_div" >
                                 <input   class=" form-control input-sm " id="keywords_Autofill"  name="keywords_Autofill" type="text"  />
                               </div>
                               <button  id="keywords_button_add" class="btn btn-sm " type="button">+</button>
+                              <br><br>
                               <p id="keyword_required">*Γράψετε μία Λέξη Κλειδί !</p>
-                              <br>
+
                           </div>
                   </div>
                   <div class="modal-footer">
