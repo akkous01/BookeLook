@@ -189,8 +189,11 @@ queries -->
     </div>
 
     <div id="middle">
-        <div id="facebook_div"><img id="facebook_icon" src="assets/images/facebook-02.png" ></div>
-        <div id="instagram_div"><img id="instagram_icon" src="assets/images/instagram-02.png" ></div>
+            <div id="social_media">
+                    <a href="#"><img src="assets/images/facebook-02.png"></a>
+                    <a href="#"><img src="assets/images/instagram-02.png"></a>
+            </div>
+
     </div>
 
     <div id="anakinosis">

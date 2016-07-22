@@ -546,3 +546,52 @@ footer{
     background-image: linear-gradient(to right,rgba(138, 109, 59, 0.62) 0,rgba(0,0,0,.0001) 100%);
 
 }
+
+#social_media_table{
+    width:100%;
+    height: 100%;
+    /*background: url(../images/small-table.png) no-repeat center bottom;*/
+    /*background-size:65% 45%;*/
+    /*!*background-position:5% 5%;*!*/
+    /*!*border: 1px solid red;*!*/
+    /*float:left;*/
+    /*margin-top: 5%;*/
+}
+#social_media{
+    width:50%;
+    height: 50%;
+    margin: 40% 10% 25% 25%;
+    /*border: 1px solid red;*/
+}
+.social_media_box{
+    width:40%;
+    height: 100%;
+    /*border: 1px solid red;*/
+    float: left;
+
+}
+
+#social_media img:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
