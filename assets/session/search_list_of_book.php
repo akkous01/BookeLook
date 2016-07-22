@@ -157,7 +157,7 @@ WHERE  ".$list_of_keywords."' and books.Show_to_User=1 ") ;
     $mark=array();
     $index=0;
 //print_r($list_of_books);
-
+$is_column=false;
    foreach ($list_of_books as $index_of_table=>$book_id):;
        for($j=0;$j<5;$j++) {
            $mark[$j]="none' name='0'";
@@ -186,7 +186,7 @@ WHERE  ".$list_of_keywords."' and books.Show_to_User=1 ") ;
            $mark[$categories[$j]-1]="block' name='1'";
        }
 
-       if($index%3==0){$books=$books. "<div class='row'>"."\n";}
+       if($index%3==0){$is_column=true;$books=$books. "<div class='row'>"."\n";}
 
        $books=$books. "<div class='column'>
                                     <div id='show_image'>
@@ -212,11 +212,13 @@ WHERE  ".$list_of_keywords."' and books.Show_to_User=1 ") ;
                                     </div>
 
                                 </div>"."\n";
-       if(($index+1)%3==0){$books=$books. "</div>"."\n";}
+       if(($index+1)%3==0){$is_column=false;$books=$books. "</div>"."\n";}
 
        $index++;
    endforeach;
-
+if($is_column){
+    $books=$books. "</div>"."\n";
+}
 if(strcmp($title,"none")==0){
     $title='';
 }
