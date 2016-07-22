@@ -80,6 +80,8 @@ if (session_status() == PHP_SESSION_NONE) {
                 <li><a href="#new_keyword">Προσθήκη Λέξης Κλειδί</a></li>
                 <li><a href="#announcements">Προσθήκη Ανακοίνωσης</a></li>
                 <li><a href="#blog">Προσθήκη στο Blog</a></li>
+                <li><a href="#gallery">Προσθήκη στη Gallery</a></li>
+
 
             </ul>
         </nav>
@@ -360,6 +362,30 @@ if (session_status() == PHP_SESSION_NONE) {
                 </form>
              </section>
 		</div>
+    </section>
+
+
+    <section id="gallery" class="wrapper style2 spotlights">
+        <div class="inner">
+
+            <h1 class="major">Προσθήκη στη Gallery</h1>
+            <section>
+                <form method="post" action="../assets/add_elements/new_gallery.php" enctype="multipart/form-data">
+                    <div class="row uniform">
+                        <div class="18u$ 12u$(xsmall)">
+                            <h4>Εικόνα για τη Gallery</h4>
+                            <input type="file" name="gallery_photo" id="gallery_photo" required="" />
+                        </div>
+                         <div class="12u$">
+                            <ul class="actions">
+                                <li><input type="submit" value="Save Gallery Photo" class="special" /></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </form>
+             </section>
+        </div>
     </section>
 </div>
 

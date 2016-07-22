@@ -1,3 +1,5 @@
+<?php include "../assets/session/load_gallery.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,13 +14,6 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
     <link rel="stylesheet" type="text/css" href="../assets/css/phylosophy.css">
 
-    <style>
-      .carousel-inner > .item > img,
-      .carousel-inner > .item > a > img {
-          width: 70%;
-          margin: auto;
-      }
-    </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 queries -->
@@ -49,32 +44,12 @@ queries -->
 
 <div id="main_comingsoon">
  <div id="comingsoon_area">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-      </ol>
+    <div style="width:100%;height:10%; text-align:center"><img src="../assets/images/navbar/7_Gallery.png"> </div>
 
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" style='height:95%; width:100%;'>  
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <img src="img_chania.jpg" alt="Chania" width="460" height="345">
-        </div>
-
-        <div class="item">
-          <img src="img_chania2.jpg" alt="Chania" width="460" height="345">
-        </div>
-      
-        <div class="item">
-          <img src="img_flower.jpg" alt="Flower" width="460" height="345">
-        </div>
-
-        <div class="item">
-          <img src="img_flower2.jpg" alt="Flower" width="460" height="345">
-        </div>
+        <?php echo $gallery_script_div?>
       </div>
 
       <!-- Left and right controls -->
