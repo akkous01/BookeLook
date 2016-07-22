@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Book-e-Look</title>
+    <title>BookeLook</title>
 
     <!-- Bootstrap -->
     
@@ -162,8 +162,8 @@
               </div>
             </td>
         </tr>
-        <tr>
-          <td style="width:100%">
+        <tr <?php echo $morfi_show?>>
+          <td style="width:100%" >
               <div class="title_div" style="width:17%;margin-left:3%" ><h4>Μορφή</h4></div>
               <div class="data_div" style="width:55%;margin-left:3%"><h4><?php echo $morfi?></h4></div>
             </td>

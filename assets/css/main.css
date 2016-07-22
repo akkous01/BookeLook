@@ -342,11 +342,11 @@ footer{
 
 .bookmark_left{
   height: 18%;
-  width:80%;
+  width:100%;
   margin-top: 2%;
   /*border:1px solid green ;*/
   text-align: right;
-  margin-left: 20%;
+  margin-left: 0%;
 
 }
 
@@ -361,7 +361,7 @@ footer{
 
 .bookmark_right{
   height: 20%;
-  width:80%;
+  width:100%;
   margin-top: 2%;
   margin-left: 0%;
   text-align: left;
@@ -369,7 +369,7 @@ footer{
 }
 .bookmark_right_2{
   height: 18%;
-  width:80%;
+  width:100%;
   margin-top: 2%;
   margin-left: 0%;
   text-align: left;

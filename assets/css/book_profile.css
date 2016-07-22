@@ -1,5 +1,5 @@
 #main_book{
-  height: 75%;
+  height: 70%;
   width: 75%;
   margin-left: 13%;
   /*border:1px solid black ; */
@@ -144,6 +144,7 @@
 .main_characteristics_table tr, td{
   /*width: 50%;*/
   /*border: 1px solid black;*/
+  padding-top: 5px;
 }
 
 
@@ -166,7 +167,9 @@
 }
 .title_div h4{
   color: white;
-  padding: 5px 5px 5px 5px;
+  padding: 4px 4px 4px 4px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 
 }
 

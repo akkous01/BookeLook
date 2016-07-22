@@ -87,15 +87,17 @@ $Audio_book = (int)$book[0]["Audio_book"];
 // $E_book=1;
 // $Audio_book=1;
 $morfi="";
-
+$morfi_show="style='display:none'";
 if($Hard_copy == 1){
 	$morfi.= "Έντυπη Μορφή";
 }
 if ($E_book == 1){
 	$morfi.= ", E-book";
+	$morfi_show = "";
 }
 if ($Audio_book == 1){
 	$morfi.= ", Audio-book";
+	$morfi_show = "";
 }
 
 $Link = $book[0]["Link"];
