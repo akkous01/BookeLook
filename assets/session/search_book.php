@@ -136,7 +136,8 @@ for($i=0 ; $i < count($ithiki_data) ; $i++){
 	if($prev_sub != (int)$ithiki_data[$i]['Subcategory_id']){
 		$ithiki .= "<h3 style='color:black'>".$ithiki_data[$i]['Name_of_subcategory']."</h3>";
 	}
-	$ithiki .= "<h4>".$ithiki_data[$i]['Name_of_keyword'];
+	$keyword_link = "<a href='../assets/session/search_keywords_books.php?keyword_id=".$ithiki_data[$i]['Keyword_id']."'>";
+	$ithiki .= "<h4>".$keyword_link.$ithiki_data[$i]['Name_of_keyword']."</a>";
 	$Keyword_id = (int)$ithiki_data[$i]['Keyword_id'];
 	for($j=0  ; $j<count($meaning); $j++){
 		if((int)$meaning[$j]['Keyword_id'] == $Keyword_id){
@@ -164,7 +165,9 @@ for($i=0 ; $i < count($sindesi_data) ; $i++){
 	if($prev_sub != (int)$sindesi_data[$i]['Subcategory_id']){
 		$sindesi .= "<h3 style='color:black'>".$sindesi_data[$i]['Name_of_subcategory']."</h3>";
 	}
-	$sindesi .= "<h4>".$sindesi_data[$i]['Name_of_keyword'];
+	$keyword_link = "<a href='../assets/session/search_keywords_books.php?keyword_id=".$sindesi_data[$i]['Keyword_id']."'>";
+
+	$sindesi .= "<h4>".$keyword_link.$sindesi_data[$i]['Name_of_keyword']."</a>";
 	$Keyword_id = (int)$sindesi_data[$i]['Keyword_id'];
 	for($j=0  ; $j<count($meaning); $j++){
 		if((int)$meaning[$j]['Keyword_id'] == $Keyword_id){
@@ -193,7 +196,9 @@ for($i=0 ; $i < count($epipleon_data) ; $i++){
 	if($prev_sub != (int)$epipleon_data[$i]['Subcategory_id']){
 		$epipleon .= "<h3 style='color:black'>".$epipleon_data[$i]['Name_of_subcategory']."</h3>";
 	}
-	$epipleon .= "<h4>".$epipleon_data[$i]['Name_of_keyword'];
+	$keyword_link = "<a href='../assets/session/search_keywords_books.php?keyword_id=".$epipleon_data[$i]['Keyword_id']."'>";
+
+	$epipleon .= "<h4>".$keyword_link.$epipleon_data[$i]['Name_of_keyword']."</a>";
 	$Keyword_id = (int)$epipleon_data[$i]['Keyword_id'];
 	for($j=0  ; $j<count($meaning); $j++){
 		if((int)$meaning[$j]['Keyword_id'] == $Keyword_id){
@@ -221,7 +226,9 @@ for($i=0 ; $i < count($gramatiki_data) ; $i++){
 	if($prev_sub != (int)$gramatiki_data[$i]['Subcategory_id']){
 		$gramatiki .= "<h3 style='color:black'>".$gramatiki_data[$i]['Name_of_subcategory']."</h3>";
 	}
-	$gramatiki .= "<h4>".$gramatiki_data[$i]['Name_of_keyword'];
+	$keyword_link = "<a href='../assets/session/search_keywords_books.php?keyword_id=".$gramatiki_data[$i]['Keyword_id']."'>";
+
+	$gramatiki .= "<h4>".$keyword_link.$gramatiki_data[$i]['Name_of_keyword']."</a>";
 	$Keyword_id = (int)$gramatiki_data[$i]['Keyword_id'];
 	for($j=0  ; $j<count($meaning); $j++){
 		if((int)$meaning[$j]['Keyword_id'] == $Keyword_id){
@@ -248,7 +255,9 @@ for($i=0 ; $i < count($analisi_data) ; $i++){
 	if($prev_sub != (int)$analisi_data[$i]['Subcategory_id']){
 		$analisi .= "<h3 style='color:black'>".$analisi_data[$i]['Name_of_subcategory']."</h3>";
 	}
-	$analisi .= "<h4>".$analisi_data[$i]['Name_of_keyword'];
+	$keyword_link = "<a href='../assets/session/search_keywords_books.php?keyword_id=".$analisi_data[$i]['Keyword_id']."'>";
+
+	$analisi .= "<h4>".$keyword_link.$analisi_data[$i]['Name_of_keyword']."</a>";
 	$Keyword_id = (int)$analisi_data[$i]['Keyword_id'];
 	for($j=0  ; $j<count($meaning); $j++){
 		if((int)$meaning[$j]['Keyword_id'] == $Keyword_id){

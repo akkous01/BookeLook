@@ -142,10 +142,20 @@ queries -->
 		<div class="book_img">
           <div id="subcategories_area">
             <table id = "first_table" class="subcategories_table">
+
               <tr>
-                <td style="text-align:center"><h4 style="color:#8a6d3b">Δες τους σελιδοδείκτες και βιβλία βρες...</h4></td>
-                <td></td>
+              <td style="width:20%">
+                <img src="assets/images/arrows-left.png" style="height:60%">
+              </td>
+                <td style="text-align:center;width:60%"><h4 style="color:#8a6d3b">Δες τους σελιδοδείκτες και βιβλία βρες...</h4></td>
+                
+                <td style="width:18%;margin-right:5%;">
+                  <img src="assets/images/arrows-right.png" style="height:40%">
+                </td>
               </tr>
+              <tr></tr>
+              <tr></tr>
+              <tr></tr>
             </table>
             <?php echo $ithika_table; echo $sindesi_table; echo $epipleon_table; echo $analisi_table; echo $gramatiki_table;?>
           </div>

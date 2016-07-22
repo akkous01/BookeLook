@@ -44,7 +44,6 @@ queries -->
 <div id="main_contact">
   <div id="phylosophy_area" style="overflow-x:hidden; padding-top:1%;text-align:center">
   <!-- <div class="container"> -->
-    <p>Παρακαλώ συμπληρώστε την πιο κάτω φόρμα για να επικοινωνήσετε μαζί μας</p>
 
     <form id="condact_form" method="post" class="form-horizontal" action="../assets/session/sent_email.php">
        <div class="form-group">

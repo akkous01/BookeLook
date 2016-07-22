@@ -84,7 +84,7 @@ $(document).ready(
 	    );
 
 
-	    $("#ithika_new").click(
+	    $("#ithika_new").hover(
 	    	function(){
 	    		$(".book_img").css("background", "url(assets/images/book.png) no-repeat center");
 	    		$(".book_img").css("background-size", "100% 100%");
@@ -99,7 +99,7 @@ $(document).ready(
 	    );
 
 
-	   	$("#sindesi_new").click(
+	   	$("#sindesi_new").hover(
 	    	function(){
 	    		$(".book_img").css("background", "url(assets/images/book.png) no-repeat center");
 	    		$(".book_img").css("background-size", "100% 100%");
@@ -114,7 +114,7 @@ $(document).ready(
 	    );
 
 
-	    $("#epipleon_new").click(
+	    $("#epipleon_new").hover(
 	    	function(){
 	    		$(".book_img").css("background", "url(assets/images/book.png) no-repeat center");
 	    		$(".book_img").css("background-size", "100% 100%");
@@ -129,7 +129,7 @@ $(document).ready(
 	    );
 
 
-	    $("#analisi_new").click(
+	    $("#analisi_new").hover(
 	    	function(){
 	    		$(".book_img").css("background", "url(assets/images/book.png) no-repeat center");
 	    		$(".book_img").css("background-size", "100% 100%");
@@ -143,7 +143,7 @@ $(document).ready(
 	    	}
 	    );
 
-	    $("#gramatiki_new").click(
+	    $("#gramatiki_new").hover(
 	    	function(){
 	    		$(".book_img").css("background", "url(assets/images/book.png) no-repeat center");
 	    		$(".book_img").css("background-size", "100% 100%");

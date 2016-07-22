@@ -1,6 +1,6 @@
 <?php
 
-$email_address = "kkoushi_antria13@hotmail.com";
+$email_address = "maria@bookelook.com";
 
 $name = $surname = $tel = $email = $occup = $city = $sinergasia = $paraggelia = $newsletter = $msg = "" ;
 
