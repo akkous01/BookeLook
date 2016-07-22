@@ -95,7 +95,7 @@ queries -->
     <div id="contact-info-area-div"><p> Για παραλαβή του <strong>Newsletter</strong> πατήστε <a href="../contact/">εδώ</a></div>
   </div>
 </div>
-  
+
 <footer><strong>Maria Christodoulou © 2016</strong></footer>
 
   <script src="../assets/js/bootstrap.min.js"></script>

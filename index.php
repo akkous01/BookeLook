@@ -88,7 +88,7 @@ queries -->
                         </div>
                         <div class="form-group">
                             <label for="percentage_of_images">ΑΝΑΛΟΓΙΑ ΕΙΚΟΝΑΣ/ΓΡΑΠΤΟΥ:</label>
-                            <input type="number" class="form-control input-sm" id="percentage_of_images" name="percentage_of_images" placeholder="--%">
+                            <input type="number" class="form-control input-sm" id="percentage_of_images" name="percentage_of_images" >
                         </div>
                         <div class="form-group" id="all_keywards">
                             <label >ΛΕΞΕΙΣ ΚΛΕΙΔΙΑ:</label>
@@ -255,8 +255,6 @@ queries -->
      
       <script>
           $( document ).ready(function() {
-
-
               $('#title').typeahead({
                   local: <?php echo $titles;?>
               });
