@@ -54,63 +54,64 @@ include "../assets/session/search_list_of_book.php";
   </header>
 
   <div id="main_search">
-      <div id="search_box">
-          <form  id="search_form" method="post" action="#">
-            <div class="box">
 
-                <div class="form-group ">
-                    <label for="title">ΤΙΤΛΟΣ ΒΙΒΛΙΟΥ:</label>
-                    <input type="text" class="form-control input-xs" id="title" name="title" value="<?php echo $title;?>">
-                </div>
-                <div class="form-group ">
-                    <label for="theme">ΘΕΜΑ:</label>
-                    <select class="form-control input-xs" id="theme" name="theme">
-                        <option value="1" <?php echo $theme[0];?>>Ηθικά/ Πνευματικά μηνυματα</option>
-                        <option value="2" <?php echo $theme[1];?>>Ανάλυση-κατανόηση και παραγωγή γραπτού λόγου / Σκέφτομαι και Γράφω </option>
-                        <option value="3" <?php echo $theme[2];?>>Γραμματική – Σύνταξη – Λεξιλόγιο</option>
-                        <option value="4" <?php echo $theme[3];?>>Σύνδεση με διάφορα άλλα θέματα</option>
-                        <option value="5" <?php echo $theme[4];?>>Επιπλέον χαρακτηριστικά</option>
-                        <option value="6" <?php echo $theme[5];?>>Όλες οι Κατηγορίες</option>
+    <div id="search_box">
+      <form  id="search_form" method="post" action="#">
+        <div class="box">
 
-                    </select>
-                </div>
-
-                <div class="form-group ">
-                    <label for="writer">ΣΥΓΓΡΑΦΕΑΣ:</label>
-                    <input type="text" class="form-control input-xs" id="writer" name="writer" value="<?php echo $writer;?>">
-                </div>
-
-                <div class="form-group ">
-                    <label for="searched_keywords">ΛΕΞΕΙΣ ΚΛΕΙΔΙΑ:</label>
-                    <div style="width:100%;">
-                        <input style="width: 75%;float: left;"  readonly="readonly" type="text" class="form-control input-xs" id="searched_keywords" name="searched_keywords" value="<?php echo $list_for_input;?>">
-                        <button   id="button_change" class="btn btn-xs" type="button" >Αλλαγή</button>
-                    </div>
-                </div>
-
+            <div class="form-group ">
+                <label for="title">ΤΙΤΛΟΣ ΒΙΒΛΙΟΥ:</label>
+                <input type="text" class="form-control input-xs" id="title" name="title" value="<?php echo $title;?>">
             </div>
-            <div class="box" style="margin-top: 0px;">
-                <div class="form-group ">
-                    <label for="percentage_of_images">ΑΝΑΛΟΓΙΑ ΕΙΚΟΝΑΣ/ΓΡΑΠΤΟΥ:</label>
-                    <input type="number" class="form-control input-xs" id="percentage_of_images" name="percentage_of_images" value="<?php echo $percentage_of_images;?>">
-                </div>
-                <div class="form-group ">
-                    <label for="age">ΗΛΙΚΙΑ:</label>
-                    <input type="number" class="form-control input-xs" id="age" name="age" value="<?php echo $age;?>">
-                </div>
-                <div class="form-group ">
-                    <div style="width:100%;margin-bottom: 10px;">
-                        <label for="price" style="width:20%;float:left;">ΤΙΜΗ:</label>
-                        <input type="text" id="amount" name="amount" readonly style=" width:80%; border:0; color:#f6931f; font-weight:bold;">
-                    </div>
-                    <div id="slider-range"></div>
-                </div>
-                <div id="search_button">
-                    <button id="search_submit" type="submit" class="btn btn-info btn-sm">Ψάξε Ξανά ...</button>
+            <div class="form-group ">
+                <label for="theme">ΘΕΜΑ:</label>
+                <select class="form-control input-xs" id="theme" name="theme">
+                    <option value="1" <?php echo $theme[0];?>>Ηθικά/ Πνευματικά μηνυματα</option>
+                    <option value="2" <?php echo $theme[1];?>>Ανάλυση-κατανόηση και παραγωγή γραπτού λόγου / Σκέφτομαι και Γράφω </option>
+                    <option value="3" <?php echo $theme[2];?>>Γραμματική – Σύνταξη – Λεξιλόγιο</option>
+                    <option value="4" <?php echo $theme[3];?>>Σύνδεση με διάφορα άλλα θέματα</option>
+                    <option value="5" <?php echo $theme[4];?>>Επιπλέον χαρακτηριστικά</option>
+                    <option value="6" <?php echo $theme[5];?>>Όλες οι Κατηγορίες</option>
+
+                </select>
+            </div>
+
+            <div class="form-group ">
+                <label for="writer">ΣΥΓΓΡΑΦΕΑΣ:</label>
+                <input type="text" class="form-control input-xs" id="writer" name="writer" value="<?php echo $writer;?>">
+            </div>
+
+            <div class="form-group ">
+                <label for="searched_keywords">ΛΕΞΕΙΣ ΚΛΕΙΔΙΑ:</label>
+                <div style="width:100%;">
+                    <input style="width: 75%;float: left;"  readonly="readonly" type="text" class="form-control input-xs" id="searched_keywords" name="searched_keywords" value="<?php echo $list_for_input;?>">
+                    <button   id="button_change" class="btn btn-xs" type="button" >Αλλαγή</button>
                 </div>
             </div>
-          </form>
-      </div>
+
+        </div>
+        <div class="box" style="margin-top: 0px;">
+            <div class="form-group ">
+                <label for="percentage_of_images">ΑΝΑΛΟΓΙΑ ΕΙΚΟΝΑΣ/ΓΡΑΠΤΟΥ:</label>
+                <input type="number" class="form-control input-xs" id="percentage_of_images" name="percentage_of_images" value="<?php echo $percentage_of_images;?>">
+            </div>
+            <div class="form-group ">
+                <label for="age">ΗΛΙΚΙΑ:</label>
+                <input type="number" class="form-control input-xs" id="age" name="age" value="<?php echo $age;?>">
+            </div>
+            <div class="form-group ">
+                <div style="width:100%;margin-bottom: 10px;">
+                    <label for="price" style="width:20%;float:left;">ΤΙΜΗ:</label>
+                    <input type="text" id="amount" name="amount" readonly style=" width:80%; border:0; color:#f6931f; font-weight:bold;">
+                </div>
+                <div id="slider-range"></div>
+            </div>
+            <div id="search_button">
+                <button id="search_submit" type="submit" class="btn btn-info btn-sm">Ψάξε Ξανά ...</button>
+            </div>
+        </div>
+      </form>
+    </div>
 
     <div id="results">
         <div id="not_found_query" style="display:<?php echo $not_found_search;?>;"><h4>Δεν βρέθηκαν αποτελέσματα με αυτή την αναζήτηση ...</h4></div>
@@ -119,6 +120,24 @@ include "../assets/session/search_list_of_book.php";
         </div>
     </div>
 
+    <div class="results_footer">
+      <div class="box_images" style=" margin-left: 8%;"> <img src="../assets/images/labels-left.png"></div>
+      <div  id="social_media_table">
+          <div id="social_media">
+              <div class="social_media_box" style=" margin-left: 15%;">
+                  <a href="#"><img src="../assets/images/facebook-02.png"></a>
+              </div>
+              <div class="social_media_box">
+                  <a href="#"><img src="../assets/images/instagram-02.png"></a>
+              </div>
+          </div>
+      </div>
+      <div class="box_images"><img src="../assets/images/labels-right.png"></div>
+    </div>
+
+    <footer><strong>Maria Christodoulou © 2016</strong></footer>
+
+  </div>
 
       <!-- change Keywords Modal -->
       <div class="modal fade" id="change_keywords_modal" role="dialog">
@@ -154,9 +173,6 @@ include "../assets/session/search_list_of_book.php";
       </div>
 
 
-</div>
-</div>
-<footer><strong>Maria Christodoulou © 2016</strong></footer>
 
 
 

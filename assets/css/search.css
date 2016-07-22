@@ -8,7 +8,9 @@ label{
   width:80%;
   margin-left: 10%;
   background: url(../images/main-search-3.png) no-repeat center bottom;
-  background-size: 95% 75% ;
+  background-size: 95% 70% ;
+    background-position: 20% 60%;
+
 
 }
 #search_box{
@@ -85,6 +87,7 @@ label{
 #search_box label{
     font-size: small;
 }
+
 #results {
     height: 53%;
     width: 70%;
@@ -106,6 +109,8 @@ label{
     margin-bottom:2%;
     border-bottom: dashed #86e886;
 }
+
+
 #table_of_books{
     /*border:2px solid yellow;*/
     width:95%;
@@ -113,6 +118,7 @@ label{
     margin-left:5%;
 
 }
+
 
 #table_of_books .row{
     /*border:2px solid blue;*/
@@ -205,6 +211,71 @@ label{
     height: 90%;
 }
 
+.results_footer{
+
+    width:78%;
+    height: 30%;
+    /*border: 1px solid #0f0f0f;*/
+   margin-left: 7%;
+   margin-right: 15%;
+}
+.results_footer .box_images{
+    /*border: 1px solid red;*/
+    width:30%;
+    height: 72%;
+
+    float:left;
+    margin-top: 5%;
+}
+#social_media_table{
+    width:31%;
+    height: 72%;
+    background: url(../images/small-table.png) no-repeat center bottom;
+    background-size:65% 45%;
+    /*background-position:5% 5%;*/
+    /*border: 1px solid red;*/
+    float:left;
+    margin-top: 5%;
+}
+#social_media{
+    width:50%;
+    height: 60%;
+    margin-left: 25%;
+    margin-right: 25%;
+    /*border: 1px solid red;*/
+}
+.social_media_box{
+    width:40%;
+    height: 100%;
+    /*border: 1px solid red;*/
+    float: left;
+
+}
+
+.social_media_box img:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
 .modal-header{
     background: url(../images/modal-header.png) no-repeat center bottom;
     background-position:40% 40%;
