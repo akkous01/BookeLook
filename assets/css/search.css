@@ -243,12 +243,16 @@ label{
     margin-left: 25%;
     margin-right: 25%;
     /*border: 1px solid red;*/
+    margin-top:0%;
+    margin-bottom:0%;
+
 }
 .social_media_box{
     width:40%;
     height: 100%;
     /*border: 1px solid red;*/
     float: left;
+
 
 }
 
