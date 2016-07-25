@@ -189,24 +189,14 @@ include "../assets/session/search_list_of_book.php";
           $( document ).ready(function() {
               var num_of_keywords=0;
               $(".search_book").click(function(){
+
                   var book_id=$(this).attr('id').split("_")[1];
                   var ithiki=$("#m_"+book_id+"_1").attr('name');
                   var analisi=$("#m_"+book_id+"_2").attr('name');
                   var gramatiki=$("#m_"+book_id+"_3").attr('name');
                   var sindesi=$("#m_"+book_id+"_4").attr('name');
                   var epipleon=$("#m_"+book_id+"_5").attr('name');
-                  $.get("../assets/session/search_book.php",
-                      {book_id:book_id,
-                          ithiki:ithiki,
-                          sindesi:sindesi,
-                          epipleon:epipleon,
-                          gramatiki:gramatiki,
-                          analisi:analisi,
-                          submit:'true'},
-                      function(data, textStatus, jqXHR)
-                      {
-                          window.open("../book_profile/");
-                      });
+                  window.open("../book_profile/index.php?book_id="+book_id+"&ithiki="+ithiki+"&analisi="+analisi+"&gramatiki="+gramatiki+"&sindesi="+sindesi+"&epipleon="+epipleon);
               });
 
               $('#title').typeahead({
