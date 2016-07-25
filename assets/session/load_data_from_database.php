@@ -48,7 +48,7 @@ for($i=0 ; $i<count($anakinosis); $i++){
 
 
 // YPOKATHGORIES ITHIKON MINIMATON
-$ithika_query = $conn->prepare("SELECT * FROM subcategories WHERE  Category_id = 1;");
+$ithika_query = $conn->prepare("SELECT DISTINCT subcategories.Subcategory_id, subcategories.Name_of_subcategory FROM subcategories INNER JOIN keywords ON keywords.Subcategory_id= subcategories.Subcategory_id INNER JOIN books_keywords ON keywords.Keyword_id=books_keywords.Keyword_id INNER JOIN books ON books_keywords.Book_id=books.Book_id WHERE subcategories.Category_id = 1 and books.Show_to_user=1;");
 $ithika_query->execute();
 $ithika_sub = $ithika_query->fetchAll(PDO::FETCH_ASSOC);
 $ithika_table = "<table id='ithika_table' class='subcategories_table' style='display: none'>";
@@ -67,7 +67,7 @@ $ithika_table = $ithika_table."</table>";
 
 
 // YPOKATHGORIES SINDESIS
-$sindesi_query = $conn->prepare("SELECT * FROM subcategories WHERE  Category_id = 4;");
+$sindesi_query = $conn->prepare("SELECT DISTINCT subcategories.Subcategory_id, subcategories.Name_of_subcategory FROM subcategories INNER JOIN keywords ON keywords.Subcategory_id= subcategories.Subcategory_id INNER JOIN books_keywords ON keywords.Keyword_id=books_keywords.Keyword_id INNER JOIN books ON books_keywords.Book_id=books.Book_id WHERE subcategories.Category_id = 4 and books.Show_to_user=1;");
 $sindesi_query->execute();
 $sindesi_sub = $sindesi_query->fetchAll(PDO::FETCH_ASSOC);
 $sindesi_table = "<table id='sindesi_table' class='subcategories_table' style='display: none'>";
@@ -84,7 +84,7 @@ $sindesi_table = $sindesi_table."</table>";
 
 
 // YPOKATHGORIES EPIPLEON
-$epipleon_query = $conn->prepare("SELECT * FROM subcategories WHERE  Category_id = 5;");
+$epipleon_query = $conn->prepare("SELECT DISTINCT subcategories.Subcategory_id, subcategories.Name_of_subcategory FROM subcategories INNER JOIN keywords ON keywords.Subcategory_id= subcategories.Subcategory_id INNER JOIN books_keywords ON keywords.Keyword_id=books_keywords.Keyword_id INNER JOIN books ON books_keywords.Book_id=books.Book_id WHERE subcategories.Category_id = 5 and books.Show_to_user=1;");
 $epipleon_query->execute();
 $epipleon_sub = $epipleon_query->fetchAll(PDO::FETCH_ASSOC);
 $epipleon_table = "<table id='epipleon_table' class='subcategories_table' style='display: none'>";
@@ -102,7 +102,7 @@ $epipleon_table = $epipleon_table."</table>";
 
 
 // YPOKATHGORIES ANALISIS
-$analisi_query = $conn->prepare("SELECT * FROM subcategories WHERE  Category_id = 2;");
+$analisi_query = $conn->prepare("SELECT DISTINCT subcategories.Subcategory_id, subcategories.Name_of_subcategory FROM subcategories INNER JOIN keywords ON keywords.Subcategory_id= subcategories.Subcategory_id INNER JOIN books_keywords ON keywords.Keyword_id=books_keywords.Keyword_id INNER JOIN books ON books_keywords.Book_id=books.Book_id WHERE subcategories.Category_id = 2 and books.Show_to_user=1;");
 $analisi_query->execute();
 $analisi_sub = $analisi_query->fetchAll(PDO::FETCH_ASSOC);
 $analisi_table = "<table id='analisi_table' class='subcategories_table' style='display: none'>";
@@ -121,7 +121,7 @@ $analisi_table = $analisi_table."</table>";
 
 // YPOKATHGORIES GRAMMATIKIS
 
-$gramatiki_query = $conn->prepare("SELECT * FROM subcategories WHERE  Category_id = 3;");
+$gramatiki_query = $conn->prepare("SELECT DISTINCT subcategories.Subcategory_id, subcategories.Name_of_subcategory FROM subcategories INNER JOIN keywords ON keywords.Subcategory_id= subcategories.Subcategory_id INNER JOIN books_keywords ON keywords.Keyword_id=books_keywords.Keyword_id INNER JOIN books ON books_keywords.Book_id=books.Book_id WHERE subcategories.Category_id = 3 and books.Show_to_user=1;");
 $gramatiki_query->execute();
 $gramatiki_sub = $gramatiki_query->fetchAll(PDO::FETCH_ASSOC);
 $gramatiki_table = "<table id='gramatiki_table' class='subcategories_table' style='display: none'>";
