@@ -3,16 +3,35 @@
 include "Database/MySqlConnect.php";
 
 // Teleftea 5 biblia
-$new_books_query = $conn->prepare("SELECT books.Title FROM books WHERE Show_to_user=1 ORDER BY Book_id DESC LIMIT 5 ");
-
-$new_books_query->execute();
-
-$new_books = $new_books_query->fetchAll(PDO::FETCH_ASSOC);
-
 $new_books_script = "<h4>Τίτλοι Νέων Βιβλίων</h4>";
-for($i=0 ; $i<count($new_books); $i++){
-	$new_books_script = $new_books_script ."<p>".$new_books[$i]['Title']."</p><hr class='myhr'>";
+$new_books_query = $conn->prepare("SELECT books.Title,books.Book_id FROM books WHERE Show_to_user=1 ORDER BY Book_id DESC LIMIT 5 ");
+$new_books_query->execute();
+$new_books = $new_books_query->fetchAll(PDO::FETCH_ASSOC);
+for($i=0;$i<count($new_books);$i++) {
+
+	$categories_query = $conn->prepare("SELECT  DISTINCT   books.Book_id,categories.Category_id
+                            FROM       books
+                            INNER JOIN books_keywords ON books.Book_id = books_keywords.Book_id
+                            INNER JOIN keywords ON keywords.Keyword_id = books_keywords.Keyword_id
+                            INNER JOIN subcategories ON subcategories.Subcategory_id = keywords.Subcategory_id
+                            INNER JOIN categories ON categories.Category_id = subcategories.Category_id
+                            WHERE     books.Book_id='" . $new_books[$i]['Book_id'] . "' and books.Show_to_User=1 ORDER BY Book_id DESC LIMIT 5 ");
+	$categories_query->execute();
+	$categories_results = $categories_query->fetchAll(PDO::FETCH_ASSOC);
+//       print_r($books_results);
+	if(empty($categories_results)){
+		continue;
+	}
+
+	$categories=[0,0,0,0,0];
+	for($j=0;$j< count($categories_results);$j++){
+		$categories[$categories_results[$j]['Category_id']-1]=1;
+	}
+	$new_books_script = $new_books_script ."<p><a href='book_profile/index.php?book_id=".$new_books[$i]['Book_id']."&ithiki=".$categories[0]."&analisi=".$categories[1]."&gramatiki=".$categories[2]."&sindesi=".$categories[3]."&epipleon=".$categories[4]."'>".$new_books[$i]['Title']."</a></p><hr class='myhr'>";
 }
+
+
+
 
 
 // ANAKINOSIS
