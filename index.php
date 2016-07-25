@@ -86,9 +86,11 @@ queries -->
                             <label for="age">ΗΛΙΚΙΑ:</label>
                             <input type="number" class="form-control input-sm" id="age" name="age">
                         </div>
-                        <div class="form-group">
-                            <label for="percentage_of_images">ΑΝΑΛΟΓΙΑ ΕΙΚΟΝΑΣ/ΓΡΑΠΤΟΥ:</label>
-                            <input type="number" class="form-control input-sm" id="percentage_of_images" name="percentage_of_images" >
+                        <div class="form-group ">
+                            <label for="percentage_of_images" style="margin=none;" >ΑΝΑΛΟΓΙΑ ΕΙΚΟΝΑΣ/ ΓΡΑΠΤΟΥ:</label>
+                            <input type="text" class=" input-xs" id="percentage_of_images" name="percentage_of_images" readonly style="width:30%; border:0; color:#f6931f; font-weight:bold;margin:0%;">
+
+                            <div id="slider-range-min"></div>
                         </div>
                         <div class="form-group" id="all_keywards">
                             <label >ΛΕΞΕΙΣ ΚΛΕΙΔΙΑ:</label>
@@ -105,7 +107,7 @@ queries -->
                         <div class="form-group">
                             <div style="width:100%;margin-bottom: 10px;">
                                 <label for="price" style="width:20%;float:left;">ΤΙΜΗ: </label>
-                                <input type="text" id="amount" name="amount" readonly style=" width:80%; border:0; color:#f6931f; font-weight:bold;">
+                                <input type="text" id="price" name="price" readonly style=" width:80%; border:0; color:#f6931f; font-weight:bold;">
                             </div>
                             <div id="slider-range"></div>
                         </div>

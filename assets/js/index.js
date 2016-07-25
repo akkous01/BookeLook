@@ -15,6 +15,17 @@ $( document ).ready(function() {
 
               });
 
+              $( "#slider-range-min" ).slider({
+                    range: "min",
+                    min: 0,
+                    max: 100,
+                    value: 12,
+                    slide: function( event, ui ) {
+                        $( "#percentage_of_images" ).val( ui.value+":"+(100-ui.value) );
+                    }
+              });
+              $( "#percentage_of_images" ).val( $( "#slider-range-min" ).slider( "value")+" : "+(100-$( "#slider-range-min" ).slider( "value") ));
+
               $( "#slider-range" ).slider({
                   range: true,
                   min: 0,

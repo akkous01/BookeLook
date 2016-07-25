@@ -91,7 +91,7 @@ $not_fount = true;
 
     }else{$emptyInputs=false;}
 
-    if(strcmp($percentage_of_images," ")==0 or strcmp($percentage_of_images,"")==0){
+    if($percentage_of_images==12){
         $percentage_of_images='none';
     }else{$emptyInputs=false;}
 
@@ -106,13 +106,20 @@ $not_fount = true;
     $book_query->execute();
     $books_step_1 = $book_query->fetchAll(PDO::FETCH_ASSOC);
 //    print_r($books_step_1 ) ;
+echo $age;
+echo $percentage_of_images;
+print_r($price);
 
-
+$percentage_of_images_min=$percentage_of_images-10;
+$percentage_of_images_max=$percentage_of_images+10;
+$titi="SELECT DISTINCT books.Book_id FROM books WHERE  books.Min_age_no_read='".$age."'
+OR books.Min_age_read='".$age."'OR (books.Persentage_of_images > '".$percentage_of_images_min."'AND books.Persentage_of_images < '".$percentage_of_images_max."' )OR (books.Price>'".$price[0]."' AND books.Price < '".$price[1]."')and books.Show_to_User=1";
+echo $titi;
     $book_query=$conn->prepare("SELECT DISTINCT books.Book_id FROM books WHERE  books.Min_age_no_read='".$age."'
-OR books.Min_age_read='".$age."'OR books.Persentage_of_images='".$percentage_of_images."' OR (books.Price>'".$price[0]."' AND books.Price < '".$price[1]."')and books.Show_to_User=1");
+OR books.Min_age_read='".$age."'OR (books.Persentage_of_images > '".$percentage_of_images_min."'AND books.Persentage_of_images < '".$percentage_of_images_max."' )OR (books.Price>'".$price[0]."' AND books.Price < '".$price[1]."')and books.Show_to_User=1");
     $book_query->execute();
     $books_step_2 = $book_query->fetchAll(PDO::FETCH_ASSOC);
-//    print_r($books_step_2 ) ;
+    print_r($books_step_2 ) ;
 
 
     $book_query=$conn->prepare("SELECT DISTINCT books_keywords.Book_id FROM books_keywords INNER JOIN books ON books.Book_id=books_keywords.Book_id INNER JOIN keywords ON books_keywords.Keyword_id=keywords.Keyword_id

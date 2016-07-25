@@ -203,16 +203,7 @@ include "../assets/session/search_list_of_book.php";
                   var epipleon=$("#m_"+book_id+"_5").attr('name');
                   window.open("../book_profile/index.php?book_id="+book_id+"&ithiki="+ithiki+"&analisi="+analisi+"&gramatiki="+gramatiki+"&sindesi="+sindesi+"&epipleon="+epipleon);
               });
-                  $( "#slider-range-min" ).slider({
-                      range: "min",
-                      min: 0,
-                      max: 100,
-                      value: 20,
-                      slide: function( event, ui ) {
-                          $( "#percentage_of_images" ).val( ui.value+":"+(100-ui.value) );
-                      }
-                  });
-                  $( "#percentage_of_images" ).val( $( "#slider-range-min" ).slider( "value")+" : "+(100-$( "#slider-range-min" ).slider( "value") ));
+
               $('#title').typeahead({
                   local: <?php echo $titles;?>
               });
