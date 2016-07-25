@@ -98,6 +98,10 @@ if (session_status() == PHP_SESSION_NONE) {
             <h1 class="major">Αποθηκευμένα Βιβλία</h1>
         <!-- </header> -->
         <div class="table-wrapper">
+            <div class="8u$ 12u$(xsmall)">
+            <input type="text" name="sarch_table" id="search_table" placeholder="Search Book">
+            </div>
+            <!-- <span id="sarch_table"></span> -->
             <table class="paginated">
                 <thead>
                 <tr>
@@ -464,7 +468,40 @@ if (session_status() == PHP_SESSION_NONE) {
                 $("#keyword_meaning").modal('show');
             }
         });
+
+    
+
     });
+
+    $("#search_table").on("keyup", function() {
+        var value = $(this).val();
+
+        if (value.length){
+            $(".paginated tr").each(function (index) {
+                if (index != 0) {
+
+                    $row = $(this);
+
+                    $row.find("td").each(function () {
+
+                        var cell = $(this).text();
+
+                        if (cell.indexOf(value) < 0) {
+                            $row.hide();
+                        } else {
+                            $row.show();
+                            return false; //Once it's shown you don't want to hide it on the next cell
+                        }
+                    });
+                }
+            });
+        }else{
+            //if empty search text, show all rows
+            $("table tr").show();
+
+        }
+    });
+
 
     function load_subcategories() {
         var selected = $('#select_category_2').val();
