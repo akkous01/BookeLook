@@ -34,10 +34,10 @@
         <li><a href="../philosophy/"><img src="../assets/images/navbar/2_OurPhilosophy.png"></a></li>
         <li><a href="../blog/"><img src="../assets/images/navbar/3_Blog.png"></a></li>
         <li><a href="../contact/"><img src="../assets/images/navbar/4_Communicate.png"></a></li>
-        <li><a href="../under_construction/"><img src="../assets/images/navbar/5_LogIn.png"></a></li>
-        <li><a href="../under_construction/"><img src="../assets/images/navbar/6_CreateAccount.png"></a></li>
-        <li><a href="../under_construction/"><img src="../assets/images/navbar/7_Gallery.png"></a></li>
-        <li><a href="../under_construction/"><img src="../assets/images/navbar/8_ZoomIn.png"></a></li>
+        <!-- <li><a href="../under_construction/"><img src="../assets/images/navbar/5_LogIn.png"></a></li> -->
+        <!-- <li><a href="../under_construction/"><img src="../assets/images/navbar/6_CreateAccount.png"></a></li> -->
+        <li><a href="../gallery/"><img src="../assets/images/navbar/7_Gallery.png"></a></li>
+        <!-- <li><a href="../under_construction/"><img src="../assets/images/navbar/8_ZoomIn.png"></a></li> -->
     </ul>
   </header>
 

@@ -10,7 +10,7 @@ include_once "assets/session/load_data_from_database.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Book-e-Look</title>
+    <title>BOOKeLOOK</title>
 
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -39,10 +39,10 @@ queries -->
         <li><a href="philosophy/"><img src="assets/images/navbar/2_OurPhilosophy.png"></a></li>
         <li><a href="blog/"><img src="assets/images/navbar/3_Blog.png"></a></li>
         <li><a href="contact/"><img src="assets/images/navbar/4_Communicate.png"></a></li>
-        <li><a href="under_construction/"><img src="assets/images/navbar/5_LogIn.png"></a></li>
-        <li><a href="under_construction/"><img src="assets/images/navbar/6_CreateAccount.png"></a></li>
-        <li><a href="under_construction/"><img src="assets/images/navbar/7_Gallery.png"></a></li>
-        <li><a href="under_construction/"><img src="assets/images/navbar/8_ZoomIn.png"></a></li>
+        <!-- <li><a href="under_construction/"><img src="assets/images/navbar/5_LogIn.png"></a></li> -->
+        <!-- <li><a href="under_construction/"><img src="assets/images/navbar/6_CreateAccount.png"></a></li> -->
+        <li><a href="gallery/"><img src="assets/images/navbar/7_Gallery.png"></a></li>
+        <!-- <li><a href="under_construction/"><img src="assets/images/navbar/8_ZoomIn.png"></a></li> -->
     </ul>
 
  </header>
@@ -149,7 +149,7 @@ queries -->
               <td style="width:20%">
                 <!-- <img src="assets/images/arrows-left.png" style="height:60%"> -->
               </td>
-                <td style="text-align:center;width:60%"><h4 style="color:#8a6d3b">Δες τους σελιδοδείκτες και βιβλία βρες...</h4></td>
+                <td style="text-align:center;width:60%"><h4 style="color:#8a6d3b">Στους σελιδοδείκτες αν πατήσεις,</h4><h4 style="color:#8a6d3b">το ταξίδι θ' αρχινήσει</h4><h4 style="color:#8a6d3b">μηνύματα να αναζητήσεις,</h4><h4 style="color:#8a6d3b">στα παιδικά βιβλία θα βρεις τις λύσεις!</h4></td>
                 
                 <td style="width:18%;margin-right:5%;">
                   <!-- <img src="assets/images/arrows-right.png" style="height:40%"> -->
@@ -178,7 +178,7 @@ queries -->
     </div>
   
   <div id="contact-info">
-    <div id="contact-link-div"><p> Παραλαβή <a href="contact/"><strong>Newsletter</strong></a></div>
+    <div id="contact-link-div"><p> Λήψη <a href="contact/"><strong>Newsletter</strong></a></p></div>
   </div>
   </div>
 
@@ -219,35 +219,36 @@ queries -->
 			    <span class="sr-only">Next</span>
 			  </a>
 			</div> -->
-
-<div id="text-carousel" class="carousel slide" data-ride="carousel">
-    <!-- Wrapper for slides -->
-    <div class="row">
+    <div id="text-carousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+      <div class="row">
         <div class="col-xs-offset-1 col-xs-11">
-            <div class="carousel-inner">
+          <div class="carousel-inner">
             <?php echo $anakinosis_script; ?>
-            </div>
+          </div>
+         </div>
         </div>
-    </div>
-    <!-- Controls --> <a class="left carousel-control" href="#text-carousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
- <a class="right carousel-control" href="#text-carousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
+        <!-- Controls --> <a class="left carousel-control" href="#text-carousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+     <a class="right carousel-control" href="#text-carousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
 
-</div>
+    </div>
 
 
       </div>
     </div>
 
-  </div>
+</div>
 
-<!-- </div> -->
 
-<footer><strong>Maria Christodoulou © 2016</strong></footer>
+<!-- <div class="advertisement"></div>
+ -->
+<footer><strong>BOOKeLOOK © 2016</strong></footer>
 
+</div>
 <!-- <div id="cotact-side"></div> -->
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <!--      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->

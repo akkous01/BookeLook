@@ -1,5 +1,5 @@
 #main_book{
-  height: 65%;
+  height: 60%;
   width: 75%;
   margin-left: 13%;
   /*border:1px solid black ; */
@@ -79,7 +79,7 @@
   height: 80%;
   width: 90%;
   margin: 0px 0px 0px 0px;
-    margin-top: 15%;
+    margin-top: 10%;
           /*border:1px solid orange ; */
 
 }
@@ -170,6 +170,8 @@
   padding: 4px 4px 4px 4px;
   margin-top: 3px;
   margin-bottom: 3px;
+    font-size: inherit;
+
 
 }
 
@@ -188,6 +190,7 @@
   padding: 0px 0px 0px 0px;
    margin-top: 3px;
   margin-bottom: 3px;
+  font-size: inherit;
   
 }
 
@@ -266,11 +269,15 @@
 
 .keywords_area h3{
   margin-left: 5%;
+    font-size: inherit;
+
 }
 
 .keywords_area h4{
   margin-left: 10%;
   /*color: rgb(35, 184, 219);*/
+    font-size: inherit;
+
 
 }
 .categories_box h4{

@@ -35,10 +35,10 @@ queries -->
         <li><a href="../philosophy/"><img src="../assets/images/navbar/2_OurPhilosophy.png"></a></li>
         <li><a href="../blog/"><img src="../assets/images/navbar/3_Blog.png"></a></li>
         <li><a href="../contact/"><img src="../assets/images/navbar/4_Communicate.png"></a></li>
-        <li><a href="#"><img src="../assets/images/navbar/5_LogIn.png"></a></li>
-        <li><a href="#"><img src="../assets/images/navbar/6_CreateAccount.png"></a></li>
+        <!-- <li><a href="#"><img src="../assets/images/navbar/5_LogIn.png"></a></li> -->
+        <!-- <li><a href="#"><img src="../assets/images/navbar/6_CreateAccount.png"></a></li> -->
         <li><a href="#"><img src="../assets/images/navbar/7_Gallery.png"></a></li>
-        <li><a href="#"><img src="../assets/images/navbar/8_ZoomIn.png"></a></li>
+        <!-- <li><a href="#"><img src="../assets/images/navbar/8_ZoomIn.png"></a></li> -->
     </ul>
  </header>
 
@@ -64,6 +64,9 @@ queries -->
     </div>
 
 </div>
+<div id="contact-info-area">
+    <div id="contact-info-area-div"><p> Λήψη <a href="../contact/"><strong>Newsletter</strong></a></p></div>
+  </div>
 </div>
 
 <footer><strong>BOOKeLOOK © 2016</strong></footer>

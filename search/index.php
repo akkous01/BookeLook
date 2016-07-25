@@ -17,7 +17,7 @@ include "../assets/session/search_list_of_book.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Book-e-Look</title>
+    <title>BOOKeLOOK</title>
 
       <!-- Bootstrap -->
       <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
@@ -46,10 +46,10 @@ include "../assets/session/search_list_of_book.php";
         <li><a href="../philosophy/"><img src="../assets/images/navbar/2_OurPhilosophy.png"></a></li>
         <li><a href="../blog/"><img src="../assets/images/navbar/3_Blog.png"></a></li>
         <li><a href="../contact/"><img src="../assets/images/navbar/4_Communicate.png"></a></li>
-        <li><a href="../under_construction/"><img src="../assets/images/navbar/5_LogIn.png"></a></li>
-        <li><a href="../under_construction/"><img src="../assets/images/navbar/6_CreateAccount.png"></a></li>
-        <li><a href="../under_construction/"><img src="../assets/images/navbar/7_Gallery.png"></a></li>
-        <li><a href="../under_construction/"><img src="../assets/images/navbar/8_ZoomIn.png"></a></li>
+        <!-- <li><a href="../under_construction/"><img src="../assets/images/navbar/5_LogIn.png"></a></li> -->
+        <!-- <li><a href="../under_construction/"><img src="../assets/images/navbar/6_CreateAccount.png"></a></li> -->
+        <li><a href="../gallery/"><img src="../assets/images/navbar/7_Gallery.png"></a></li>
+        <!-- <li><a href="../under_construction/"><img src="../assets/images/navbar/8_ZoomIn.png"></a></li> -->
     </ul>
   </header>
 
@@ -141,7 +141,7 @@ include "../assets/session/search_list_of_book.php";
       <div class="box_images"><img src="../assets/images/labels-right.png"></div>
     </div>
 
-    <footer><strong>Maria Christodoulou © 2016</strong></footer>
+    <footer><strong>BOOKeLOOK © 2016</strong></footer>
 
   </div>
 

@@ -48,7 +48,7 @@ footer{
 
 .my_nav li {
 	display: inline;
-    margin-right:2%;
+    margin-right:8%;
 
 }
 .my_nav  a{
@@ -71,6 +71,14 @@ footer{
   /*float: left;*/
   border: 1px solid rgba(1, 1, 255, 0);
 
+}
+
+.advertisement{
+  width: 8%;
+  float: left;
+  height: 30%;
+  margin-top: 30%;
+  border: 1px solid black;
 }
 
 #cotact-side{
