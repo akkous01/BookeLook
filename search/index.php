@@ -93,8 +93,13 @@ include "../assets/session/search_list_of_book.php";
         </div>
         <div class="box" style="margin-top: 0px;">
             <div class="form-group ">
-                <label for="percentage_of_images">ΑΝΑΛΟΓΙΑ ΕΙΚΟΝΑΣ/ΓΡΑΠΤΟΥ:</label>
-                <input type="number" class="form-control input-xs" id="percentage_of_images" name="percentage_of_images" value="<?php echo $percentage_of_images;?>">
+                <div style="width:100%; margin-bottom: 15px;">
+                    <div style="float: left;width:70%;">
+                        <label for="percentage_of_images" style="margin=none;" >ΑΝΑΛΟΓΙΑ ΕΙΚΟΝΑΣ/ ΓΡΑΠΤΟΥ:</label>
+                    </div>
+                    <input type="text" class=" input-xs" id="percentage_of_images" name="percentage_of_images" readonly style="width:30%; border:0; color:#f6931f; font-weight:bold;margin:0%;">
+                </div>
+                <div id="slider-range-min"></div>
             </div>
             <div class="form-group ">
                 <label for="age">ΗΛΙΚΙΑ:</label>
@@ -103,7 +108,7 @@ include "../assets/session/search_list_of_book.php";
             <div class="form-group ">
                 <div style="width:100%;margin-bottom: 10px;">
                     <label for="price" style="width:20%;float:left;">ΤΙΜΗ:</label>
-                    <input type="text" id="amount" name="amount" readonly style=" width:80%; border:0; color:#f6931f; font-weight:bold;">
+                    <input type="text" id="price" name="price" readonly style=" width:80%; border:0; color:#f6931f; font-weight:bold;">
                 </div>
                 <div id="slider-range"></div>
             </div>
@@ -198,7 +203,16 @@ include "../assets/session/search_list_of_book.php";
                   var epipleon=$("#m_"+book_id+"_5").attr('name');
                   window.open("../book_profile/index.php?book_id="+book_id+"&ithiki="+ithiki+"&analisi="+analisi+"&gramatiki="+gramatiki+"&sindesi="+sindesi+"&epipleon="+epipleon);
               });
-
+                  $( "#slider-range-min" ).slider({
+                      range: "min",
+                      min: 0,
+                      max: 100,
+                      value: 20,
+                      slide: function( event, ui ) {
+                          $( "#percentage_of_images" ).val( ui.value+":"+(100-ui.value) );
+                      }
+                  });
+                  $( "#percentage_of_images" ).val( $( "#slider-range-min" ).slider( "value")+" : "+(100-$( "#slider-range-min" ).slider( "value") ));
               $('#title').typeahead({
                   local: <?php echo $titles;?>
               });

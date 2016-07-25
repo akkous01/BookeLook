@@ -19,17 +19,18 @@ $not_fount = true;
 
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // set variables ////////////////////////////////////////////////////////////////////
+        print_r($_POST);
         unset($_SESSION['list_of_books']);
-// set variables ////////////////////////////////////////////////////////////////////
         $title = $_POST['title'];
         $writer = $_POST['writer'];
         $age = $_POST['age'];
-        $percentage_of_images = $_POST['percentage_of_images'];
+        $percentage_of_images = explode(":",$_POST['percentage_of_images'])[0];
         $theme_id = $_POST['theme'];
 
         echo $percentage_of_images;
         $price = array(2);
-        $price = explode("  ", preg_replace("/[^A-Za-z0-9 ]/", '', $_POST['amount']));
+        $price = explode("  ", preg_replace("/[^A-Za-z0-9 ]/", '', $_POST['price']));
         $list_of_books = array();
 
         $keywords = array();
