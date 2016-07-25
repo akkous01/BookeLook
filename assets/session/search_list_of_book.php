@@ -7,6 +7,8 @@
  */
 include "../Database/MySqlConnect.php";
 $title = $writer =  $age = $percentage_of_images = "none";
+$percentage_of_images_min="none";
+$percentage_of_images_max="none";
 $theme_id = 6;
 $price=array(2);
 $price[0]=0;
@@ -20,15 +22,17 @@ $not_fount = true;
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // set variables ////////////////////////////////////////////////////////////////////
-        print_r($_POST);
+
         unset($_SESSION['list_of_books']);
         $title = $_POST['title'];
         $writer = $_POST['writer'];
         $age = $_POST['age'];
         $percentage_of_images = explode(":",$_POST['percentage_of_images'])[0];
+        $percentage_of_images_min=$percentage_of_images-10;
+        $percentage_of_images_max=$percentage_of_images+10;
         $theme_id = $_POST['theme'];
 
-        echo $percentage_of_images;
+
         $price = array(2);
         $price = explode("  ", preg_replace("/[^A-Za-z0-9 ]/", '', $_POST['price']));
         $list_of_books = array();
@@ -93,6 +97,8 @@ $not_fount = true;
 
     if($percentage_of_images==12){
         $percentage_of_images='none';
+        $percentage_of_images_min='none';
+        $percentage_of_images_max='none';
     }else{$emptyInputs=false;}
 
     if(strcmp($age," ")==0 or strcmp($age,"")==0){
@@ -106,20 +112,15 @@ $not_fount = true;
     $book_query->execute();
     $books_step_1 = $book_query->fetchAll(PDO::FETCH_ASSOC);
 //    print_r($books_step_1 ) ;
-echo $age;
-echo $percentage_of_images;
-print_r($price);
 
-$percentage_of_images_min=$percentage_of_images-10;
-$percentage_of_images_max=$percentage_of_images+10;
-$titi="SELECT DISTINCT books.Book_id FROM books WHERE  books.Min_age_no_read='".$age."'
-OR books.Min_age_read='".$age."'OR (books.Persentage_of_images > '".$percentage_of_images_min."'AND books.Persentage_of_images < '".$percentage_of_images_max."' )OR (books.Price>'".$price[0]."' AND books.Price < '".$price[1]."')and books.Show_to_User=1";
-echo $titi;
+
+
+
     $book_query=$conn->prepare("SELECT DISTINCT books.Book_id FROM books WHERE  books.Min_age_no_read='".$age."'
 OR books.Min_age_read='".$age."'OR (books.Persentage_of_images > '".$percentage_of_images_min."'AND books.Persentage_of_images < '".$percentage_of_images_max."' )OR (books.Price>'".$price[0]."' AND books.Price < '".$price[1]."')and books.Show_to_User=1");
     $book_query->execute();
     $books_step_2 = $book_query->fetchAll(PDO::FETCH_ASSOC);
-    print_r($books_step_2 ) ;
+//    print_r($books_step_2 ) ;
 
 
     $book_query=$conn->prepare("SELECT DISTINCT books_keywords.Book_id FROM books_keywords INNER JOIN books ON books.Book_id=books_keywords.Book_id INNER JOIN keywords ON books_keywords.Keyword_id=keywords.Keyword_id
