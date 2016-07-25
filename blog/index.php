@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Book-e-Look</title>
+    <title>BOOKeLOOK</title>
 
     <!-- Bootstrap -->
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
@@ -55,7 +55,7 @@ queries -->
 </div>
 
 <?php echo $blog_modals ?>
-<footer><strong>Maria Christodoulou © 2016</strong></footer>
+<footer><strong>BOOKeLOOK © 2016</strong></footer>
   <script src="../assets/js/bootstrap.min.js"></script>
   <?php echo $blog_scripts;?>
 </body>

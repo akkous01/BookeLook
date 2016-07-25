@@ -107,7 +107,7 @@ queries -->
       </ul>
     </div>
 </div>
-<footer><strong>Maria Christodoulou © 2016</strong></footer>
+<footer><strong>BOOKeLOOK © 2016</strong></footer>
 
   <script src="../assets/js/bootstrap.min.js"></script>
   <script>

@@ -1,5 +1,5 @@
 #main_book{
-  height: 70%;
+  height: 65%;
   width: 75%;
   margin-left: 13%;
   /*border:1px solid black ; */
@@ -279,7 +279,7 @@
 }
 
 #title_area {
-    height: 12%;
+    height: 15%;
     width: 100%;
     /*border: 2px solid black;*/
     text-align: left;

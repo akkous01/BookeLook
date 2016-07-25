@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Book-e-Look</title>
+    <title>BOOKeLOOK</title>
 
     <!-- Bootstrap -->
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
@@ -43,7 +43,7 @@ queries -->
   <div id="comingsoon_area"><img src="../assets/images/ComingSoon.gif" style="height:80%; width:80%;margin-left: 10%;margin-top: 10%; " "></div>
 </div>
 
-<footer><strong>Maria Christodoulou © 2016</strong></footer>
+<footer><strong>BOOKeLOOK © 2016</strong></footer>
 
   <script src="../assets/js/bootstrap.min.js"></script>
 
