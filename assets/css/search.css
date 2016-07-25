@@ -5,7 +5,7 @@ label{
 }
 #main_search {
   height: 80%;
-  width:80%;
+  width:84%;
   margin-left: 10%;
   background: url(../images/main-search-3.png) no-repeat center bottom;
   background-size: 95% 70% ;
@@ -16,7 +16,7 @@ label{
 #search_box{
   margin-top: 0%;
   height: 21%;
-  width: 80%;
+  width: 78%;
     margin-left:12%;
   /*position: absolute;*/
   border:2.5px solid #33ccff ;
