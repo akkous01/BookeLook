@@ -47,15 +47,16 @@ queries -->
  </header>
 
 <div id="main_blog">
-  <div id="blog_area"><?php echo $blog_script?></div>
+  <div id="blog_area"><?php echo $blog_h4?></div>
 
   <div id="contact-info-area">
     <div id="contact-info-area-div"><p> Για παραλαβή του <strong>Newsletter</strong> πατήστε <a href="../contact/">εδώ</a></div>
   </div>
 </div>
 
+<?php echo $blog_modals ?>
 <footer><strong>Maria Christodoulou © 2016</strong></footer>
   <script src="../assets/js/bootstrap.min.js"></script>
-  <?php echo $blog_javascript;?>
+  <?php echo $blog_scripts;?>
 </body>
 </html>

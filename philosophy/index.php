@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Book-e-Look</title>
+    <title>BOOKeLOOK</title>
 
     <!-- Bootstrap -->
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
@@ -41,8 +41,20 @@ queries -->
 
 <div id="main_phylosophy">
   <div id="phylosophy_area">
-    <h4 id="kapelo"><img src="../assets/images/image55.png"> Σας βγάζω το καπέλο και σας χαιρετώ! :)</h4>
-    <div id="kapelo_content" style="display:none">
+    <h4 id="kapelo" ><img src="../assets/images/image55.png"> Σας βγάζω το καπέλο και σας χαιρετώ! :)</h4>
+    <h4 id="ergalio"><img src="../assets/images/image54.png"> Το BOOKeLOOK είναι το πιο χρήσιμο εργαλείο σε:</h4>
+  </div>
+
+  <div id="contact-info-area">
+    <div id="contact-info-area-div"><p> Για παραλαβή του <strong>Newsletter</strong> πατήστε <a href="../contact/">εδώ</a></div>
+  </div>
+</div>
+
+<div class="my-modal" id="kapelo_modal">
+  <span class="modal-close">×</span>
+    <div id="kapelo_content" class="my-modal-content">
+      <h4 align="center"><img src="../assets/images/image55.png"> Σας βγάζω το καπέλο και σας χαιρετώ! :)</h4>
+      <hr>
       <p>Καλώς ορίσατε σ’ένα ταξίδι που θα σας αλλάξει την βιβλιο-θεωρία που είχατε μέχρι σήμερα! Σ’ ένα διαδικτυακό ταξίδι που στόχο έχει να σας δείξει κρυμμένα μονοπάτια που οδηγούν στους θησαυρούς που πραγματικά κρύβουν τα παιδικά λογοτεχνικά βιβλία.</p>
       <p>Αφετηρία σε αυτό το ταξίδι όπως και σε πολλά άλλα αποτελεί ο πρωταγωνιστής στη ζωή μας – το παιδί. Παιδιά που έρχονται σε μια πρώτη επαφή και να θέλουν να γνωρίσουν το καινούριο ή παιδιά που αντιμετωπίζουν προβλήματα σε θέματα</p>
       <ul>
@@ -66,8 +78,13 @@ queries -->
       <p>Διευκρινίζεται ότι το BOOKeLOOK δεν δημιουργήθηκε για να κάνουμε κριτική αλλά να αναδείξουμε τα ευεργετικά χαρακτηριστικά των παιδικών βιβλίων και τον τρόπο που μπορούν να χρησιμοποιηθούν για την ανάπτυξη των παιδιών μας. Για οποιαδήποτε σχόλια, ερωτήσεις ή περισσότερες πληροφορίες για εμάς ή τα βιβλία, θα χαρούμε να δούμε τα ηλεκτρονικά σας μηνύματα (e-mails)!</p>
       <p>Ευελπιστώ ότι το BOOKeLOOK θα σας κρατήσει συντροφιά στην προσπάθεια σας για σωστή διαπαιδαγώγηση των μαθητών και των παιδιών σας μέσα από την εναλλακτική μεθοδολογία του. Αν είστε ευχαριστημένοι, μοιραστείτε το και με γνωστούς ή φίλους που θα τους ήταν χρήσιμο, ουτως ώστε και έμπρακτα να προωθήσουμε τη φιλοσοφία του να «μην κρίνουμε ένα βιβλίο μόνο από το εξώφυλλο» όπως λέει μια αγγλική παροιμία και «να διδάσκουμε την αγάπη για το διάβασμα» όπως αναφέρει ο Skinner.</p>
     </div>
-    <h4 id="ergalio"><img src="../assets/images/image54.png"> Το BOOKeLOOK είναι το πιο χρήσιμο εργαλείο σε:</h4>
-    <div id="ergalio_content" style="display:none">
+</div>
+
+<div class="my-modal" id="ergalio_modal">
+<span class="modal-close">×</span>
+  <div id="ergalio_content" class="my-modal-content">
+    <h4 align="center"><img src="../assets/images/image54.png"> Το BOOKeLOOK είναι το πιο χρήσιμο εργαλείο σε:</h4>
+    <hr>
       <ul>
         <li>Δασκάλους και νηπιαγωγούς
           <ul>
@@ -89,28 +106,36 @@ queries -->
         <li>Βιβλιοθήκες και βιβλιοπωλεία που θέλουν να προτείνουν κάτι εξειδικευμένο και συγκεκριμένο στους πελάτες τους.</li>
       </ul>
     </div>
-  </div>
-
-  <div id="contact-info-area">
-    <div id="contact-info-area-div"><p> Για παραλαβή του <strong>Newsletter</strong> πατήστε <a href="../contact/">εδώ</a></div>
-  </div>
 </div>
-
 <footer><strong>Maria Christodoulou © 2016</strong></footer>
 
   <script src="../assets/js/bootstrap.min.js"></script>
   <script>
-    $(document).ready(function(){
-        $("#kapelo").click(function(){
+      var modal = document.getElementById('kapelo_modal');
+      var img = document.getElementById('kapelo');
+      img.onclick = function(){
+          modal.style.display = "block";
+      }
 
-            $("#kapelo_content").toggle();
-            // $("#ergalio_content").fadeOut("slow");
-        });
-        $("#ergalio").click(function(){
-            // $("#kapelo_content").fadeOut("slow");
-            $("#ergalio_content").toggle();
-        });
-    });
+      var span = document.getElementsByClassName("modal-close")[0];
+      span.onclick = function() {
+          modal.style.display = "none";
+      }
+   
+  </script>
+
+  <script>
+
+      var modal1 = document.getElementById('ergalio_modal');
+      var img1 = document.getElementById('ergalio');     
+      img1.onclick = function(){
+          modal1.style.display = "block";
+      }
+      var span1 = document.getElementsByClassName("modal-close")[1];     
+      span1.onclick = function() {
+          modal1.style.display = "none";
+      }
+   
   </script>
 </body>
 </html>

@@ -113,10 +113,10 @@ if($book['Show_to_user'] == 1){
     </div>
 </section> -->
 <header id="header">
-                <a href="index.php" class="title">Zoom in Books</a>
+                <a href="../home/index.php" class="title">Zoom in Books</a>
                 <nav>
                     <ul>
-                        <li><a href="../index.php">Admin</a></li>
+                        <li><a href="../home/index.php">Admin</a></li>
                         <li><a href="../../index.php">Web Page</a></li>
                     </ul>
                 </nav>
@@ -125,7 +125,7 @@ if($book['Show_to_user'] == 1){
 <div id="wrapper">
     <section id="show_book" class="show_book" >
         <h2><?php echo $book['Title'];?></h2>
-        <form method="post" action="submit_edit_book.php" enctype="multipart/form-data" >
+        <form method="post" action="../assets/new_edit_book/submit_edit_book.php" enctype="multipart/form-data" >
             <div class="row uniform">
 
                 <div class="8u$ 12u$(xsmall)">
