@@ -21,7 +21,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
   
     include "../../Database/MySqlConnect.php";
-
+    include "../assets/load/load_count.php";
     include "../assets/load/load_books_dataTable.php";
     include "../assets/load/load_keywords_not_found.php";
 ?>
@@ -75,7 +75,7 @@ if (session_status() == PHP_SESSION_NONE) {
                 <li><a href="#list_of_books">Λίστα Βιβλίων</a></li>
                 <li><a href="#new_book">Προσθήκη Νέου Βιβλίου</a></li>
                 <li><a href="#two">Λίστα Λέξεων Κλειδιών που δεν βρέθηκαν</a></li>
-                <!-- <li><a href="#new_category">Προσθήκη Κατηγορίας</a></li> -->
+                <li><a href="#search_keywords">Λέξεις κλειδιά που αναζητήθηκαν περισσότερο</a></li>
                 <li><a href="#new_subcategory">Προσθήκη Υποατηγορίας</a></li>
                 <li><a href="#new_keyword">Προσθήκη Λέξης Κλειδί</a></li>
                 <li><a href="#announcements">Προσθήκη Ανακοίνωσης</a></li>
@@ -240,6 +240,21 @@ if (session_status() == PHP_SESSION_NONE) {
         <div class="inner">
             <h1 class="major">Λίστα Λέξεων Κλειδιών που δεν βρέθηκαν</h1>
             <?php echo $not_found?>
+            
+        </div>
+    </section>
+
+      <!-- Two -->
+    <section id="search_keywords" class="wrapper style1 spotlights">
+        <div class="inner">
+            <h1 class="major">Λέξεις κλειδιά που αναζητήθηκαν περισσότερο</h1>
+            <table>
+            	<tr>
+            		<th>Λέξη κλειδί</th>
+            		<th>Φορές</th>
+            	</tr>
+            	<?php echo $count_table; ?>
+            </table>
             
         </div>
     </section>
