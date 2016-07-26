@@ -13,7 +13,7 @@ $theme_id = 6;
 $price=array(2);
 $price[0]=0;
 $price[1]=0;
-$list_for_input = ",...";
+$list_for_input = "|...";
 $list_of_keywords =  "keywords.Name_of_keyword='none";
 $not_found_search="none";
 $not_fount = true;
@@ -45,16 +45,46 @@ $not_fount = true;
             if ((strcmp($keyword, 'k') == 0 and strcmp($value, '') != 0) or (strcmp($key, 'keywords_Autofill') == 0 and strcmp($value, '') != 0)) {
                 array_push($keywords, $value);
                 $list_of_keywords = $list_of_keywords . " keywords.Name_of_keyword LIKE '%" . $value . "%' or ";
-                $list_for_input = $list_for_input . $value . ",";
+                $list_for_input = $list_for_input . $value . "|";
+
+                $count = 0;
+                $search_keyword_query = $conn->prepare("SELECT * FROM count_search_keywords WHERE   search_keyword='".$value."'");
+
+                $search_keyword_query->execute();
+                $search_keyword = $search_keyword_query->fetchAll(PDO::FETCH_ASSOC);
+                if(count($search_keyword) == 0){
+                    $insert_new_serch_keyword_query = $conn->prepare("INSERT INTO count_search_keywords (search_keyword, count) VALUES ('{$value}', 1)" );
+                    $insert_new_serch_keyword_query->execute();
+                }else{
+                    $count = (int)$search_keyword[0]['count']+1;
+                    $search_keyword_id = $search_keyword[0]['search_keyword_id'];
+                    $update_query = $conn->prepare("UPDATE count_search_keywords SET count='{$count}' WHERE search_keyword_id='{$search_keyword_id}'");
+                    $update_query->execute(); 
+                }
             }
         endforeach;
 
         if (isset($_POST['searched_keywords'])) {
-            $searched_keywords = explode(",", $_POST['searched_keywords']);
+            $searched_keywords = explode("|", $_POST['searched_keywords']);
             for ($i = 0; $i < count($searched_keywords) - 1; $i++) {
                 if (strcmp($searched_keywords[$i], "") != 0) {
-                    $list_for_input = $list_for_input . $searched_keywords[$i] . ",";
+                    $list_for_input = $list_for_input . $searched_keywords[$i] . "|";
                     $list_of_keywords = $list_of_keywords . " keywords.Name_of_keyword LIKE'%" . $searched_keywords[$i] . "%' or ";
+                    $count = 0;
+                    $value = $searched_keywords[$i];
+                    $search_keyword_query = $conn->prepare("SELECT * FROM count_search_keywords WHERE   search_keyword='".$value."'");
+
+                    $search_keyword_query->execute();
+                    $search_keyword = $search_keyword_query->fetchAll(PDO::FETCH_ASSOC);
+                    if(count($search_keyword) == 0){
+                        $insert_new_serch_keyword_query = $conn->prepare("INSERT INTO count_search_keywords (search_keyword, count) VALUES ('{$value}', 1)" );
+                        $insert_new_serch_keyword_query->execute();
+                    }else{
+                        $count = (int)$search_keyword[0]['count']+1;
+                        $search_keyword_id = $search_keyword[0]['search_keyword_id'];
+                        $update_query = $conn->prepare("UPDATE count_search_keywords SET count='{$count}' WHERE search_keyword_id='{$search_keyword_id}'");
+                        $update_query->execute(); 
+                    }
                 }
             }
         }
@@ -237,7 +267,7 @@ if(strcmp($writer,"none")==0 or strcmp($writer,"")==0){
 // not fount words ///////////////////////////////////
 
     if($not_fount and empty($books_step_3)){
-        $not_fount_keywords=explode(",",$list_for_input);
+        $not_fount_keywords=explode("|",$list_for_input);
         for($i=0;$i<count($not_fount_keywords)-1;$i++){
             $not_found_keywords_query=$conn->prepare("INSERT INTO `not_found_keywords` (`Not_found_keyword_id`, `Not_found_keyword`) VALUES (NULL, '".$not_fount_keywords[$i]."');");
             $not_found_keywords_query->execute();

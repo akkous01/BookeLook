@@ -40,7 +40,8 @@ $( document ).ready(function() {
 
               var num_of_keywords=0;
               $( "#button_change" ).click(function() {
-                    var list_of_keywords = $("#searched_keywords").val().split(',');
+                    var list_of_keywords = $("#searched_keywords").val().split('|');
+
                     for (var i = 0; i < list_of_keywords.length - 1; i++) {
                         if(list_of_keywords[i]!=""){
                             var div_keyword = "<div class='keyword' id='div_k_" + num_of_keywords + "'>" +
@@ -90,10 +91,10 @@ $( document ).ready(function() {
                     var list_of_keywords="";
                     for(i=0;i<num_of_keywords;i++){
                         if($('#div_k_'+i).length){
-                            list_of_keywords=list_of_keywords+$('#k_'+i).val()+",";
+                            list_of_keywords=list_of_keywords+$('#k_'+i).val()+"|";
                         }
                     }
-                    list_of_keywords=list_of_keywords+$("#keywords_Autofill").val()+",...";
+                    list_of_keywords=list_of_keywords+$("#keywords_Autofill").val()+"|...";
                     $('#searched_keywords').val(list_of_keywords);
                     $('#change_keywords_modal').modal('toggle');
                     num_of_keywords=0;
