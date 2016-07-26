@@ -129,7 +129,7 @@ label{
 }
 #table_of_books .column{
     /*border:2px solid green;*/
-    width: 31%;
+    width: 32%;
     height:100%;
     float: left;
     margin-right: 1%;
@@ -142,12 +142,20 @@ label{
     height: 100%;
 }
 #book_title{
-    /*border:2px solid blue;*/
-    height: 22%;
+    height: 23%;
     width: 100%;
     text-align: center;
     font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
     font-size: small;
+    overflow: hidden;
+}
+#book_title label{
+    font-weight: normal;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    background: none;
+    display: inline-block;
 }
 #mark_image{
     /*border:2px solid blue;*/
