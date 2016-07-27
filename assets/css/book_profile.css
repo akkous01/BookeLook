@@ -283,6 +283,8 @@
 .categories_box h4{
   margin-left: 7%;
   margin-right: 5%;
+    font-size: inherit;
+  
 }
 
 #title_area {
