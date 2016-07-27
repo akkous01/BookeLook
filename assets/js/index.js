@@ -19,7 +19,8 @@ $( document ).ready(function() {
                     range: "min",
                     min: 0,
                     max: 100,
-                    value: 12,
+                    step:5,
+                    value: 15,
                     slide: function( event, ui ) {
                         $( "#percentage_of_images" ).val( ui.value+":"+(100-ui.value) );
                     }

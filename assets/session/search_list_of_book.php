@@ -125,7 +125,7 @@ $not_fount = true;
 
     }else{$emptyInputs=false;}
 
-    if($percentage_of_images==12){
+    if($percentage_of_images==15){
         $percentage_of_images='none';
         $percentage_of_images_min='none';
         $percentage_of_images_max='none';
