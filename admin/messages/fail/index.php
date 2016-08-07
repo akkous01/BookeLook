@@ -10,7 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
@@ -35,7 +35,7 @@
 						<div class="inner">
 							<h1 class="major">Κάποιο Λάθος έχει προκύψει</h1>
 							<p><?php echo $_GET['error'];?></p>
-							<a href="../index.php" class="button special">Επιστροφή</a>
+							<a href="../../home/index.php" class="button special">Επιστροφή</a>
 						</div>
 					</section>
 					</div>

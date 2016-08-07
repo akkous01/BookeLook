@@ -374,6 +374,9 @@ footer{
   text-align: left;
 
 }
+#analisi_new:hover {
+cursor: hand;
+}
 .bookmark_right_2{
   height: 18%;
   width:100%;

@@ -78,6 +78,7 @@ for($i=0; $i<count($ithika_sub) ; $i+=2){
 
 	$ithika_table = $ithika_table."<tr><td><a href='".$href."'>".$ithika_sub[$i]['Name_of_subcategory']."</a><hr class='myhr_2'></td>";
 	if($i+1 < count($ithika_sub)){
+		$href = "assets/session/search_subcategory_books.php?sub_id=".$ithika_sub[$i+1]['Subcategory_id'];
 		$ithika_table = $ithika_table."<td><a href='".$href."'>".$ithika_sub[$i+1]['Name_of_subcategory']."</a><hr class='myhr_2'></td>";
 	}
 	$ithika_table = $ithika_table."</tr>";
@@ -95,6 +96,7 @@ for($i=0; $i<count($sindesi_sub) ; $i+=2){
 	$href = "assets/session/search_subcategory_books.php?sub_id=".$sindesi_sub[$i]['Subcategory_id'];
 	$sindesi_table = $sindesi_table."<tr><td><a href='".$href."'>".$sindesi_sub[$i]['Name_of_subcategory']."</a><hr class='myhr_2'></td>";
 	if($i+1 < count($sindesi_sub)){
+		$href = "assets/session/search_subcategory_books.php?sub_id=".$sindesi_sub[$i+1]['Subcategory_id'];
 		$sindesi_table = $sindesi_table."<td><a href='".$href."'>".$sindesi_sub[$i+1]['Name_of_subcategory']."</a><hr class='myhr_2'></td>";
 	}
 	$sindesi_table = $sindesi_table."</tr>";
@@ -112,6 +114,8 @@ for($i=0; $i<count($epipleon_sub) ; $i+=2){
 	$href = "assets/session/search_subcategory_books.php?sub_id=".$epipleon_sub[$i]['Subcategory_id'];
 	$epipleon_table = $epipleon_table."<tr><td><a href='".$href."'>".$epipleon_sub[$i]['Name_of_subcategory']."</a><hr class='myhr_2'></td>";
 	if($i+1 < count($epipleon_sub)){
+		$href = "assets/session/search_subcategory_books.php?sub_id=".$epipleon_sub[$i+1]['Subcategory_id'];
+
 		$epipleon_table = $epipleon_table."<td><a href='".$href."'>".$epipleon_sub[$i+1]['Name_of_subcategory']."</a><hr class='myhr_2'></td>";
 	}
 	$epipleon_table = $epipleon_table."</tr>";
@@ -130,6 +134,7 @@ for($i=0; $i<count($analisi_sub) ; $i+=2){
 	$href = "assets/session/search_subcategory_books.php?sub_id=".$analisi_sub[$i]['Subcategory_id'];
 	$analisi_table = $analisi_table."<tr><td><a href='".$href."'>".$analisi_sub[$i]['Name_of_subcategory']."</a><hr class='myhr_2'></td>";
 	if($i+1 < count($analisi_sub)){
+		$href = "assets/session/search_subcategory_books.php?sub_id=".$analisi_sub[$i+1]['Subcategory_id'];
 		$analisi_table = $analisi_table."<td><a href='".$href."'>".$analisi_sub[$i+1]['Name_of_subcategory']."</a><hr class='myhr_2'></td>";
 	}
 	$analisi_table = $analisi_table."</tr>";
@@ -150,6 +155,7 @@ for($i=0; $i<count($gramatiki_sub) ; $i+=2){
 
 	$gramatiki_table = $gramatiki_table."<tr><td><a href='".$href."'>".$gramatiki_sub[$i]['Name_of_subcategory']."</a><hr class='myhr_2'></td>";
 	if($i+1 < count($gramatiki_sub)){
+		$href = "assets/session/search_subcategory_books.php?sub_id=".$gramatiki_sub[$i+1]['Subcategory_id'];
 		$gramatiki_table = $gramatiki_table."<td><a href='".$href."'>".$gramatiki_sub[$i+1]['Name_of_subcategory']."</a><hr class='myhr_2'></td>";
 	}
 	$gramatiki_table = $gramatiki_table."</tr>";
