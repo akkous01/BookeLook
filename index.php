@@ -82,16 +82,6 @@ queries -->
                             <label for="writer">ΣΥΓΓΡΑΦΕΑΣ:</label>
                             <input type="text" class="form-control input-sm" id="writer" name="writer">
                         </div>
-                        <div class="form-group">
-                            <label for="age">ΗΛΙΚΙΑ:</label>
-                            <input type="number" class="form-control input-sm" id="age" name="age">
-                        </div>
-                        <div class="form-group ">
-                            <label for="percentage_of_images" style="margin=none;" >ΑΝΑΛΟΓΙΑ ΕΙΚΟΝΑΣ/ ΓΡΑΠΤΟΥ:</label>
-                            <input type="text" class=" input-xs" id="percentage_of_images" name="percentage_of_images" readonly style="width:30%; border:0; color:#f6931f; font-weight:bold;margin:0%;">
-
-                            <div id="slider-range-min"></div>
-                        </div>
                         <div class="form-group" id="all_keywards">
                             <label >ΛΕΞΕΙΣ ΚΛΕΙΔΙΑ:</label>
                             <div class="all_keywords"></div>
@@ -103,6 +93,16 @@ queries -->
                                 <p id="keyword_required">*Γράψετε μία Λέξη Κλειδί !</p>
                                 <br>
                             </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">ΗΛΙΚΙΑ:</label>
+                            <input type="number" class="form-control input-sm" id="age" name="age">
+                        </div>
+                        <div class="form-group ">
+                            <label for="percentage_of_images" style="margin=none;" >ΑΝΑΛΟΓΙΑ ΕΙΚΟΝΑΣ/ ΓΡΑΠΤΟΥ:</label>
+                            <input type="text" class=" input-xs" id="percentage_of_images" name="percentage_of_images" readonly style="width:30%; border:0; color:#f6931f; font-weight:bold;margin:0%;">
+
+                            <div id="slider-range-min"></div>
                         </div>
                         <div class="form-group">
                             <div style="width:100%;margin-bottom: 10px;">
