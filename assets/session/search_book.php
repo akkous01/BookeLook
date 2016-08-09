@@ -93,9 +93,14 @@ if ($Audio_book == 1){
 }
 
 $Link = $book[0]["Link"];
+$Link_2 = $book[0]["Link_2"];
 $link_show = "";
+$link2_show ="";
 if($Link == ""){
 	$link_show = "style='display:none'";
+}
+if($Link_2 == ""){
+	$link2_show = "display:none";
 }
 $Curriculum = $book[0]["Curriculum"];
 $curriculum_show = "";

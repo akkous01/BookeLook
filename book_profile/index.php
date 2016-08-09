@@ -24,7 +24,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body ondragstart="return false" onselectstart="return false">
+  <body >
 
 
 
@@ -104,16 +104,13 @@
           </td>
         </tr>
 
-        <tr>
-          <td>
-            <div class="title_div" style="width:20%;margin-left:3%" >
-              <h4>ISBN</h4>
-            </div>
-            <div class="data_div" style="width:50%;margin-left:3%">
-              <h4><?php echo $ISBN?></h4>
-            </div>
-          </td>
-        </tr>
+        <tr <?php echo $link_show?>>
+            <td style="width:100%">
+              <div class="title_div" style="width:17%;margin-left:3%" ><h4>Σύνδεσμος</h4></div>
+              <div class="data_div" style="width:70%;margin-left:3%"><h4><a href="http://<?php echo $Link?>"><?php echo $Link?></a></h4></div>
+              <div class="data_div" style="width:70%;margin-left:3%;<?php echo $link2_show?>"><h4><a href="http://<?php echo $Link_2?>"><?php echo $Link_2?></a></h4></div>
+            </td>
+          </tr>
 
         <tr>
           <td style="width:25%;" >
@@ -168,12 +165,18 @@
               <div class="data_div" style="width:55%;margin-left:3%"><h4><?php echo $morfi?></h4></div>
             </td>
         </tr>
-        <tr <?php echo $link_show?>>
-            <td style="width:100%">
-              <div class="title_div" style="width:17%;margin-left:3%" ><h4>Link</h4></div>
-              <div class="data_div" style="width:70%;margin-left:3%"><h4><?php echo $Link?></h4></div>
-            </td>
-          </tr>
+        
+        <tr>
+          <td>
+            <div class="title_div" style="width:20%;margin-left:3%" >
+              <h4>ISBN</h4>
+            </div>
+            <div class="data_div" style="width:50%;margin-left:3%">
+              <h4><?php echo $ISBN?></h4>
+            </div>
+          </td>
+        </tr>
+
         </table>
 
 <!--         <table class="main_characteristics_table">
@@ -287,12 +290,12 @@
   </div>
 
   <!-- <div class="categories_border"> -->
-	  <div id="ithiki_box" class="categories_box" style="background-color:#D4A6E0"><?php echo $ithiki?></div>
-	  <div id="sindesi_box" class="categories_box" style="display:none;background-color:#FFB3B3"><?php echo $sindesi?></div>
-	  <div id="epipleon_box" class="categories_box" style="display:none;background-color:#87D4FF"><?php echo $epipleon?></div>
-	  <div id="gramatiki_box" class="categories_box" style="display:none;background-color:#86E886"><?php echo $gramatiki?></div>
-	  <div id="analisi_box" class="categories_box" style="display:none;background-color:#FFBA4C"><?php echo $analisi?></div>
-    <div id="drastiriotites_box" class="categories_box" style="display:none;background-color:#FF6F4D"><h4><?php echo $Curriculum?></h4>
+	  <div ondragstart="return false" onselectstart="return false" id="ithiki_box" class="categories_box" style="background-color:#D4A6E0"><?php echo $ithiki?></div>
+	  <div ondragstart="return false" onselectstart="return false" id="sindesi_box" class="categories_box" style="display:none;background-color:#FFB3B3"><?php echo $sindesi?></div>
+	  <div ondragstart="return false" onselectstart="return false" id="epipleon_box" class="categories_box" style="display:none;background-color:#87D4FF"><?php echo $epipleon?></div>
+	  <div ondragstart="return false" onselectstart="return false" id="gramatiki_box" class="categories_box" style="display:none;background-color:#86E886"><?php echo $gramatiki?></div>
+	  <div ondragstart="return false" onselectstart="return false" id="analisi_box" class="categories_box" style="display:none;background-color:#FFBA4C"><?php echo $analisi?></div>
+    <div ondragstart="return false" onselectstart="return false" id="drastiriotites_box" class="categories_box" style="display:none;background-color:#FF6F4D"><h4><?php echo $Curriculum?></h4>
     </div>
   <!-- </div> -->
 
