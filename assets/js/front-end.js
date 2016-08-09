@@ -1,5 +1,32 @@
+$(function () {
+	    var $sel = $('#ithika');
+	    var $tab = $('#ithika_new');
+	    function fadeInOut () {
+	    	$tab.hide( function () {
+	            $tab.show(function () {
+	                $tab.hide( function () {
+	                    setTimeout(fadeInOut, 500);
+	                });
+	            });
+	        });
+	        $sel.show( function () {
+	            $sel.hide( function () {
+	                $sel.show( function () {
+	                    setTimeout(fadeInOut, 500);
+	                });
+	            });
+	        });
+	        
+	    }
+
+	    fadeInOut();
+	});
+
 $(document).ready(
+	
 	function(){
+
+
 	    $("#ithika").hover(
 	    	function(){
 	        	$("#ithika").hide();
@@ -245,5 +272,7 @@ $(document).ready(
 
 
 	}
+
+	
 	
 );
