@@ -1,26 +1,37 @@
 $(function () {
-	    var $sel = $('#ithika');
-	    var $tab = $('#ithika_new');
-	    function fadeInOut () {
-	    	$tab.hide( function () {
-	            $tab.show(function () {
-	                $tab.hide( function () {
-	                    setTimeout(fadeInOut, 500);
-	                });
-	            });
-	        });
-	        $sel.show( function () {
-	            $sel.hide( function () {
-	                $sel.show( function () {
-	                    setTimeout(fadeInOut, 500);
-	                });
-	            });
-	        });
-	        
-	    }
+    var $ithika = $('#ithika');
+    var $ithika_new = $('#ithika_new');
 
-	    fadeInOut();
-	});
+    var $sindesi = $('#sindesi');
+    var $sindesi_new = $('#sindesi_new');
+
+    var $epipleon = $('#epipleon');
+    var $epipleon_new = $('#epipleon_new');
+
+    var $analisi = $('#analisi');
+    var $analisi_new = $('#analisi_new');
+
+    var $gramatiki = $('#gramatiki');
+    var $gramatiki_new = $('#gramatiki_new');
+
+   loop_interval = setInterval(function () {
+        $ithika.fadeIn(0).delay(2000).fadeOut(0).delay(2000).fadeIn(0);
+        $ithika_new.fadeOut(0).delay(2000).fadeIn(0).delay(2000).fadeOut(0);
+
+        $sindesi.fadeIn(0).delay(10000).fadeOut(0).delay(2000).fadeIn(0);
+        $sindesi_new.fadeOut(0).delay(10000).fadeIn(0).delay(2000).fadeOut(0);
+
+        $epipleon.fadeIn(0).delay(6000).fadeOut(0).delay(2000).fadeIn(0);
+        $epipleon_new.fadeOut(0).delay(6000).fadeIn(0).delay(2000).fadeOut(0);
+
+        $analisi.fadeIn(0).delay(8000).fadeOut(0).delay(2000).fadeIn(0);
+        $analisi_new.fadeOut(0).delay(8000).fadeIn(0).delay(2000).fadeOut(0);
+
+        $gramatiki.fadeIn(0).delay(4000).fadeOut(0).delay(2000).fadeIn(0);
+        $gramatiki_new.fadeOut(0).delay(4000).fadeIn(0).delay(2000).fadeOut(0);
+
+    }, 12000);
+});
 
 $(document).ready(
 	
@@ -29,6 +40,7 @@ $(document).ready(
 
 	    $("#ithika").hover(
 	    	function(){
+	    		// clearInterval(loop_interval);
 	        	$("#ithika").hide();
 	        	$("#sindesi").show();
 	        	$("#epipleon").show();
@@ -45,6 +57,7 @@ $(document).ready(
 
 	     $("#sindesi").hover(
 	    	function(){
+	    		// clearInterval(loop_interval);
 	        	$("#ithika").show();
 	        	$("#sindesi").hide();
 	        	$("#epipleon").show();
@@ -61,6 +74,7 @@ $(document).ready(
 
 	     $("#epipleon").hover(
 	    	function(){
+	    		// clearInterval(loop_interval);
 	    		$("#ithika").show();
 	        	$("#sindesi").show();
 	        	$("#epipleon").hide();
@@ -78,6 +92,7 @@ $(document).ready(
 
 	     $("#analisi").hover(
 	    	function(){
+	    		// clearInterval(loop_interval);
 	    		$("#ithika").show();
 	        	$("#sindesi").show();
 	        	$("#epipleon").show();
@@ -113,6 +128,8 @@ $(document).ready(
 
 	    $("#ithika_new").hover(
 	    	function(){
+	    		clearInterval(loop_interval);
+
 	    		$(".book_img").css("background", "url(assets/images/book.png) no-repeat center");
 	    		$(".book_img").css("background-size", "100% 100%");
 	    		$("#first_table").hide();
@@ -128,6 +145,8 @@ $(document).ready(
 
 	   	$("#sindesi_new").hover(
 	    	function(){
+	    		clearInterval(loop_interval);
+
 	    		$(".book_img").css("background", "url(assets/images/book.png) no-repeat center");
 	    		$(".book_img").css("background-size", "100% 100%");
 	    		$("#first_table").hide();
@@ -143,6 +162,7 @@ $(document).ready(
 
 	    $("#epipleon_new").hover(
 	    	function(){
+	    		clearInterval(loop_interval);
 	    		$(".book_img").css("background", "url(assets/images/book.png) no-repeat center");
 	    		$(".book_img").css("background-size", "100% 100%");
 	    		$("#first_table").hide();
@@ -158,6 +178,7 @@ $(document).ready(
 
 	    $("#analisi_new").hover(
 	    	function(){
+	    		clearInterval(loop_interval);
 	    		$(".book_img").css("background", "url(assets/images/book.png) no-repeat center");
 	    		$(".book_img").css("background-size", "100% 100%");
 	    		$("#first_table").hide();
@@ -172,6 +193,7 @@ $(document).ready(
 
 	    $("#gramatiki_new").hover(
 	    	function(){
+	    		clearInterval(loop_interval);
 	    		$(".book_img").css("background", "url(assets/images/book.png) no-repeat center");
 	    		$(".book_img").css("background-size", "100% 100%");
 	    		$("#first_table").hide();
