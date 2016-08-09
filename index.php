@@ -149,7 +149,7 @@ queries -->
              <!--  <td style="width:20%">
                 <img src="assets/images/arrows-left.png" style="height:60%">
               </td> -->
-                <td style="text-align:center;width:80%"><h4 style="color:#8a6d3b">Στους σελιδοδείκτες αν πατήσεις,</h4><h4 style="color:#8a6d3b">το ταξίδι θ' αρχινήσει</h4><h4 style="color:#8a6d3b">μηνύματα να αναζητήσεις,</h4><h4 style="color:#8a6d3b">στα παιδικά βιβλία θα βρεις τις λύσεις!</h4></td>
+                <td style="text-align:center;width:80%"><h4 style="color:#8a6d3b">Στους σελιδοδείκτες αν πατήσεις,</h4><h4 style="color:#8a6d3b">το ταξίδι θ' αρχίσεις</h4><h4 style="color:#8a6d3b">μηνύματα να αναζητήσεις,</h4><h4 style="color:#8a6d3b">στα παιδικά βιβλία θα βρεις τις λύσεις!</h4></td>
                 
                <!--  <td style="width:18%;margin-right:5%;">
                   <img src="assets/images/arrows-right.png" style="height:40%">
@@ -191,8 +191,8 @@ queries -->
 
     <div id="middle">
             <div id="social_media">
-                    <a href="#"><img src="assets/images/facebook-02.png"></a>
-                    <a href="#"><img src="assets/images/instagram-02.png"></a>
+                    <a href="https://www.facebook.com/Bookelook-165679707183386/"><img src="assets/images/facebook-02.png"></a>
+                    <a href="https://www.instagram.com/bookelook_books/"><img src="assets/images/instagram-02.png"></a>
             </div>
 
     </div>

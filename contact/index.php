@@ -26,7 +26,7 @@ queries -->
 
 
   </head>
-  <body ondragstart="return false" onselectstart="return false">
+  <body>
 
   <header>
     <ul class="my_nav">
@@ -44,7 +44,8 @@ queries -->
 <div id="main_contact">
   <div id="phylosophy_area" style="overflow-x:hidden; padding-top:1%;text-align:center">
   <!-- <div class="container"> -->
-
+  <p>Αν θέλετε να επικοινωνήσετε μαζί μας στείλτε μας email στο: <u>info@bookelook.com</u>. Διαφορετικά μπορείτε να συμπληρώσετε την πιο κάτω φόρμα</p>
+  <hr>
     <form id="condact_form" method="post" class="form-horizontal" action="../assets/session/sent_email.php">
        <div class="form-group">
           <label class="control-label col-sm-4" for="name">Όνομα: *</label>

@@ -131,10 +131,10 @@ include "../assets/session/search_list_of_book.php";
       <div  id="social_media_table">
           <div id="social_media">
               <div class="social_media_box" style=" margin-left: 15%;">
-                  <a href="#"><img src="../assets/images/facebook-02.png"></a>
+                  <a href="https://www.facebook.com/Bookelook-165679707183386/"><img src="../assets/images/facebook-02.png"></a>
               </div>
               <div class="social_media_box">
-                  <a href="#"><img src="../assets/images/instagram-02.png"></a>
+                  <a href="https://www.instagram.com/bookelook_books/"><img src="../assets/images/instagram-02.png"></a>
               </div>
           </div>
       </div>
