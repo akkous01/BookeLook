@@ -24,6 +24,8 @@ if (session_status() == PHP_SESSION_NONE) {
     include "../assets/load/load_count.php";
     include "../assets/load/load_books_dataTable.php";
     include "../assets/load/load_keywords_not_found.php";
+    include "../assets/load/load_announcements.php";
+    include "../assets/load/load_blog.php";
 ?>
 
 <!DOCTYPE HTML>
@@ -77,9 +79,9 @@ if (session_status() == PHP_SESSION_NONE) {
                 <li><a href="#new_book">Προσθήκη Νέου Βιβλίου</a></li>
                 <li><a href="#new_subcategory">Προσθήκη Υποατηγορίας</a></li>
                 <li><a href="#new_keyword">Προσθήκη Λέξης Κλειδί</a></li>
-                <li><a href="#announcements">Προσθήκη Ανακοίνωσης</a></li>
-                <li><a href="#blog">Προσθήκη στο Blog</a></li>
-                <li><a href="#gallery">Προσθήκη στη Gallery</a></li>
+                <li><a href="#announcements">Ανακοίνωσης</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#two">Λίστα Λέξεων Κλειδιών που δεν βρέθηκαν</a></li>
                 <li><a href="#search_keywords">Λέξεις κλειδιά που αναζητήθηκαν περισσότερο</a></li>
 
@@ -303,36 +305,71 @@ if (session_status() == PHP_SESSION_NONE) {
     </section>
 
 
-    <section id="announcements" class="wrapper style1 spotlights">
-        <h2 class="major">Προσθήκη Ανακοίνωσης</h2>
+    <section id="announcements" class="wrapper style2 spotlights">
+        <h2 class="major">Ανακοίνωσης</h2>
     	<div class="inner" style="margin-top: 0%;padding-top: 0%">
+            <section>
+                <table id="announcements" class="paginated">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Περιεχόμενο</th>
+                        <th>Ημερομηνία</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php echo $announcements_box; ?>
+                    </tbody>
+
+                </table>
+             </section>
+            <h3 class="major">Προσθήκη Ανακοίνωσης</h3>
             <section>
                 <form method="post" action="../assets/add_elements/new_announcement.php" enctype="multipart/form-data">
                     <div class="row uniform">
-                    	<div class="12u$">
+                        <div class="12u$">
                             <textarea name="announcement_content" id="announcement_content" rows="4" value="" required=""></textarea>
                         </div>
                         <div class="18u$ 12u$(xsmall)">
                             <h3>Εικόνα για την ανακοίνωση</h3>
                             <input type="file" name="announcement_photo" id="announcement_photo"   />
                         </div>
-                         <div class="12u$">
+                        <div class="12u$">
                             <ul class="actions">
                                 <li><input type="submit" value="Sabmit announcement" class="special" /></li>
                             </ul>
                         </div>
                     </div>
                 </form>
-             </section>
+            </section>
 		</div>
     </section>
 
     <section id="blog" class="wrapper style2 spotlights">
-        <h2 class="major">Προσθήκη στο Blog</h2>
+        <h2 class="major">Blog</h2>
     	<div class="inner" style="margin-top: 0%;padding-top: 0%">
+            <section>
+                <table id="blog" class="paginated">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Τίτλος</th>
+                        <th>Ημερομηνία</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php echo $blog_box; ?>
+                    </tbody>
+
+                </table>
+            </section>
+            <h3> Προσθήκη στο Blog</h3>
             <section>
                 <form method="post" action="../assets/add_elements/new_blog.php" enctype="multipart/form-data">
                     <div class="row uniform">
+                        <div class="6u$ 12u$(xsmall)" style="display: none">
+                            <input type="text" name="blog_id" id="blog_id" value="none" required />
+                        </div>
                     	<div class="6u$ 12u$(xsmall)">
                         	<h3>Τίτλος</h3><input type="text" name="blog_title" id="blog_title" value="" required />
                     	</div>
@@ -358,8 +395,9 @@ if (session_status() == PHP_SESSION_NONE) {
 
 
     <section id="gallery" class="wrapper style2 spotlights">
-        <h2 class="major">Προσθήκη στη Gallery</h2>
+        <h2 class="major">Gallery</h2>
         <div class="inner" style="margin-top: 0%;padding-top: 0%">
+            <h3>Προσθήκη στη Gallery</h3>
             <section>
                 <form method="post" action="../assets/add_elements/new_gallery.php" enctype="multipart/form-data">
                     <div class="row uniform">

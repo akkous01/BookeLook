@@ -62,7 +62,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   }
 
-	try{ 
+	try{
+
+        $delete_query = $conn->prepare("DELETE FROM `blog` WHERE `blog`.`blog_id` =".$_POST["blog_id"]."");
+        $delete_query->execute();
+
 		$blog_content_query = $conn->prepare("INSERT INTO blog (blog_title, blog_content, blog_date, blog_photo) VALUES ('{$blog_title}','{$blog_content}', now(), '{$blog_photo}')");
 		$blog_content_query->execute();
 		

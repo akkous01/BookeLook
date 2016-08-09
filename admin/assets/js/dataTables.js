@@ -39,4 +39,21 @@ $(document).ready(function() {
         var submit='true';
         window.open("../edit_book/index.php?book_id="+book_id);
     });
+
+    $("#announcements tbody").on("click", "tr", function(e) {
+        $tds=$(this).children('td');
+        var announcement_id=$tds[0].innerText ;
+        var content=$tds[1].innerText ;
+        var date=$tds[2].innerText ;
+        var submit='true';
+        window.open("../edit_announcements/index.php?announcement_id="+announcement_id+"&content="+content+"&date="+date);
+    });
+    $("#blog tbody").on("click", "tr", function(e) {
+        $tds=$(this).children('td');
+        var blog_id=$tds[0].innerText ;
+        var title=$tds[1].innerText ;
+        var date=$tds[2].innerText ;
+        var submit='true';
+        window.open("../edit_blog/index.php?blog_id="+blog_id+"&title="+title+"&date="+date);
+    });
 })
