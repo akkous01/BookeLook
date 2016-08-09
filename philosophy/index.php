@@ -46,7 +46,7 @@ queries -->
   </div>
 
   <div id="contact-info-area">
-    <div id="contact-info-area-div"><p> Λήψη <a href="../contact/"><strong>Newsletter</strong></a></p></div>
+    <div id="contact-info-area-div" style="height: 10%; margin-top:40%"><p> Λήψη <a href="../contact/"><strong>Newsletter</strong></a></p></div>
   </div>
 </div>
 

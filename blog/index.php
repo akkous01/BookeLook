@@ -127,7 +127,7 @@ queries -->
         <div id="blog_area"><?php echo $blog_h4?></div>
 
         <div id="contact-info-area">
-          <div id="contact-info-area-div"><p> Λήψη <a href="../contact/"><strong>Newsletter</strong></a></p></div>
+          <div id="contact-info-area-div" ><p> Λήψη <a href="../contact/"><strong>Newsletter</strong></a></p></div>
         </div>
     </div>
   </div>

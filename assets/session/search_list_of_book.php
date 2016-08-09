@@ -269,7 +269,7 @@ if(strcmp($writer,"none")==0 or strcmp($writer,"")==0){
     if($not_fount and empty($books_step_3)){
         $not_fount_keywords=explode("|",$list_for_input);
         for($i=0;$i<count($not_fount_keywords)-1;$i++){
-            $not_found_keywords_query=$conn->prepare("INSERT INTO `not_found_keywords` (`Not_found_keyword_id`, `Not_found_keyword`) VALUES (NULL, '".$not_fount_keywords[$i]."');");
+            $not_found_keywords_query=$conn->prepare("INSERT IGNORE INTO `not_found_keywords` (`Not_found_keyword_id`, `Not_found_keyword`) VALUES (NULL, '".$not_fount_keywords[$i]."');");
             $not_found_keywords_query->execute();
         }
     }

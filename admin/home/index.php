@@ -59,11 +59,12 @@ if (session_status() == PHP_SESSION_NONE) {
 
 
 			<header id="header">
-                <a href="../../../" class="title">Zoom in Books</a>
+                <a href="../../" class="title">Zoom in Books</a>
                 <nav>
                     <ul>
-                        <li><a href="../../../">Admin</a></li>
-                        <li><a href="../../../">Web Page</a></li>
+                        <li><a href="">Admin</a></li>
+                        <li><a href="../../">Web Page</a></li>
+                        <li><a href="../">Log out</a></li>
                     </ul>
                 </nav>
 			</header>
@@ -74,13 +75,13 @@ if (session_status() == PHP_SESSION_NONE) {
             <ul>
                 <li><a href="#list_of_books">Λίστα Βιβλίων</a></li>
                 <li><a href="#new_book">Προσθήκη Νέου Βιβλίου</a></li>
-                <li><a href="#two">Λίστα Λέξεων Κλειδιών που δεν βρέθηκαν</a></li>
-                <li><a href="#search_keywords">Λέξεις κλειδιά που αναζητήθηκαν περισσότερο</a></li>
                 <li><a href="#new_subcategory">Προσθήκη Υποατηγορίας</a></li>
                 <li><a href="#new_keyword">Προσθήκη Λέξης Κλειδί</a></li>
                 <li><a href="#announcements">Προσθήκη Ανακοίνωσης</a></li>
                 <li><a href="#blog">Προσθήκη στο Blog</a></li>
                 <li><a href="#gallery">Προσθήκη στη Gallery</a></li>
+                <li><a href="#two">Λίστα Λέξεων Κλειδιών που δεν βρέθηκαν</a></li>
+                <li><a href="#search_keywords">Λέξεις κλειδιά που αναζητήθηκαν περισσότερο</a></li>
 
 
             </ul>
@@ -95,7 +96,7 @@ if (session_status() == PHP_SESSION_NONE) {
 
     <section id="list_of_books" class="list_of_books">
         <!-- <header> -->
-            <h1 class="major">Αποθηκευμένα Βιβλία</h1>
+            <h2 class="major">Αποθηκευμένα Βιβλία</h2>
         <!-- </header> -->
         <div class="table-wrapper">
             <div class="8u$ 12u$(xsmall)">
@@ -136,45 +137,45 @@ if (session_status() == PHP_SESSION_NONE) {
 
     <!-- One -->
     <section id="new_book" class="wrapper style2 spotlights">
-        <h1 class="major">Νέο Βιβλίο</h1>
+        <h2 class="major">Νέο Βιβλίο</h2>
         <section class="new_book_body">
             <form method="post" action="../assets/new_edit_book/submit_new_book.php" enctype="multipart/form-data">
                 <div class="row uniform">
 
                     <div class="8u$ 12u$(xsmall)">
-                        <h4>Τίτλος Βιβλίου * </h4> <input type="text" name="Title" id="Title" value="" placeholder="Τίτλος Βιβλίου" required/>
+                        <h3>Τίτλος Βιβλίου * </h3> <input type="text" name="Title" id="Title" value="" placeholder="Τίτλος Βιβλίου" required/>
                     </div>
 
                     <div class="18u$ 12u$(xsmall)">
-                        <h4>Συγγραφέας * </h4><input type="text" name="Writer" id="Writer" value="" placeholder="Συγγραφέας" required/>
+                        <h3>Συγγραφέας * </h3><input type="text" name="Writer" id="Writer" value="" placeholder="Συγγραφέας" required/>
                     </div>
 
                     <div class="18u$ 12u$(xsmall)">
-                        <h4>Εικονογράφος</h4><input type="text" name="Illustrator" id="Illustrator" value="" placeholder="Εικονογράφος" />
+                        <h3>Εικονογράφος</h3><input type="text" name="Illustrator" id="Illustrator" value="" placeholder="Εικονογράφος" />
                     </div>
 
                     <div class="18u$ 12u$(xsmall)">
-                        <h4>Εκδόσεις * </h4><input type="text" name="Publisher" id="Publisher" value="" placeholder="Εκδόσεις" required/>
+                        <h3>Εκδόσεις * </h3><input type="text" name="Publisher" id="Publisher" value="" placeholder="Εκδόσεις" required/>
                     </div>
 
                     <div class="18u$ 12u$(xsmall)">
-                        <h4>ISBN * </h4><input type="text" name="ISBN" id="ISBN" value="" placeholder="ISBN" required/>
+                        <h3>ISBN * </h3><input type="text" name="ISBN" id="ISBN" value="" placeholder="ISBN" required/>
                     </div>
 
                     <div class="18u$ 12u$(xsmall)">
-                        <h4>Σελίδες * </h4><input type="number" name="Pages" id="Pages" value="" required/>
+                        <h3>Σελίδες * </h3><input type="number" name="Pages" id="Pages" value="" required/>
                     </div>
 
                     <div class="18u$ 12u$(xsmall)">
-                        <h4>Ποσοστό Εικόνων * </h4><input type="double" name="Persentage_of_images" id="Persentage_of_images" value="" required/>
+                        <h3>Ποσοστό Εικόνων * </h3><input type="double" name="Persentage_of_images" id="Persentage_of_images" value="" required/>
                     </div>
 
                     <div class="24u$ 12u$(xsmall)">
-                        <h4>Ελάχιστη Ηλικία για παιδία που δεν διεβάζουν * </h4><input type="number" name="Min_age_no_read" id="Min_age_no_read" value="" required/>
+                        <h3>Ελάχιστη Ηλικία για παιδία που δεν διεβάζουν * </h3><input type="number" name="Min_age_no_read" id="Min_age_no_read" value="" required/>
                     </div>
 
                     <div class="24u$ 12u$(xsmall)">
-                        <h4>Ελάχιστη Ηλικία για παιδία που διεβάζουν * </h4><input type="number" name="Min_age_read" id="Min_age_read" value="" required/>
+                        <h3>Ελάχιστη Ηλικία για παιδία που διεβάζουν * </h3><input type="number" name="Min_age_read" id="Min_age_read" value="" required/>
                     </div>
 
                     <div class="6u$ 12u$(xsmall)">
@@ -183,11 +184,11 @@ if (session_status() == PHP_SESSION_NONE) {
                     </div>
 
                     <div class="6u$ 12u$(xsmall)">
-                        <h4>Μέση Τιμή Πώλησης (€)* </h4><input type="double" name="Price" id="Price" value=""  required/>
+                        <h3>Μέση Τιμή Πώλησης (€)* </h3><input type="double" name="Price" id="Price" value=""  required/>
                     </div>
 
                     <div class="12u$ 12u$(xsmall)">
-                        <h4>Μορφή* </h4>
+                        <h3>Μορφή* </h3>
                         <input type='checkbox' id="Hard_copy" name="Hard_copy"'>
                         <label for="Hard_copy">Έντυπη Μορφή</label>
                         <input type='checkbox' id="E_book" name="E_book"'>
@@ -197,30 +198,27 @@ if (session_status() == PHP_SESSION_NONE) {
                     </div>
 
                     <div class="6u$ 12u$(xsmall)">
-                        <h4>Σύνδεσμος</h4><input type="text" name="Link" id="Link" value=""/>
+                        <h3>Σύνδεσμος</h3><input type="text" name="Link" id="Link" value=""/>
                     </div>
-
-                    <div class="12u$ 12u$(xsmall)">
-                        <h4>Δραστηριότητες και Θέματα προς συζήτηση</h4>
-                        <textarea name="Curriculum" id="Curriculum" rows="4" value=""></textarea>
-                    </div>
-
-                     
-
                     <div class="18u$ 12u$(xsmall)">
-                        <h4>Εξώφυλλο * </h4><input type="file" name="Cover" id="Cover" required/>
+                        <h3>Εξώφυλλο * </h3><input type="file" name="Cover" id="Cover" required/>
                     </div>
 
                     <div class="18u$ 12u$(xsmall)">
-                        <h4>Οπισθόφυλλο</h4><input type="file" name="Back_cover" id="Back_cover"/>
+                        <h3>Οπισθόφυλλο</h3><input type="file" name="Back_cover" id="Back_cover"/>
                     </div>
 
-                    <div class="12u$"><hr><h3>Κατηγορίες</h3><hr></div>
+                    <div class="12u$"><hr><h2>Κατηγορίες</h2></div>
                     <?php include_once "../assets/load/load_keywords.php"; ?>
 
                     <div class="12u$ 12u$(xsmall)">
+                        <hr>
+                        <h3>Δραστηριότητες και Θέματα προς συζήτηση</h3>
+                        <textarea name="Curriculum" id="Curriculum" rows="4" value=""></textarea>
+                    </div>
+                    <div class="12u$ 12u$(xsmall)">
                         <input type='checkbox' id="Show_to_user" name="Show_to_user"'>
-                        <label for="Show_to_user"><h3>Το βιβλίο να εμφανίζεται στους χρήστες</h3></label>
+                        <label for="Show_to_user"><h2>Το βιβλίο να εμφανίζεται στους χρήστες</h2></label>
                     </div>
                     <div class="12u$">
                         <ul class="actions">
@@ -235,39 +233,16 @@ if (session_status() == PHP_SESSION_NONE) {
         </section>
     </section>
 
-    <!-- Two -->
-    <section id="two" class="wrapper style1 spotlights">
-        <div class="inner">
-            <h1 class="major">Λίστα Λέξεων Κλειδιών που δεν βρέθηκαν</h1>
-            <?php echo $not_found?>
-            
-        </div>
-    </section>
-
-      <!-- Two -->
-    <section id="search_keywords" class="wrapper style1 spotlights">
-        <div class="inner">
-            <h1 class="major">Λέξεις κλειδιά που αναζητήθηκαν περισσότερο</h1>
-            <table>
-            	<tr>
-            		<th>Λέξη κλειδί</th>
-            		<th>Φορές</th>
-            	</tr>
-            	<?php echo $count_table; ?>
-            </table>
-            
-        </div>
-    </section>
-
        
     <section id="new_subcategory" class="wrapper style2 spotlights">
-        <div class="inner">
-            <h1 class="major">Προσθήκη Νέας Υποκατηγορίας</h1>
+        <h2 class="major">Προσθήκη Νέας Υποκατηγορίας</h2>
+        <div class="inner" style="margin-top: 0%;padding-top: 0%">
+
                 <section>
                     <form method="post" action="../assets/add_elements/new_subcategory.php">
                         <div class="row uniform">
                             <div class="12u$">
-                                <h4>Κατηγορία</h4>
+                                <h3>Κατηγορία</h3>
                                 <div class="select-wrapper">
                                     <select name="select_category" id="select_category" required>
                                         <?php include "../assets/load/load_categories.php";?>
@@ -292,13 +267,13 @@ if (session_status() == PHP_SESSION_NONE) {
 
 
     <section id="new_keyword" class="wrapper style1 spotlights">
-        <div class="inner">
-            <h1 class="major">Προσθήκη Νέας Λέξης Κλειδί</h1>
+        <h2 class="major">Προσθήκη Νέας Λέξης Κλειδί</h2>
+        <div class="inner" style="margin-top: 0%;padding-top: 0%">
                 <section>
                     <form method="post" action="../assets/add_elements/new_keyword.php">
                         <div class="row uniform">
                             <div class="12u$">
-                                <h4>Κατηγορία</h4>
+                                <h3>Κατηγορία</h3>
                                 <div class="select-wrapper">
                                     <select name="select_category_2" id="select_category_2">
                                         <?php include "../assets/load/load_categories.php";?>
@@ -306,7 +281,7 @@ if (session_status() == PHP_SESSION_NONE) {
                                 </div>
                             </div>
                             <div class="12u$">
-                                <h4>Υποκατηγορία</h4>
+                                <h3>Υποκατηγορία</h3>
                                 <div class="select-wrapper">
                                     <select name="select_subcategory" id="select_subcategory">
                                     </select>
@@ -329,9 +304,8 @@ if (session_status() == PHP_SESSION_NONE) {
 
 
     <section id="announcements" class="wrapper style1 spotlights">
-    	<div class="inner">
-
-            <h1 class="major">Προσθήκη Ανακοίνωσης</h1>
+        <h2 class="major">Προσθήκη Ανακοίνωσης</h2>
+    	<div class="inner" style="margin-top: 0%;padding-top: 0%">
             <section>
                 <form method="post" action="../assets/add_elements/new_announcement.php" enctype="multipart/form-data">
                     <div class="row uniform">
@@ -339,7 +313,7 @@ if (session_status() == PHP_SESSION_NONE) {
                             <textarea name="announcement_content" id="announcement_content" rows="4" value="" required=""></textarea>
                         </div>
                         <div class="18u$ 12u$(xsmall)">
-                            <h4>Εικόνα για την ανακοίνωση</h4>
+                            <h3>Εικόνα για την ανακοίνωση</h3>
                             <input type="file" name="announcement_photo" id="announcement_photo"   />
                         </div>
                          <div class="12u$">
@@ -354,21 +328,20 @@ if (session_status() == PHP_SESSION_NONE) {
     </section>
 
     <section id="blog" class="wrapper style2 spotlights">
-    	<div class="inner">
-
-            <h1 class="major">Προσθήκη στο Blog</h1>
+        <h2 class="major">Προσθήκη στο Blog</h2>
+    	<div class="inner" style="margin-top: 0%;padding-top: 0%">
             <section>
                 <form method="post" action="../assets/add_elements/new_blog.php" enctype="multipart/form-data">
                     <div class="row uniform">
                     	<div class="6u$ 12u$(xsmall)">
-                        	<h4>Τίτλος</h4><input type="text" name="blog_title" id="blog_title" value="" required />
+                        	<h3>Τίτλος</h3><input type="text" name="blog_title" id="blog_title" value="" required />
                     	</div>
                         
                         <div class="12u$">
                             <textarea name="blog_content" id="blog_content" rows="6" value=""></textarea>
                         </div>
                         <div class="18u$ 12u$(xsmall)">
-                            <h4>Εικόνα για το blog</h4>
+                            <h3>Εικόνα για το blog</h3>
                             <input type="file" name="blog_photo" id="blog_photo"/>
                         </div>
                          <div class="12u$">
@@ -385,14 +358,13 @@ if (session_status() == PHP_SESSION_NONE) {
 
 
     <section id="gallery" class="wrapper style2 spotlights">
-        <div class="inner">
-
-            <h1 class="major">Προσθήκη στη Gallery</h1>
+        <h2 class="major">Προσθήκη στη Gallery</h2>
+        <div class="inner" style="margin-top: 0%;padding-top: 0%">
             <section>
                 <form method="post" action="../assets/add_elements/new_gallery.php" enctype="multipart/form-data">
                     <div class="row uniform">
                         <div class="18u$ 12u$(xsmall)">
-                            <h4>Εικόνα για τη Gallery</h4>
+                            <h3>Εικόνα για τη Gallery</h3>
                             <input type="file" name="gallery_photo" id="gallery_photo" required="" />
                         </div>
                          <div class="12u$">
@@ -406,15 +378,48 @@ if (session_status() == PHP_SESSION_NONE) {
              </section>
         </div>
     </section>
+
+
+    <!-- Λέξεις κλειδιά  -->
+    <section id="two" class="wrapper style1 spotlights" style="height: 500px">
+        <h2 class="major">Λίστα Λέξεων Κλειδιών που δεν βρέθηκαν</h2>
+        <div class="inner" style="height: 100%;margin-top: 0%;padding-top: 0%" >
+            <?php echo $not_found?>
+
+        </div>
+    </section>
+
+    <!-- Κλειδιά που Αναζητήθηκαν -->
+    <section id="search_keywords" class="wrapper style1 spotlights ">
+        <h2 class="major">Λέξεις κλειδιά που αναζητήθηκαν περισσότερο</h2>
+        <div class="inner" style="margin-top: 0%;padding-top: 0%">
+            <table class="paginated">
+                <thead>
+                <tr>
+                    <th>Λέξη κλειδί</th>
+                    <th>Φορές</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <?php echo $count_table; ?>
+                </tbody>
+
+            </table>
+
+        </div>
+    </section>
 </div>
+
+
+
 
 <div class="modal fade" tabindex="-1" role="dialog" id="keyword_meaning">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
-        <h4 class="modal-title">Προσθήκη Σιμασίας Λέξης Κλειδί</h4>
-        <h4 id="name_of_check_keyword"></h4>
+        <h3 class="modal-title">Προσθήκη Σιμασίας Λέξης Κλειδί</h3>
+        <h3 id="name_of_check_keyword"></h3>
       </div>
       <div class="modal-body">
         <input type="text" style="display:none" name="keyword_open" id="keyword_open" />

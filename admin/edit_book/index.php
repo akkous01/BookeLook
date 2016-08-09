@@ -8,13 +8,13 @@
 session_start();
 include "../../Database/MySqlConnect.php";
 
-$book_query = $conn->prepare("SELECT * FROM `books` WHERE book_id=".$_SESSION['book_id'].";");
+$book_query = $conn->prepare("SELECT * FROM `books` WHERE book_id=".$_GET['book_id'].";");
 $book_query->execute();
 
-$book_keywards_query = $conn->prepare("SELECT * FROM `books_keywords` WHERE Book_id=".$_SESSION['book_id'].";");
+$book_keywards_query = $conn->prepare("SELECT * FROM `books_keywords` WHERE Book_id=".$_GET['book_id'].";");
 $book_keywards_query->execute();
 
-$books_keywords_meaning_query = $conn->prepare("SELECT * FROM `books_keywords_meaning` WHERE Book_id=".$_SESSION['book_id'].";");
+$books_keywords_meaning_query = $conn->prepare("SELECT * FROM `books_keywords_meaning` WHERE Book_id=".$_GET['book_id'].";");
 $books_keywords_meaning_query->execute();
 
 

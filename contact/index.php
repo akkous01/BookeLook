@@ -92,7 +92,7 @@ queries -->
         </div>
         <div class="form-group">
           <label class="control-label col-sm-2" ></label>
-          <div class="col-sm-8" style="margin-bottom:3%"><textarea class="form-control" rows="4" id="msg" name="msg"></textarea> 
+          <div class="col-sm-12" style="margin-bottom:3%"><textarea class="form-control" rows="4" id="msg" name="msg"></textarea>
         </div>
         </div>
         <div style="margin-top:4%;width:70%; margin-left:15%; text-align:left">

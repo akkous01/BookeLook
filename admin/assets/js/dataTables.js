@@ -29,18 +29,14 @@ $(document).ready(function() {
     });
     $("#list_of_books tbody").on("click", "tr", function(e) {
        $tds=$(this).children('td');
-        $.get("../assets/new_edit_book/session_edit_book.php",
-            {book_id:$tds[0].innerText,
-            title:$tds[1].innerText,
-            isbn:$tds[2].innerText,
-            writer:$tds[3].innerText,
-            illustrator:$tds[4].innerText,
-            publisher:$tds[5].innerText,
-            pages:$tds[6].innerText,
-                submit:'true'},
-            function(data, textStatus, jqXHR)
-            {
-                window.open("../edit_book/");
-            });
+        var book_id=$tds[0].innerText ;
+        //var title=$tds[1].innerText;
+        //var isbn=$tds[2].innerText;
+        //var writer=$tds[3].innerText;
+        //var illustrator=$tds[4].innerText;
+        //var publisher=$tds[5].innerText;
+        //var pages=$tds[6].innerText;
+        var submit='true';
+        window.open("../edit_book/index.php?book_id="+book_id);
     });
 })

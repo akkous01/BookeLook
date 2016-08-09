@@ -13,7 +13,7 @@
 		$category_id = (integer) $categories[$i]['Category_id'];
 		$category_name = (string)$categories[$i]['Name_of_category'];
 
-		$categories_check_box .= "\r\n<div class='12u$' ><h4 style='float:left;width:50%'>$category_name</h4>
+		$categories_check_box .= "\r\n<div class='12u$' ><h3 id='title_cat$category_id' style='float:left;width:50%'>$category_name</h3>
 			<span class='collapse_sub_categories'  id='cat$category_id' style='float:left'>
 						<img  id='show_cat$category_id' src='../assets/images/show.png'>
 						<img  id='hide_cat$category_id' src='../assets/images/hide.png' style='display:none'>
@@ -31,7 +31,7 @@
 			$subcategory_id = (integer) $subcategories[$j]['Subcategory_id'];
 			$subcategory_name = (string)$subcategories[$j]['Name_of_subcategory']."  ";
 			$categories_check_box .= "\r\n<div class='12u$'>
-				<h5 style='color:grey;width:50%;float:left'>$subcategory_name</h5>
+				<h4 style='color:grey;width:50%;float:left'>$subcategory_name</h4>
 				<span class='collapse_sub_categories' style='float:left' id='sub$subcategory_id'>
 						<img  id='show_sub$subcategory_id' src='../assets/images/show.png'>
 						<img style='display:none'id='hide_sub$subcategory_id' src='../assets/images/hide.png' >
@@ -75,7 +75,7 @@
 	}
 
 	echo $categories_check_box;
-                    
+
 ?>
 
  <!-- "\r\n<div class='6u$ 12u$(small)'><input type='checkbox' id='C{$category_id}' name='C{$category_id}'><label for='C{$category_id}'>{$category_name}</label></div>";" -->

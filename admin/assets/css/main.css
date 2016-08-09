@@ -3939,6 +3939,9 @@
 	margin-top: 10%;
 	margin-bottom: 15%;
 }
+.list_of_books .table-wrapper{
+	margin-left: 5%;
+}
 .list_of_books .pager{
 	margin-bottom: 2%;
 }
@@ -3947,6 +3950,7 @@
 	color:white;
 	padding: 5px 5px 5px 5px;
 	margin-left: 1px;
+	margin-right: 1px;
 }
 .list_of_books .pager .page-number:hover{
 	color:black;
@@ -3996,5 +4000,55 @@ hr{
 	background-color: none;
 }
 
+#not_found_keyword_box{
+	overflow-y: scroll;
+	height: 70%;
+}
 
+#search_keywords .pager .page-number {
+	background-color: rgba(230, 226, 230, 0.34);
+	color: white;
+	padding: 5px 5px 5px 5px;
+	margin-left: 1px;
+	margin-right: 1px;
 
+}
+
+section h2 {
+	margin-left: 1%;
+}
+#title_cat1{
+	color:#D4A6E0;
+}
+#title_cat2{
+	color:rgb(255, 186, 76);
+}
+#title_cat3{
+	color:rgb(134, 232, 134);
+}
+#title_cat4{
+	color:rgb(255, 179, 179);
+}
+#title_cat5{
+	color:rgb(135, 212, 255);
+}
+#collapse_cat1{
+	 background-color: #D4A6E0;
+	border-radius: 24px;
+ }
+#collapse_cat2{
+	 background-color: rgb(255, 186, 76);
+	border-radius: 24px;
+ }
+#collapse_cat3{
+	 background-color: rgb(134, 232, 134);
+	border-radius: 24px;
+ }
+#collapse_cat4{
+	 background-color: rgb(255, 179, 179);
+	border-radius: 24px;
+ }
+#collapse_cat5{
+	 background-color: rgb(135, 212, 255);
+	border-radius: 24px;
+ }
