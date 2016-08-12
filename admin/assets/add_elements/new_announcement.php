@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
 	try{
-      $announcements_query = $conn->prepare("DELETE FROM `announcements` WHERE `announcements`.`announcement_id` =".$_POST['announcement_id']."");
+      $announcements_query = $conn->prepare("DELETE FROM `announcements` WHERE `announcements`.`announcement_id` ='".$_POST['announcement_id']."'");
       $announcements_query->execute();
 
 		$announcement_content_query = $conn->prepare("INSERT INTO announcements (announcement_content, announcement_date, announcement_photo) VALUES ('{$announcement_content}', now(), '{$announcement_photo}')");

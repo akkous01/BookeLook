@@ -6,6 +6,7 @@
  * Time: 8:41 PM
  */
 
+
 if (session_status() == PHP_SESSION_NONE) {
       session_start();
 
@@ -26,6 +27,7 @@ if (session_status() == PHP_SESSION_NONE) {
     include "../assets/load/load_keywords_not_found.php";
     include "../assets/load/load_announcements.php";
     include "../assets/load/load_blog.php";
+    include "../assets/load/load_Gallery_Photos.php"
 ?>
 
 <!DOCTYPE HTML>
@@ -52,7 +54,8 @@ if (session_status() == PHP_SESSION_NONE) {
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <script src="../assets/js/dataTables.js"></script>
-
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea' });</script>
 
     
 <body onload="loadSubCategories()">
@@ -393,10 +396,14 @@ if (session_status() == PHP_SESSION_NONE) {
 		</div>
     </section>
 
-
+<!-- Gallery-------------------------------------------------------------------------------->
     <section id="gallery" class="wrapper style2 spotlights">
         <h2 class="major">Gallery</h2>
         <div class="inner" style="margin-top: 0%;padding-top: 0%">
+            <section style="width: 100%;height: 500px;borer:1px solid blue;">
+                <?php echo $gallery;?>
+
+            </section>
             <h3>Προσθήκη στη Gallery</h3>
             <section>
                 <form method="post" action="../assets/add_elements/new_gallery.php" enctype="multipart/form-data">
@@ -607,7 +614,11 @@ if (session_status() == PHP_SESSION_NONE) {
         $(input_id).show();
         $("#keyword_meaning").modal('hide');
     }
-   
+
+    $('.delete_button').click(function() {
+        var id=$(this).attr('id').split("_")[1];
+        location.replace("?delete='"+id+"'");
+    });
 </script>
 </body>
 </html>
