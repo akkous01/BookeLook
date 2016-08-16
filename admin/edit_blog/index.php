@@ -14,9 +14,10 @@ $blog_query = $conn->prepare("SELECT blog_content,blog_photo FROM `blog` WHERE b
 $blog_query->execute();
 $blog= $blog_query->fetchAll(PDO::FETCH_ASSOC);
 $blog= $blog[0];
-$content=$blog['blog_content'];
 $photo=$blog['blog_photo'];
 
+$content = $string = html_entity_decode($blog['blog_content']);
+$content = strip_tags($content);
 
 
 
@@ -36,6 +37,8 @@ $photo=$blog['blog_photo'];
     <link rel="stylesheet" href="../assets/css/main.css" />
     <!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
     <!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
+    <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+    <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
 </head>
 
 <body>

@@ -54,9 +54,13 @@ if (session_status() == PHP_SESSION_NONE) {
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <script src="../assets/js/dataTables.js"></script>
-    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-    <script>tinymce.init({ selector:'textarea' });</script>
+   <!--  <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea' });</script> -->
 
+    <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+    <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+                        
+</head>
     
 <body onload="loadSubCategories()">
 
@@ -328,10 +332,10 @@ if (session_status() == PHP_SESSION_NONE) {
              </section>
             <h3 class="major">Προσθήκη Ανακοίνωσης</h3>
             <section>
-                <form method="post" action="../assets/add_elements/new_announcement.php" enctype="multipart/form-data">
+                <form method="post" action="../assets/add_elements/new_announcement.php" enctype="multipart/form-data" novalidate>
                     <div class="row uniform">
                         <div class="12u$">
-                            <textarea name="announcement_content" id="announcement_content" rows="4" value="" required=""></textarea>
+                            <textarea name="announcement_content" id="announcement_content" rows="4" value="" required="" ></textarea>
                         </div>
                         <div class="18u$ 12u$(xsmall)">
                             <h3>Εικόνα για την ανακοίνωση</h3>
@@ -396,7 +400,7 @@ if (session_status() == PHP_SESSION_NONE) {
 		</div>
     </section>
 
-<!-- Gallery-------------------------------------------------------------------------------->
+<!-- Gallery -->
     <section id="gallery" class="wrapper style2 spotlights">
         <h2 class="major">Gallery</h2>
         <div class="inner" style="margin-top: 0%;padding-top: 0%">
@@ -425,7 +429,7 @@ if (session_status() == PHP_SESSION_NONE) {
     </section>
 
 
-    <!-- Λέξεις κλειδιά  -->
+    <!-- Λέξεις κλειδιά 
     <section id="two" class="wrapper style1 spotlights" style="height: 500px">
         <h2 class="major">Λίστα Λέξεων Κλειδιών που δεν βρέθηκαν</h2>
         <div class="inner" style="height: 100%;margin-top: 0%;padding-top: 0%" >

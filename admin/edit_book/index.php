@@ -47,7 +47,8 @@ if($book['Audio_book'] == 1){
 if($book['Show_to_user'] == 1){
     $Show_to_user_check = 'true';
 }
-
+$Curriculum = $string = html_entity_decode($book["Curriculum"]);
+$Curriculum = strip_tags($content);
 
 
 
@@ -93,6 +94,8 @@ if($book['Show_to_user'] == 1){
 
 
     </script>
+    <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+    <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
 </head>
 <body>
 <!-- Sidebar -->
@@ -193,7 +196,7 @@ if($book['Show_to_user'] == 1){
 
                 <div class="12u$ 12u$(xsmall)">
                     <h4>Δραστηριότητες και Θέματα προς συζήτηση</h4>
-                    <textarea name="Curriculum" id="Curriculum" rows="4" value=""><?php echo $book['Curriculum'];?></textarea>
+                    <textarea name="Curriculum" id="Curriculum" rows="4" value=""><?php echo $Curriculum;?></textarea>
                 </div>
 
 

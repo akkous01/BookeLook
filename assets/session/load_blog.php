@@ -29,8 +29,10 @@
 	$blog_modals = "";
 	$blog_scripts = "";
 	for($i=0 ; $i<count($blog_data); $i++){
+		$content = $string = html_entity_decode($blog_data[$i]['blog_content']);
+		$content = strip_tags($content);
 		$blog_h4 .= "<h4 class='blog_title' id='blog_title_".$i."'><img src='../assets/images/image56.png'>".$blog_data[$i]['blog_title']."</h4>";
-		$blog_modals .= "<div class='my-modal' id='blog_modal_".$i."'><span class='modal-close'>x</span><div class='my-modal-content'> <h4 align='center'><img src='../assets/images/image56.png'>".$blog_data[$i]['blog_title']."</h4><hr>"."<p>".$blog_data[$i]['blog_content']. "</p><p>".$blog_data[$i]['blog_date']."</p>";
+		$blog_modals .= "<div class='my-modal' id='blog_modal_".$i."'><span class='modal-close'>x</span><div class='my-modal-content'> <h4 align='center'><img src='../assets/images/image56.png'>".$blog_data[$i]['blog_title']."</h4><hr>"."<p>".$content. "</p><p>".$blog_data[$i]['blog_date']."</p>";
 		
 		if($blog_data[$i]['blog_photo'] != ""){
 			$blog_modals .= "<img class='blog_img' src='../Database/Blog_photos/".$blog_data[$i]['blog_photo']."' />";

@@ -102,7 +102,9 @@ if($Link == ""){
 if($Link_2 == ""){
 	$link2_show = "display:none";
 }
-$Curriculum = $book[0]["Curriculum"];
+// $Curriculum = $book[0]["Curriculum"];
+$Curriculum = $string = html_entity_decode($book[0]["Curriculum"]);
+$Curriculum = strip_tags($content);
 $curriculum_show = "";
 if($Curriculum == ""){
 	$curriculum_show = "style='display:none'";

@@ -7,9 +7,10 @@
  */
 include "../../Database/MySqlConnect.php";
 $announcement_id=$_GET['announcement_id'];
-$content=$_GET['content'];
+// $content=$_GET['content'];
 $date=$_GET['date'];
-
+$content = $string = html_entity_decode($_GET['content']);
+$content = strip_tags($content);
 ?>
 <!DOCTYPE HTML>
 <!--
@@ -26,6 +27,8 @@ $date=$_GET['date'];
     <link rel="stylesheet" href="../assets/css/main.css" />
     <!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
     <!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
+    <script src="http://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+    <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
 </head>
 
 <body>
