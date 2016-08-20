@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
 	try{
-        echo "refrefe";
+        
         $delete_query = $conn->prepare("DELETE FROM `blog` WHERE `blog`.`blog_id` ='".$_POST["blog_id"]."'");
         $delete_query->execute();
 
