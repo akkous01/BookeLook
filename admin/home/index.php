@@ -337,10 +337,10 @@ if (session_status() == PHP_SESSION_NONE) {
                         <div class="12u$">
                             <textarea name="announcement_content" id="announcement_content" rows="4" value="" required="" ></textarea>
                         </div>
-                        <div class="18u$ 12u$(xsmall)">
-                            <h3>Εικόνα για την ανακοίνωση</h3>
-                            <input type="file" name="announcement_photo" id="announcement_photo"   />
-                        </div>
+<!--                        <div class="18u$ 12u$(xsmall)">-->
+<!--                            <h3>Εικόνα για την ανακοίνωση</h3>-->
+<!--                            <input type="file" name="announcement_photo" id="announcement_photo"   />-->
+<!--                        </div>-->
                         <div class="12u$">
                             <ul class="actions">
                                 <li><input type="submit" value="Sabmit announcement" class="special" /></li>

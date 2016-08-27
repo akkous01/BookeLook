@@ -58,7 +58,7 @@ $content = strip_tags($content);
                     <div class="12u$">
                         <ul class="actions">
                             <li><input type="submit" value="Sabmit announcement" class="special" /></li>
-                            <li><input type="button" onclick="location.href = '../home/';" value="Delete Announcement" class="special" /></li>
+                            <li><input type="button" onclick="location.href = '../assets/delete_elements/delete_announcements.php?announcement_id=<?php echo $announcement_id;?>';" value="Delete Announcement" class="special" /></li>
                         </ul>
 
                     </div>

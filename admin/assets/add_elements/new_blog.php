@@ -20,6 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   $blog_photo = "";
+  $blog_photo_prev = $_POST['blog_photo_prev'];
   if (!empty($_FILES["blog_photo"]["name"])){
     $target_dir = '../../../Database/Blog_photos/'; // upload directory
     $target_file = $target_dir . basename($_FILES["blog_photo"]["name"]);
@@ -63,9 +64,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
 	try{
-        echo "refrefe";
-        $delete_query = $conn->prepare("DELETE FROM `blog` WHERE `blog`.`blog_id` ='".$_POST["blog_id"]."'");
-        $delete_query->execute();
+
+        $file = "../../../Database/Blog_photos/".$blog_photo_prev;
+        if (!unlink($file))
+        {
+            echo ("Error deleting $file");
+        }
+        else
+        {
+            echo ("Deleted $file");
+        }
+
+        $blogts_query = $conn->prepare("DELETE FROM `blog` WHERE `blog`.`blog_id` ='" . $_POST['blog_id'] . "'");
+        $blogts_query->execute();
 
 		$blog_content_query = $conn->prepare("INSERT INTO blog (blog_title, blog_content, blog_date, blog_photo) VALUES ('{$blog_title}','{$blog_content}', now(), '{$blog_photo}')");
 		$blog_content_query->execute();

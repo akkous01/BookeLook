@@ -249,6 +249,7 @@ $Curriculum = strip_tags($content);
                 <div class="12u$">
                     <ul class="actions">
                         <li><input type="submit" value="Save Book" class="special" /></li>
+                        <li><input type="button" value="Download" onclick="location.href = 'download_Book.php';" class="special" /></li>
                         <li><input type="reset" value="Reset" /></li>
                     </ul>
                 </div>

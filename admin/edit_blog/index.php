@@ -78,11 +78,13 @@ $content = strip_tags($content);
                         <img src="../../Database/Blog_photos/<?php echo $photo;?>"/>
                     </div>
                     <div class="18u$ 12u$(xsmall)">
+                        <input style="display:none" type="text" name="blog_photo_prev" id="blog_photo_prev" value="<?php echo $photo?>"/>
                         <input type="file" name="blog_photo" id="blog_photo" value="<?php echo $photo?>"/>
                     </div>
                     <div class="12u$">
                         <ul class="actions">
                             <li><input type="submit" value="Save Blog" class="special" /></li>
+                            <li><input type="button" onclick="location.href = '../assets/delete_elements/delete_blog.php?blog_id=<?php echo $blog_id;?>&photo=<?php echo $photo;?>';" value="Delete Blog" class="special" /></li>
                         </ul>
                     </div>
                 </div>
