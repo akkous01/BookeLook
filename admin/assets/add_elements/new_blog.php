@@ -64,8 +64,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
 	try{
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         $file = "../../../Database/Blog_photos/".$blog_photo_prev;
         if (!unlink($file))
@@ -79,14 +77,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $blogts_query = $conn->prepare("DELETE FROM `blog` WHERE `blog`.`blog_id` ='" . $_POST['blog_id'] . "'");
         $blogts_query->execute();
-=======
-        
-=======
-        echo "refrefe";
->>>>>>> origin/master
         $delete_query = $conn->prepare("DELETE FROM `blog` WHERE `blog`.`blog_id` ='".$_POST["blog_id"]."'");
         $delete_query->execute();
->>>>>>> 1113327ad0386b2c4387df71288bf2ef1f70a99d
+
 
 		$blog_content_query = $conn->prepare("INSERT INTO blog (blog_title, blog_content, blog_date, blog_photo) VALUES ('{$blog_title}','{$blog_content}', now(), '{$blog_photo}')");
 		$blog_content_query->execute();
